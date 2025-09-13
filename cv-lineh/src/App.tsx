@@ -1,19 +1,13 @@
 
-import './App.css'
-import PersonalDetail from './Components/PersonalDetail'
-import Portfolio from './Components/Portfolio'
-import Work from './Components/Work'
-import Education from './Components/Education'
+//import './App.css'
+import './Styles/style.css'
+import Layout from './Components/Layout'
 
 function App() {
 
   return (
     <div className="cv-container">
-      <h1>CV </h1>
-      <Portfolio />
-      <Work />
-      <Education />
-      <PersonalDetail />
+      <Layout />
     </div>
   )
 }
