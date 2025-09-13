@@ -7,3 +7,32 @@
   text-align: center;
 }
 
+
+/* moduls */
+.modul-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.modul-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 250px;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+
+
+
+/* desktop */
+@media (min-width: 600px) {
+  .modul-list {
+    max-width: 1000px; 
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
