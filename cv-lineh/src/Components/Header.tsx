@@ -19,8 +19,8 @@ export default function Header() {
         <header className={`header-bg ${headerState}`}>
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
-                    <h1>file: CV-line uploaded</h1>
-                    <button className="intro-btn" onClick={handleClick}> npm start.</button>
+                    <h1> </h1>
+                    <button className="intro-btn" onClick={handleClick}> Go.</button>
                 </div>
             ) : (
                 <div className="header-content">
@@ -34,6 +34,7 @@ export default function Header() {
                     <button className="contact-btn">Kontakt meg</button>
                 </div>
             )}
+            
         </header>
     );
 }
