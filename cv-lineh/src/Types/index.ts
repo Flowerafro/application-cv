@@ -1,5 +1,9 @@
 // definere data types for CV application
 
+export interface PortfolioCarouselProps {
+    projects: Project[];
+}
+
 export interface Project {
     title: string;
     description: string;
@@ -14,4 +18,3 @@ export interface Modul {
     image?: string; // optional property
     projects?: Project[]; // optional property - array of Project objects til Portfolio module
 }
-

@@ -23,22 +23,25 @@
 .modul-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+
   background-color: #fff;
   color: #333;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   border-radius: 8px;
   min-height: 300px;
   min-width: 300px;
-  padding: 1rem;
 }
 
+.modul-text {
+  padding: 1rem;
+}
 
 /* --- Karusell-spesifikk styling for alle skjermstørrelser --- */
 .modul-card-portfolio {
   grid-column: 1;
   width: 100%;
-  background-image: none; /* Erstattes av bildet fra karusellen */
+  background-image: none; 
   position: relative;
   overflow: hidden;
 }
@@ -47,11 +50,11 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   transition: background-image 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 1rem;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -65,8 +68,8 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
-  z-index: 10;
+  padding: 0;
+  z-index: 100;
 }
 
 .slider-controls button {
@@ -87,6 +90,33 @@
 .slider-controls button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* -------------Indication dots ------------------ */
+
+.slider-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-dot.active {
+    background-color: #fff; 
+  }
+
 /* ----------------------------------------------------------------- */
 
 
@@ -117,5 +147,9 @@
   .modul-card-portfolio {
     grid-column: 1 / 4;
     width: 100%;
+  }
+
+  .indicator-dot:hover {
+      background-color: #fff;
   }
 }
