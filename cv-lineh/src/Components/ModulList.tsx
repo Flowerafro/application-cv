@@ -1,5 +1,4 @@
-
-import ModulCard from "./ModulCard";
+/* import ModulCard from "./ModulCard";
 import type { Modul } from "../Types";
 
 export default function ModulList({moduls}: {moduls: Modul[]} ) {
@@ -8,4 +7,22 @@ export default function ModulList({moduls}: {moduls: Modul[]} ) {
             {moduls.map(modul => <ModulCard key={modul.id} modul={modul} className={modul.id === "1" ? "modul-card modul-card-portfolio" : "modul-card"} />)}
         </main>
     )
+} */
+
+import ModulCard from "./ModulCard";
+import PortfolioCarousel from "./PortfolioCarusel";
+import type { Modul } from "../Types";
+
+export default function ModulList({ moduls }: { moduls: Modul[] }) {
+    return (
+        <main className="modul-list">
+            {moduls.map(modul => {
+                if (modul.id === "1" && modul.projects) {
+                    return <PortfolioCarousel key={modul.id} projects={modul.projects} />;
+                } else {
+                    return <ModulCard key={modul.id} modul={modul} className="modul-card" />;
+                }
+            })}
+        </main>
+    );
 }

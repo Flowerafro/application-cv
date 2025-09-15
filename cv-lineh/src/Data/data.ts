@@ -1,11 +1,31 @@
 import type { Modul } from "../Types";
 
+import projectImage1 from '/public/coffee.jpg';
+import projectImage2 from '/public/thunder.jpg';
+import projectImage3 from '/public/trees.jpg';
+
 export const moduls: Modul[] = [
     {
         id: '1',
         title: 'Portfolio',
         description: 'text',
-        image: 'image.jpg',
+        projects: [
+            {
+                title: 'Project 1',
+                description: 'Description of Project 1',
+                image: projectImage1,
+            },
+            {
+                title: 'Project 2',
+                description: 'Description of Project 2',
+                image: projectImage2,
+            },
+            {
+                title: 'Project 3',
+                description: 'Description of Project 3',
+                image: projectImage3,
+            }
+        ]
     },
     {
         id: '2',
