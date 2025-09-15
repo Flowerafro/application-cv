@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { Project, PortfolioCarouselProps } from "../Types"
+import type { PortfolioCarouselProps } from "../Types"
 
 export default function PortfolioCarousel( {projects}: PortfolioCarouselProps ) {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
