@@ -34,8 +34,10 @@ export default function PortfolioCarousel( {projects}: PortfolioCarouselProps ) 
     }
     const currentProject = projects[currentProjectIndex];
 
+    console.log(projects);
+
     return (
-        <div className="modul-card modul-card-portfolio" {...handlers}>
+        <div className="modul-card-portfolio" {...handlers}>
             
             <div className="slider-content" style={{ backgroundImage: `url(${currentProject.image})` }}>
                 <h3>{currentProject.title}</h3>

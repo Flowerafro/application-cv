@@ -29,37 +29,37 @@ export const moduls: Modul[] = [
     },
     {
         id: '2',
-        title: 'Projects',
+        title: 'Skills',
         description: 'text',
         image: 'image.jpg',
     },
     {
         id: '3',
-        title: 'About me',
+        title: 'Work',
         description: 'text',
         image: 'image.jpg',
     },
     {
         id: '4',
-        title: 'Work',
+        title: 'Education',
         description: 'texts about module 4',
         image: 'image.jpg',
     },
     {
         id: '5',
-        title: 'Education',
+        title: 'About me',
         description: 'text',
         image: 'image.jpg',
     },
     {
         id: '6',
-        title: 'Contact',
+        title: 'Find me',
         description: 'text',
         image: 'image.jpg',
     },
     {
         id: '7',
-        title: 'Blog',
+        title: 'Interests',
         description: 'text',
         image: 'image.jpg',
     }
