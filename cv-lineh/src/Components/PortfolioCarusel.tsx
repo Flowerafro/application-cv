@@ -38,11 +38,13 @@ export default function PortfolioCarousel( {projects}: PortfolioCarouselProps ) 
 
     return (
         <div className="modul-card-portfolio" {...handlers}>
-            
-            <div className="slider-content" style={{ backgroundImage: `url(${currentProject.image})` }}>
-                <h3>{currentProject.title}</h3>
-                <p>{currentProject.description}</p>
-            </div>
+
+            <a href={currentProject.link} target="_blank" rel="noopener noreferrer" >
+                <div className="slider-content" style={{ backgroundImage: `url(${currentProject.image})` }}>
+                    <h3>{currentProject.title}</h3>
+                    <p>{currentProject.description}</p>    
+                </div>
+            </a>
             <div className="slider-controls">
                 <button onClick={handlePrev}>&lt;</button>
                 <button onClick={handleNext}>&gt;</button>

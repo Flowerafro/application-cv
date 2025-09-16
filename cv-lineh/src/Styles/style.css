@@ -63,18 +63,29 @@
   transition: background-image 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   padding: 1rem;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.project-info {
+  text-align: left;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  color: white;
+}
+.project-link {
+  color: inherit;
+  text-align: center;
 }
 
 .slider-controls {
   position: absolute;
   top: 50%;
-  left: 1rem;
-  right: 1rem;
+  left: 0;
+  right:0;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
@@ -83,16 +94,17 @@
 }
 
 .slider-controls button {
-  background: rgba(203, 110, 24, 0.8);
+  background: rgba(23, 23, 23, 0.8);
   color: white;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border-radius: 2px;
+ /*  width: 40px;
+  height: 100%; */
+  padding: 1rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -166,7 +178,6 @@
     grid-column: 1 / 4;
     width: 100%;
   }
-
   .indicator-dot:hover {
       background-color: #fff;
   }
