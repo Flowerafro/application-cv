@@ -7,8 +7,9 @@ export interface PortfolioCarouselProps {
 export interface Project {
     title: string;
     description: string;
-    image?: string; // optional property
-    link?: string; // optional property
+    image?: string;
+    video?: string;
+    link?: string;
 }
 
 export interface Modul {

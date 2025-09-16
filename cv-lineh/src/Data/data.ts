@@ -4,6 +4,8 @@ import projectImage1 from '/project-1-dashboard.png';
 import projectImage2 from '/coffee.jpg';
 import projectImage3 from '/lime.jpg';
 
+import projectVideo1 from '/project-1-video.mov';
+
 export const moduls: Modul[] = [
     {
         id: '1',
@@ -13,7 +15,8 @@ export const moduls: Modul[] = [
             {
                 title: 'Web News Paper: Daily Bugle',
                 description: 'HTML/CSS/JS ',
-                image: projectImage1, // video istedet?
+                image: projectImage1,
+                video: projectVideo1,
                 link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
             },
             {

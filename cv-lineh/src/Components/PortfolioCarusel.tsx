@@ -1,6 +1,7 @@
 import { useState } from "react"
 import type { PortfolioCarouselProps } from "../Types"
 import { useSwipeable } from "react-swipeable";
+import VideoPlayer from "./videoPlayer";
 
 export default function PortfolioCarousel( {projects}: PortfolioCarouselProps ) {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -38,11 +39,21 @@ export default function PortfolioCarousel( {projects}: PortfolioCarouselProps ) 
 
     return (
         <div className="modul-card-portfolio" {...handlers}>
-
-            <a href={currentProject.link} target="_blank" rel="noopener noreferrer" >
-                <div className="slider-content" style={{ backgroundImage: `url(${currentProject.image})` }}>
-                    <h3>{currentProject.title}</h3>
-                    <p>{currentProject.description}</p>    
+            <a href={currentProject.link} target="_blank" rel="noopener noreferrer">
+                 <div className="slider-info">
+                        <h3>{currentProject.title}</h3>
+                        <p>{currentProject.description}</p>
+                    </div>
+                <div className="slider-content">
+                    {currentProject.video ? (
+                        <VideoPlayer {...currentProject} />
+                    ) : (
+                        <div
+                            className="slider-image"
+                            style={{ backgroundImage: `url(${currentProject.image})` }}
+                        />
+                    )}
+                
                 </div>
             </a>
             <div className="slider-controls">
@@ -51,7 +62,12 @@ export default function PortfolioCarousel( {projects}: PortfolioCarouselProps ) 
             </div>
             <div className="slider-indicators">
                 {projects.map((_, index) => (
-                    <button key={index} className={`indicator-dot ${index === currentProjectIndex ? 'active' : ''}`} onClick={() => handleDotClick(index)} aria-label={`Gå til slide ${index + 1}`} />
+                    <button
+                        key={index}
+                        className={`indicator-dot ${index === currentProjectIndex ? "active" : ""}`}
+                        onClick={() => handleDotClick(index)}
+                        aria-label={`Gå til slide ${index + 1}`}
+                    />
                 ))}
             </div>
         </div>
