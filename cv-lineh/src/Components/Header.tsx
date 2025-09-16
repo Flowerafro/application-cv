@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 
 export default function Header() {
@@ -25,7 +24,7 @@ export default function Header() {
             ) : (
                 <div className="header-content">
                     <div className="profile">
-                        <img src="/public/LHworks.jpeg" alt="Profilbilde" className="profile-img" />
+                        <img src="/LHworks.jpeg" alt="Profilbilde" className="profile-img" />
                         <div className="profile-info">
                             <span className="profile-name">Ditt Navn</span>
                             <span className="profile-title">Student</span>

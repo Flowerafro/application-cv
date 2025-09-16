@@ -63,7 +63,7 @@
 
 /* header */
 .header-bg {
-  background-image: url('/public/header-bg.jpg');
+  background-image: url('/header-bg.jpg');
   background-size: cover;
   background-position: center;
   padding: 0;

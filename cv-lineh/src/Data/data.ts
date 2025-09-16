@@ -1,8 +1,8 @@
 import type { Modul } from "../Types";
 
-import projectImage1 from '/public/coffee.jpg';
-import projectImage2 from '/public/thunder.jpg';
-import projectImage3 from '/public/lime.jpg';
+import projectImage1 from '/coffee.jpg';
+import projectImage2 from '/thunder.jpg';
+import projectImage3 from '/lime.jpg';
 
 export const moduls: Modul[] = [
     {
