@@ -16,6 +16,8 @@ export interface Modul {
     id: string;
     title: string;
     description: string;
+    className: string; // legg til className property
+    icon?: string; // optional property for education module
     image?: string; // optional property
     projects?: Project[]; // optional property - array of Project objects til Portfolio module
 }
