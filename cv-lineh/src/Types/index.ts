@@ -4,11 +4,12 @@ import type { IconType } from "react-icons";
 
 
 export interface Work {
-    title: string;
+    id: string;
+    description: string;
 }
 
 export interface Tool {
-    icon?: IconType; // Bruk IconType for React-ikoner
+    icon: IconType; // Bruk IconType for React-ikoner
     link: string; // Optional link property
 }
 

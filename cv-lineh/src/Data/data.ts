@@ -92,11 +92,25 @@ export const moduls: Modul[] = [
         image: '',
         work: [
             {
-                description: 'leadership roles',
-            },
-            {
+                id: '101',
                 description: 'project coordination',
             },
+            {
+                id: '102',
+                description: 'team leadership',
+            },
+            {
+                id: '103',
+                description: 'problem solving',
+            },
+            {
+                id: '104',
+                description: 'stressed situations',
+            },
+            {
+                id: '105',
+                description: 'communication with clients',
+            }
         ]
     },
     {
