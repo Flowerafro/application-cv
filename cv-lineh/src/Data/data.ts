@@ -43,10 +43,11 @@ export const moduls: Modul[] = [
     },
     {
         id: '4',
-        title: 'I have an',
-        description: 'BA in Information systems',
-        className: 'modul-card-education',
-        image: 'diploma.png',
+    title: 'I have an',
+    description: 'BA in Information systems',
+    className: 'modul-card-education',
+    image: 'image.jpg',
+    icon: '/diploma-icon.png',
     },
     {
         id: '5',

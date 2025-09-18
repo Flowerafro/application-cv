@@ -8,9 +8,9 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
                 <h3>{modul.title}</h3>
                 <p>{modul.description}</p>
             </div>
-            {modul.image && (
+           {/*  {modul.image && (
                 <img src={modul.image} alt={modul.title} className="modul-image" />
-            )} {/* Viser kun bildet hvis `image` finnes */}
+            )}  */}
         </div>
     );
 }
