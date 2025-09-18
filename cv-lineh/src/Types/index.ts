@@ -1,11 +1,10 @@
 // definere data types for CV application
 
-import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import type { IconType } from "react-icons";
 
 export interface Tool {
-    name: string;
-    icon: string | IconDefinition;  // URL eller path til ikonbilde
-
+    icon?: IconType; // Bruk IconType for React-ikoner
+    link: string; // Optional link property
 }
 
 export interface PortfolioCarouselProps {

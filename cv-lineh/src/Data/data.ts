@@ -1,5 +1,5 @@
 import type { Modul } from "../Types";
-import { faFigma, faNotion, faTrello, faSass, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity } from "react-icons/si";
 
 export const moduls: Modul[] = [
     {
@@ -30,46 +30,58 @@ export const moduls: Modul[] = [
     },
     {
         id: '2',
-        title: ' ',
-        description: 'I am most familiar with',
-        className: 'modul-card-coding',
-        image: '',
-    },
-    {
-        id: '3',
-        title: 'BA',
-        description: 'Information systems HIOF',
+        title: 'Bachelor\'s Degree',
+        description: 'in Information systems @ HIOF',
         className: 'modul-card-education',
         image: '',
         icon: '/diploma.png',
     },
     {
+        id: '3',
+        title: ' ',
+        description: 'I mostly code with',
+        className: 'modul-card-coding',
+        image: '',
+    },
+    {
         id: '4',
-        title: 'Tools ',
-        description: 'I love to work with',
+        title: 'Tools',
+        description: 'but I also have exoperience with these',
         className: 'modul-card-tools',
         image: '',
         tools: [
             {
-                name: 'Github',
-                icon: faGithub,
+                icon: SiAdobe,
+                link: 'https://www.adobe.com/'
             },
             {
-                name: 'Figma',
-                icon: faFigma
+                icon: SiSanity,
+                link: 'https://www.sanity.io/'
             },
             {
-                name: 'Notion',
-                icon: faNotion
+                icon: SiGithub,
+                link: 'https://github.com/'
             },
             {
-                name: 'Trello',
-                icon: faTrello,
+                icon: SiFigma,
+                link: 'https://www.figma.com/'
             },
             {
-                name: 'Sass',
-                icon: faSass
+                icon: SiNotion,
+                link: 'https://www.notion.so/'
             },
+            {
+                icon: SiTrello,
+                link: 'https://trello.com/'
+            },
+            {
+                icon: SiSass,
+                link: 'https://sass-lang.com/'
+            },
+            {
+                icon: SiCanva,
+                link: 'https://www.canva.com/'
+            }
         ]
     },
     {

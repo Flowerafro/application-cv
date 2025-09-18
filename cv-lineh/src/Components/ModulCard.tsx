@@ -1,5 +1,5 @@
 import type { Modul } from "../Types";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Tool from "./Tool";
 
 
 export default function ModulCard({ modul, className = "modul-card" }: { modul: Modul, className?: string }) {
@@ -15,23 +15,14 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
                 <p>{modul.description}</p>
             </div>
             {modul.tools && modul.tools.length > 0 && (
-                <div className="tools-list">
-                    {modul.tools.map((tool, index) => (
-                        <div key={index} className="tool-item">
-                            {typeof tool.icon === "string" ? (
-                                <img src={tool.icon} alt={tool.name} className="tool-icon" />
-                            ) : tool.icon ? (
-                                // Assuming you use FontAwesome for IconDefinition
-                                <span className="tool-icon">
-                                    {/* @ts-ignore */}
-                                    <FontAwesomeIcon icon={tool.icon} />
-                                </span>
-                            ) : null}
-                            <span className="tool-name">{tool.name}</span>
-                        </div>
-                    ))}
-                </div>
-            )}
+    <div className="tools-list">
+        {modul.tools.map((tool, index) =>
+            tool.icon ? (
+                <Tool key={index} icon={tool.icon} link={tool.link} />
+            ) : null
+        )}
+    </div>
+)}
         </div>
     );
 }

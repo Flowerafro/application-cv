@@ -39,57 +39,6 @@
 /************ unique modul styling *************/
 
 /** card id 2 **/
-.modul-card-coding {
-  background-color: #fff;
-  color: #333;
-  align-items: center;
-  padding: 1rem;
-}
-
-.modul-card-coding h3 {
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-.modul-card-coding h3::before {
-  content: " "; 
-  animation-name: titleChange;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
-}
-
-@keyframes titleChange {
-
-    0% {
-        content: "React";
-    }
-    25% {
-        content: "JavaScript";
-    }
-    50% {
-        content: "MySQL";
-    }
-
-    75% {
-        content: "HTML/CSS";
-    }
-
-    100% {
-        content: "Javascript";
-    }
-}
-
-.modul-card-coding p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.modul-card-coding .modul-text {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-/** card id 3 **/
 
 .modul-card-education {
   color: #fff;
@@ -130,9 +79,7 @@
 
 
 .modul-card-education .modul-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 } 
 .modul-card-education h3 {
   font-size: 2rem;
@@ -156,6 +103,57 @@
 
 
 
+/** card id 3 **/
+.modul-card-coding {
+  background-color: #fff;
+  color: #333;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modul-card-coding h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.modul-card-coding h3::before {
+  content: " "; 
+  animation-name: titleChange;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+@keyframes titleChange {
+
+    0% {
+        content: "React";
+    }
+    25% {
+        content: "JavaScript";
+    }
+    50% {
+        content: "MySQL";
+    }
+
+    75% {
+        content: "CSS/Sass";
+    }
+
+    100% {
+        content: "HTML";
+    }
+}
+
+.modul-card-coding p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.modul-card-coding .modul-text {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 
 /** card id 4 **/
 
@@ -164,16 +162,38 @@
   color: #333;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 1rem;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.modul-card-tools .modul-text {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.modul-card-tools .modul-text h3 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .tools-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-item svg {
+  height: 2.5em;
+  width: 2.5em;
+  color: #fff;
 }
 
 /*** card id 5*/
@@ -216,6 +236,8 @@
 
   min-height: 300px;
   width: clamp(350px, 96%, 380px);
+
+  display: none;
 }
 
 .slider-info {
@@ -301,7 +323,7 @@
 .indicator-dot {
   width: 10px;
   height: 10px;
-  background: rgba(255, 255, 255, 0.5);
+  background: #ffffff80;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -375,14 +397,16 @@
     margin-top:1rem;
   }
 
-  .modul-card-coding {
+  .modul-card-education {
     grid-column: 1;
     grid-row: 2;
   }
-  .modul-card-education {
+
+  .modul-card-coding {
     grid-column: 2;
     grid-row: 2;
   }
+  
   .modul-card-tools {
     grid-column: 3;
     grid-row: 2;
