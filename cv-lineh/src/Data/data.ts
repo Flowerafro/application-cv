@@ -1,4 +1,5 @@
 import type { Modul } from "../Types";
+import { faFigma, faNotion, faTrello, faSass, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export const moduls: Modul[] = [
     {
@@ -30,44 +31,66 @@ export const moduls: Modul[] = [
     {
         id: '2',
         title: ' ',
-        description: 'is my main focus',
+        description: 'I am most familiar with',
         className: 'modul-card-coding',
-        image: 'image.jpg',
+        image: '',
     },
     {
         id: '3',
-        title: 'Work',
-        description: 'text',
-        className: 'modul-card-work',
-        image: 'image.jpg',
+        title: 'BA',
+        description: 'Information systems HIOF',
+        className: 'modul-card-education',
+        image: '',
+        icon: '/diploma.png',
     },
     {
         id: '4',
-    title: 'I have an',
-    description: 'BA in Information systems',
-    className: 'modul-card-education',
-    image: 'image.jpg',
-    icon: '/diploma-icon.png',
+        title: 'Tools ',
+        description: 'I love to work with',
+        className: 'modul-card-tools',
+        image: '',
+        tools: [
+            {
+                name: 'Github',
+                icon: faGithub,
+            },
+            {
+                name: 'Figma',
+                icon: faFigma
+            },
+            {
+                name: 'Notion',
+                icon: faNotion
+            },
+            {
+                name: 'Trello',
+                icon: faTrello,
+            },
+            {
+                name: 'Sass',
+                icon: faSass
+            },
+        ]
     },
     {
         id: '5',
-        title: 'About me',
-        description: 'text',
-        className: 'modul-card-about',
-        image: 'image.jpg',
+        title: 'Experience',
+        description: ' arbeidserfaring  ',
+        className: 'modul-card-experience',
+        image: '',
     },
     {
         id: '6',
-        title: 'Find me',
-        description: 'text',
-        className: 'modul-card-findme',
-        image: 'image.jpg',
-    },
-    {
-        id: '7',
         title: 'Interests',
         description: 'text',
         className: 'modul-card-interests',
-        image: 'image.jpg',
+        image: '',
+    },
+    {
+        id: '7',
+        title: 'Find me',
+        description: 'text',
+        className: 'modul-card-findme',
+        image: '',
     }
 ]

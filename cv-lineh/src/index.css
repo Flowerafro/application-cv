@@ -6,7 +6,7 @@
   font-weight: 400;
   line-height: 1.5;
   color-scheme: light dark;
-  background-color: #f4f4f4ff;
+  background-color: #232323ff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +40,7 @@ body {
 #root, .layout {
 /*   min-height: 100vh; */
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;

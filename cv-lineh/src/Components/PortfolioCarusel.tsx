@@ -42,8 +42,6 @@ export default function PortfolioCarousel({ projects }: PortfolioCarouselProps) 
     }
     const currentProject = projects[currentProjectIndex];
 
-    console.log("Current Project:", currentProject.image);
-
     return (
         <div className="modul-card-portfolio" {...handlers}>
             <a href={currentProject.link} target="_blank" rel="noopener noreferrer">
