@@ -31,7 +31,7 @@ export const moduls: Modul[] = [
     {
         id: '2',
         title: 'Bachelor\'s Degree',
-        description: 'in Information systems @ HIOF',
+        description: 'in Information systems HIOF',
         className: 'modul-card-education',
         image: '',
         icon: '/diploma.png',
@@ -46,7 +46,7 @@ export const moduls: Modul[] = [
     {
         id: '4',
         title: 'Tools',
-        description: 'but I also have exoperience with these',
+        description: 'but I also worked with these',
         className: 'modul-card-tools',
         image: '',
         tools: [
@@ -86,10 +86,18 @@ export const moduls: Modul[] = [
     },
     {
         id: '5',
-        title: 'Experience',
-        description: ' arbeidserfaring  ',
+        title: 'I have experience working with',
+        description: ' ',
         className: 'modul-card-experience',
         image: '',
+        work: [
+            {
+                description: 'leadership roles',
+            },
+            {
+                description: 'project coordination',
+            },
+        ]
     },
     {
         id: '6',

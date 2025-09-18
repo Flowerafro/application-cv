@@ -348,7 +348,7 @@
   }
 
   .modul-card {
-    width: clamp(300px, 96%, 350px);
+    width: clamp(200px, 96%, 350px);
     min-height: 300px;
   }
 

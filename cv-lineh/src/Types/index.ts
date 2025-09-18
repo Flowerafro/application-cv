@@ -2,6 +2,11 @@
 
 import type { IconType } from "react-icons";
 
+
+export interface Work {
+    title: string;
+}
+
 export interface Tool {
     icon?: IconType; // Bruk IconType for React-ikoner
     link: string; // Optional link property
@@ -28,4 +33,5 @@ export interface Modul {
     image?: string // optional property
     projects?: Project[]; // optional property - array of Project objects til Portfolio module
     tools?: Tool[]
+    work?: Work[]; // optional property - array of Work objects til Experience module
 }
