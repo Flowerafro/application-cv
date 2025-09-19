@@ -224,39 +224,41 @@
     animation: fadeInOut 20s linear infinite;
     animation-fill-mode: forwards;
     opacity: 1;
+
+    margin-top: 1rem;
 }
 
 /* Updated animation to make <li> elements stay in the center for 5 seconds */
 @keyframes fadeInOut {
     0% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
         opacity: 0;
     }
     10% {
-        transform: translateX(50%);
-        opacity: 0; /* Elementet kommer inn i midten */
+        transform: translateX(-50%);
+        opacity: 0;
     }
     25% {
         transform: translateX(0);
-        opacity: 1; /* Elementet står stille i midten */
+        opacity: 1; 
     }
     
     50% {
         transform: translateX(0);
-        opacity: 1; /* Elementet står stille i midten */
+        opacity: 1; 
     }
     75% {
         transform: translateX(0);
-        opacity: 1; /* Elementet står stille i midten */
+        opacity: 1; 
     }
 
     90% {
-        transform: translateX(-50%);
-        opacity: 0; /* Elementet begynner å forsvinne */
+        transform: translateX(50%);
+        opacity: 0;
     }
  
     100% {
-        transform: translateX(-100%);
+        transform: translateX(100%);
         opacity: 0;
     }
 }
@@ -269,6 +271,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+ /*  background-image: url('public/coffee.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+
+  width: 100%;
+  height: 100%;
 }
 
 /*** card id 7*/

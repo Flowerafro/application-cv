@@ -2,6 +2,10 @@
 
 import type { IconType } from "react-icons";
 
+export interface interestImages {
+    src: string;
+    className: string;
+}
 
 export interface Work {
     id: string;
@@ -35,4 +39,5 @@ export interface Modul {
     projects?: Project[]; // optional property - array of Project objects til Portfolio module
     tools?: Tool[]
     work?: Work[]; // optional property - array of Work objects til Experience module
+    interestImages?: interestImages[]; // optional property - array of interestImages objects til Interests module
 }

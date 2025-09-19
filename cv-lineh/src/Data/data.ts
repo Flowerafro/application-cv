@@ -93,7 +93,7 @@ export const moduls: Modul[] = [
         work: [
             {
                 id: '101',
-                description: 'project coordination',
+                description: 'project management',
             },
             {
                 id: '102',
@@ -105,7 +105,7 @@ export const moduls: Modul[] = [
             },
             {
                 id: '104',
-                description: 'stressed situations',
+                description: 'decision making in stressed situations',
             },
             {
                 id: '105',
@@ -116,9 +116,19 @@ export const moduls: Modul[] = [
     {
         id: '6',
         title: 'Interests',
-        description: 'text',
+        description: ' ',
         className: 'modul-card-interests',
-        image: '',
+        image: ' ',
+        interestImages: [
+            {
+                src: 'coffee.jpg',
+                className: 'interest-image'
+            },
+            {
+                src: 'lime.jpg',
+                className: 'interest-image'
+            },
+        ]
     },
     {
         id: '7',
