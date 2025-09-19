@@ -508,10 +508,8 @@
   }
 
   .modul-card {
-    width: clamp(300px, 96%, 100vw);
-    height: auto;
-    max-height: 300px;
-    margin-top:1rem;
+    width: clamp(350px, 30vw, 400px);
+    height: clamp(350px, 30vw, 400px);
   }
 
   .modul-card-education {
@@ -532,6 +530,7 @@
   .modul-card-experience {
     grid-column: 1;
     grid-row: 3;
+    max-height: 400px;
   }
 
   .modul-card-interests {
@@ -544,16 +543,10 @@
     padding: 0.7rem;
   }
 
-  .interest-image {
-    max-height: 300px;
-    object-fit: cover;
-  }
-
   .modul-card-findme {
     grid-column: 3;
     grid-row: 3;
   }
-
   .indicator-dot:hover {
       background-color: #var(--white-color);
   }
