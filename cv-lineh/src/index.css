@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 :root {
  height: 100%;
   width: 100%;
@@ -11,6 +14,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --green-color: #2dcca7;
+  --blue-color: #3e91cc;
+  --purple-color: #c472f3;
+  --magenta-color: #b62cbb;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --dark-opacity: #00000089;
+  --dark-grey-color: #333333;
+  --light-grey-color: #ffffff80;
+  --oker-color: #f0a500ff;
 }
 
 * {

@@ -116,18 +116,22 @@ export const moduls: Modul[] = [
     {
         id: '6',
         title: 'Interests',
-        description: ' ',
+        description: '',
         className: 'modul-card-interests',
-        image: ' ',
+        image: '',
         interestImages: [
             {
-                src: 'coffee.jpg',
+                src: 'hiking.jpg',
                 className: 'interest-image'
             },
             {
-                src: 'lime.jpg',
+                src: 'climbing.jpg',
                 className: 'interest-image'
             },
+            {
+                src: 'reading.jpg',
+                className: 'interest-image'
+            }
         ]
     },
     {
