@@ -2,6 +2,12 @@
 
 import type { IconType } from "react-icons";
 
+export interface SocialLink {
+    id: string;
+    icon: IconType;
+    link: string;
+}
+
 export interface interestImages {
     src: string;
     className: string;
@@ -40,4 +46,5 @@ export interface Modul {
     tools?: Tool[]
     work?: Work[]; // optional property - array of Work objects til Experience module
     interestImages?: interestImages[]; // optional property - array of interestImages objects til Interests module
+    socialLinks?: SocialLink[]; // optional property - array of SocialLink objects til FindMe module
 }

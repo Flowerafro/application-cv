@@ -1,5 +1,5 @@
 import type { Modul } from "../Types";
-import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity } from "react-icons/si";
+import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
 
 export const moduls: Modul[] = [
     {
@@ -115,8 +115,8 @@ export const moduls: Modul[] = [
     },
     {
         id: '6',
-        title: 'Interests',
-        description: '',
+        title: 'Stuff',
+        description: 'I like doing besides work',
         className: 'modul-card-interests',
         image: '',
         interestImages: [
@@ -131,6 +131,14 @@ export const moduls: Modul[] = [
             {
                 src: 'reading.jpg',
                 className: 'interest-image'
+            },
+            {
+                src: 'travel1.jpg',
+                className: 'interest-image'
+            },
+            {
+                src: 'camping.jpeg',
+                className: 'interest-image'
             }
         ]
     },
@@ -140,5 +148,17 @@ export const moduls: Modul[] = [
         description: 'text',
         className: 'modul-card-findme',
         image: '',
+        socialLinks: [
+            {
+                id: '201',
+                icon: SiGithub,
+                link: 'https://github.com/Flowerafro?tab=repositories'
+            },
+            {
+                id: '202',
+                icon: SiLinkedin,
+                link: 'https://www.linkedin.com/in/line-henriksen-542a44290/'
+            },
+        ]
     }
 ]
