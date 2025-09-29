@@ -32,7 +32,7 @@ export const moduls: Modul[] = [
             {
                 title: 'Project 3',
                 description: 'Description of Project 3',
-                image: '/lime.jpg',
+                image: '',
                 link: '',
             }
         ]
