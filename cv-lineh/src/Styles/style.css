@@ -26,6 +26,7 @@
   gap: 2rem;
   justify-items: center;
   max-width: 600px;
+  margin-bottom: 2rem;
 }
 
 .modul-card {
@@ -161,8 +162,9 @@
   color: #333;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 1rem;
+  position: relative;
 }
 
 .modul-card-tools .modul-text {
@@ -276,6 +278,12 @@
   position: relative;
 }
 
+.modul-card-interests .modul-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 .modul-card-interests .modul-text {
   position: absolute;
   width: 100%;
@@ -312,10 +320,27 @@
 
 .modul-card-findme {
   background-color: var(--dark-grey-color);
-  color: var(--white-color);
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.modul-card-findme .modul-text {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modul-card-findme .modul-text h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.modul-card-findme .modul-text p {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
 }
 
 
@@ -427,6 +452,39 @@
     background-color: var(--green-color);
   }
 
+
+/* Mobile-only --------- */
+@media only screen and (max-width: 500px) {
+  .modul-card-findme {
+    background-color: #000;
+    color: var(--white-color);
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/workatdesk4-1.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* overlay that fades out based on --reveal (0..1) */
+  .modul-card-findme::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #000;
+    pointer-events: none;
+    opacity: calc(1 - var(--reveal, 0));
+    transition: opacity 200ms linear;
+    z-index: 1;
+  }
+
+  .modul-card-findme .modul-content-wrapper {
+    position: relative;
+    z-index: 2; 
+  }
+
+  
+}
+
 /* ----------------------------------------------------------------- */
 
 
@@ -476,7 +534,7 @@
 
   .work-item li {
     font-size: 0.9rem;
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
   }
   .modul-card-interests .modul-text {
     font-size: 1.2rem;
@@ -490,18 +548,14 @@
 
 
 
+
+
 /* desktop */
 @media only screen and (min-width: 900px) {
   .modul-list {
     grid-template-columns: repeat(3, 1fr);
     width: clamp(900px, 96%, 100vw);
     max-width: 1200px;
-  }
-
-  .modul-card:hover {
-    transform: scale(1.03);
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
 
   .modul-card-portfolio {
@@ -554,4 +608,26 @@
   .indicator-dot:hover {
       background-color: #var(--white-color);
   }
+
+  .tool-item:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .modul-card-education:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+.modul-card-tools .modul-text h3 {
+  transition: transform 1s cubic-bezier(.2,.8,.2,1), color 0.5s ease-in-out;
+}
+
+.modul-card-tools:hover .modul-text h3 {
+  transform: translateY(-4px);
+  color: #fff;
+  transition: transform 1s cubic-bezier(.22,.8,.3,1), color 0.5s ease-in-out;
+}
+
 }

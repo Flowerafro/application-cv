@@ -61,35 +61,43 @@ export const moduls: Modul[] = [
         tools: [
             {
                 icon: SiAdobe,
-                link: 'https://www.adobe.com/'
+                link: 'https://www.adobe.com/',
+                name: 'Adobe'
             },
             {
                 icon: SiSanity,
-                link: 'https://www.sanity.io/'
+                link: 'https://www.sanity.io/',
+                name: 'Sanity'
             },
             {
                 icon: SiGithub,
-                link: 'https://github.com/'
+                link: 'https://github.com/',
+                name: 'GitHub'
             },
             {
                 icon: SiFigma,
-                link: 'https://www.figma.com/'
+                link: 'https://www.figma.com/',
+                name: 'Figma'
             },
             {
                 icon: SiNotion,
-                link: 'https://www.notion.so/'
+                link: 'https://www.notion.so/',
+                name: 'Notion'
             },
             {
                 icon: SiTrello,
-                link: 'https://trello.com/'
+                link: 'https://trello.com/',
+                name: 'Trello'
             },
             {
                 icon: SiSass,
-                link: 'https://sass-lang.com/'
+                link: 'https://sass-lang.com/',
+                name: 'Sass'
             },
             {
                 icon: SiCanva,
-                link: 'https://www.canva.com/'
+                link: 'https://www.canva.com/',
+                name: 'Canva'
             }
         ]
     },
@@ -154,7 +162,7 @@ export const moduls: Modul[] = [
     {
         id: '7',
         title: 'Find me',
-        description: 'text',
+        description: '-',
         className: 'modul-card-findme',
         image: '',
         socialLinks: [

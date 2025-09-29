@@ -19,8 +19,9 @@ export interface Work {
 }
 
 export interface Tool {
-    icon: IconType; // Bruk IconType for React-ikoner
-    link: string; // Optional link property
+    icon: IconType;
+    link: string;
+    name: string;
 }
 
 export interface PortfolioCarouselProps {
