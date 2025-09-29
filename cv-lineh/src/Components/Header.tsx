@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import lhworks from '../assets/LHworks.jpeg';
 
 export default function Header() {
     // state som styrer at headeren skal gå fra fullscreen til shrink til normal
@@ -24,7 +25,7 @@ export default function Header() {
             ) : (
                 <div className="header-content">
                     <div className="profile">
-                        <img src="/LHworks.jpeg" alt="Profilbilde" className="profile-img" />
+                        <img src={lhworks} alt="Profilbilde" className="profile-img" />
                         <div className="profile-info">
                             <span className="profile-name">Ditt Navn</span>
                             <span className="profile-title">Student</span>

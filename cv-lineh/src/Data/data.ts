@@ -1,6 +1,15 @@
 import type { Modul } from "../Types";
 import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
 
+import bugle from '../assets/bugle.png';
+import webshop from '../assets/webshop.png';
+import diploma from '../assets/diploma.png';
+import hiking from '../assets/hiking.jpg';
+import climbing from '../assets/climbing.jpg';
+import reading from '../assets/reading.jpg';
+import travel1 from '../assets/travel1.jpg';
+import camping from '../assets/camping.jpeg';
+
 export const moduls: Modul[] = [
     {
         id: '1',
@@ -11,13 +20,13 @@ export const moduls: Modul[] = [
             {
                 title: 'Web News Paper: Daily Bugle',
                 description: 'HTML/CSS/JS ',
-                image: '/bugle.png',
+                image: bugle,
                 link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
             },
             {
                 title: 'Simple web shop',
                 description: 'Description of Project 2',
-                image: 'webshop.png',
+                image: webshop,
                 link: '',
             },
             {
@@ -34,7 +43,7 @@ export const moduls: Modul[] = [
         description: 'in Information systems HIOF',
         className: 'modul-card-education',
         image: '',
-        icon: '/diploma.png',
+        icon: diploma,
     },
     {
         id: '3',
@@ -121,23 +130,23 @@ export const moduls: Modul[] = [
         image: '',
         interestImages: [
             {
-                src: 'hiking.jpg',
+                src: hiking,
                 className: 'interest-image'
             },
             {
-                src: 'climbing.jpg',
+                src: climbing,
                 className: 'interest-image'
             },
             {
-                src: 'reading.jpg',
+                src: reading,
                 className: 'interest-image'
             },
             {
-                src: 'travel1.jpg',
+                src: travel1,
                 className: 'interest-image'
             },
             {
-                src: 'camping.jpeg',
+                src: camping,
                 className: 'interest-image'
             }
         ]

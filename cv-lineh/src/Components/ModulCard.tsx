@@ -17,6 +17,8 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
         }
     }, [modul.id, modul.interestImages]);
 
+    const interestImageSrc = modul.interestImages?.[currentInterestImage]?.src;
+
     return (
     <div
         className={className}>
@@ -37,10 +39,10 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
             </div>
         )}
         {modul.work && modul.work.length > 0 && <Work work={modul.work} />}
-        {modul.interestImages && modul.interestImages.length > 0 && (
+        {modul.interestImages && modul.interestImages.length > 0 && interestImageSrc && (
             <div className="interest-images-list">
                 <ImageComponent
-                    src={modul.interestImages[currentInterestImage].src}
+                    src={interestImageSrc}
                     alt={`Interest image for ${modul.title}`}
                     className="interest-image"
                 />
