@@ -1,4 +1,4 @@
-import type { Modul } from "../Types";
+import type { Modul, Portfolio } from "../Types";
 import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
 
 import bugle from '../assets/bugle.png';
@@ -13,44 +13,6 @@ import camping from '../assets/camping.jpeg';
 export const moduls: Modul[] = [
     {
         id: '1',
-        title: 'Portfolio',
-        description: 'text',
-        className: 'modul-card-portfolio',
-        projects: [
-            {
-                title: 'project1',
-                description: 'description',
-                image: bugle,
-                link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
-            },
-            {
-                title: 'Simple web shop',
-                description: 'Description of Project 2',
-                image: webshop,
-                link: '',
-            },
-            {
-                title: 'Project 3',
-                description: 'Description of Project 3',
-                image: '',
-                link: '',
-            },
-            {
-                title: 'Project 4',
-                description: 'Description of Project 4',
-                image: '',
-                link: '',
-            },
-            {
-                title: 'Project 5',
-                description: 'Description of Project 5',
-                image: '',
-                link: '',
-            }
-        ]
-    },
-    {
-        id: '2',
         title: 'Bachelor\'s Degree',
         description: 'in Information systems HIOF',
         className: 'modul-card-education',
@@ -58,14 +20,14 @@ export const moduls: Modul[] = [
         icon: diploma,
     },
     {
-        id: '3',
+        id: '2',
         title: ' ',
         description: 'I mostly code with',
         className: 'modul-card-coding',
         image: '',
     },
     {
-        id: '4',
+        id: '3',
         title: 'Tools',
         description: 'but I also worked with these',
         className: 'modul-card-tools',
@@ -114,7 +76,7 @@ export const moduls: Modul[] = [
         ]
     },
     {
-        id: '5',
+        id: '4',
         title: 'I have experience working with',
         description: ' ',
         className: 'modul-card-experience',
@@ -143,7 +105,7 @@ export const moduls: Modul[] = [
         ]
     },
     {
-        id: '6',
+        id: '5',
         title: 'Stuff',
         description: 'I like doing besides work',
         className: 'modul-card-interests',
@@ -172,7 +134,7 @@ export const moduls: Modul[] = [
         ]
     },
     {
-        id: '7',
+        id: '6',
         title: 'Find me',
         description: '-',
         className: 'modul-card-findme',
@@ -191,3 +153,52 @@ export const moduls: Modul[] = [
         ]
     }
 ]
+
+export const portfolio: Portfolio[] = [
+    {
+        id: 'p1',
+        title: 'project1',
+        description: 'description',
+        image: bugle,
+        link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
+    },
+    {
+        id: 'p2',
+        title: 'Simple web shop',
+        description: 'Description of Project 2',
+        image: webshop,
+        link: '',
+    },
+    {
+        id: 'p3',
+        title: 'Project 3',
+        description: 'Description of Project 3',
+        image: '',
+        link: '',
+    },
+    {
+        id: 'p4',
+        title: 'Project 4',
+        description: 'Description of Project 4',
+        image: '',
+        link: '',
+    },
+    {
+        id: 'p5',
+        title: 'Project 5',
+        description: 'Description of Project 5',
+        image: '',
+        link: '',
+    }
+]
+
+// Helper: map portfolio items into Modul-shaped objects for UI reuse
+export function getPortfolioAsModuls(): Modul[] {
+    return portfolio.map((p, idx) => ({
+        id: p.id ?? `p${idx + 1}`,
+        title: p.title,
+        description: p.description,
+        className: 'modul-card',
+        image: p.image,
+    } as Modul));
+}

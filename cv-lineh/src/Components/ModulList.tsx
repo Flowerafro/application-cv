@@ -1,24 +1,15 @@
 
 import ModulCard from "./ModulCard";
-import Portfolio from "./Portfolio";
 import type { Modul } from "../Types";
 
-export default function ModulList({ moduls }: { moduls: Modul[] }) {
+export default function ModulList({ moduls }: { moduls?: Modul[] }) {
+    if (!moduls || moduls.length === 0) return <main className="modul-list" />;
+
     return (
-               <main className="modul-list">
-            {moduls.map(modul => {
-                if (modul.id === "1" && modul.projects) {
-                    return <Portfolio key={modul.id} projects={modul.projects} />;
-                } else {
-                    return (
-                        <ModulCard
-                            key={modul.id}
-                            modul={modul}
-                            className={`modul-card ${modul.className || ''}`} // Legger til unik klasse
-                        />
-                    );
-                }
-            })}
+        <main className="modul-list">
+            {moduls.map((modul) => (
+                <ModulCard key={modul.id} modul={modul} className={`modul-card ${modul.className || ''}`} />
+            ))}
         </main>
     );
 }

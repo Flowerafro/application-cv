@@ -32,6 +32,14 @@ export interface Project {
     link?: string;
 }
 
+export interface Portfolio {
+    id?: string;
+    title: string;
+    description: string;
+    image?: string;
+    link?: string;
+}
+
 export interface Modul {
     id: string;
     title: string;
