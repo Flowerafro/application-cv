@@ -1,7 +1,6 @@
 
 import Layout from './Components/Layout'
-import './Styles/style.css'
-import './Styles/header.css'
+import './index.css'
 import { moduls } from './Data/data'
 
 

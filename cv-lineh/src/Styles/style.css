@@ -340,42 +340,6 @@
 }
 
 
-/* ----------------------------- Portfolio ------------------------------------ */
-.grid,
-.modul-list,
-.portfolio-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 2rem;
-  justify-items: center;
-}
-
-.portfolio-item {
-  background: var(--white-color);
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.modul-card-image {
-  width: 100%;
-  max-height: auto;
-  object-fit: cover;
-}
-
-.modul-text-portfolio {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 
 /* ----------------------------- tablet------------------------------------ */
 
@@ -401,11 +365,6 @@
     height: 75px;
   }
 
-  /* .modul-card-tools, .modul-card-experience {
-    grid-column: 1 / 3;
-    width: clamp(500px, 96%, 100vw);
-    padding: 1rem;
-  } */
 
   .tool-item svg {
     height: 2em;
@@ -457,13 +416,12 @@
     width: clamp(500px, 96%, 100vw);
   }
 
-  /* modul-card-portfolio removed - portfolio cards now use the standard .modul-card styles */
+
 
   .modul-card {
-    /* On desktop, let cards size to the grid column width to avoid overflow */
     width: 100%;
     max-width: 320px;
-    height: auto; /* allow content to define height, keep min-height above */
+    height: auto; 
   }
 
   .modul-card-education {
