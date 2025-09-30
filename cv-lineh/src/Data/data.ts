@@ -18,8 +18,8 @@ export const moduls: Modul[] = [
         className: 'modul-card-portfolio',
         projects: [
             {
-                title: 'Web News Paper: Daily Bugle',
-                description: 'HTML/CSS/JS ',
+                title: 'project1',
+                description: 'description',
                 image: bugle,
                 link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
             },
@@ -32,6 +32,18 @@ export const moduls: Modul[] = [
             {
                 title: 'Project 3',
                 description: 'Description of Project 3',
+                image: '',
+                link: '',
+            },
+            {
+                title: 'Project 4',
+                description: 'Description of Project 4',
+                image: '',
+                link: '',
+            },
+            {
+                title: 'Project 5',
+                description: 'Description of Project 5',
                 image: '',
                 link: '',
             }
