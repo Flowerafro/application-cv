@@ -24,10 +24,6 @@ export interface Tool {
     name: string;
 }
 
-export interface PortfolioCarouselProps {
-    projects: Project[];
-}
-
 export interface Project {
     title: string;
     description: string;

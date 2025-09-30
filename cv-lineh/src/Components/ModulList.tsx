@@ -1,6 +1,6 @@
 
 import ModulCard from "./ModulCard";
-import PortfolioCarousel from "./PortfolioCarusel";
+import Portfolio from "./Portfolio";
 import type { Modul } from "../Types";
 
 export default function ModulList({ moduls }: { moduls: Modul[] }) {
@@ -8,7 +8,7 @@ export default function ModulList({ moduls }: { moduls: Modul[] }) {
                <main className="modul-list">
             {moduls.map(modul => {
                 if (modul.id === "1" && modul.projects) {
-                    return <PortfolioCarousel key={modul.id} projects={modul.projects} />;
+                    return <Portfolio key={modul.id} projects={modul.projects} />;
                 } else {
                     return (
                         <ModulCard

@@ -9,7 +9,6 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
     const [hoveredToolName, setHoveredToolName] = useState<string | null>(null);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
     const ref = useRef<HTMLDivElement | null>(null);
-    const [revealProgress, setRevealProgress] = useState(0); // 0..1 for mobile reveal
 
     useEffect(() => {
         const handleResize = () => {
@@ -20,22 +19,7 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-        if (modul.id !== '7' || isDesktop) return;
-        const node = ref.current;
-        if (!node || typeof IntersectionObserver === 'undefined') return;
-
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                // Use intersection ratio as reveal progress
-                const ratio = Math.min(1, Math.max(0, entry.intersectionRatio));
-                setRevealProgress(ratio);
-            });
-        }, { threshold: Array.from({length: 21}, (_,i) => i/20) });
-
-        obs.observe(node);
-        return () => obs.disconnect();
-    }, [modul.id, isDesktop]);
+    // Removed mobile reveal IntersectionObserver for Find-me (static card requested)
 
     useEffect(() => {
         if (modul.id === '6' && modul.interestImages && modul.interestImages.length > 0) {
@@ -61,8 +45,6 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
         }
     };
 
-    const inlineStyle = modul.id === '7' && !isDesktop ? { ['--reveal' as any]: revealProgress } : undefined;
-
     // click/key handlers removed (flip behaviour reverted)
 
     return (
@@ -70,7 +52,6 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
             className={className}
             onMouseLeave={handleMouseLeave}
             ref={ref}
-            style={inlineStyle as any}
         >
             <div className="modul-content-wrapper">
                 {modul.image ? (

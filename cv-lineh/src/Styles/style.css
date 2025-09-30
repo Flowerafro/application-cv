@@ -345,6 +345,7 @@
 
 
 /* --- Karusell-spesifikk styling for alle skjermstørrelser --- */
+
 .modul-card-portfolio {
   grid-column: 1;
   background-color: var(--white-color);
@@ -355,102 +356,8 @@
   min-height: 300px;
   width: clamp(350px, 96%, 380px);
 
-  display: none;
+  display: block;
 }
-
-.slider-info {
-  position: absolute;
- top: 0;
-  left: 0;
-  font-size: 0.8rem;
-  color: #2a2a2aff;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-
-.slider-content {
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right:0;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  z-index: 100;
-}
-
-.slider-controls button {
-  background: rgba(23, 23, 23, 0.8);
-  color: white;
-  border: none;
-  border-radius: 2px;
- /*  width: 40px;
-  height: 100%; */
-  padding: 1rem 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  visibility: hidden;
-}
-
-/* ------- Video of projects ------- */
-
-.slider-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    transform: scale(1.05);
-}
-
-.slider-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-/* -------------Indication dots ------------------ */
-
-.slider-indicators {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-  z-index: 10;
-}
-
-.indicator-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--light-grey-color);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.indicator-dot.active {
-    background-color: var(--green-color);
-  }
 
 
 /* Mobile-only --------- */
@@ -459,22 +366,6 @@
     background-color: #000;
     color: var(--white-color);
     position: relative;
-    overflow: hidden;
-    background-image: url('../assets/workatdesk4-1.png');
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* overlay that fades out based on --reveal (0..1) */
-  .modul-card-findme::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #000;
-    pointer-events: none;
-    opacity: calc(1 - var(--reveal, 0));
-    transition: opacity 200ms linear;
-    z-index: 1;
   }
 
   .modul-card-findme .modul-content-wrapper {
