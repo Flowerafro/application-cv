@@ -24,9 +24,12 @@ export default function ModulList({ moduls }: { moduls?: Modul[] }) {
 
     return (
         <main className="modul-list">
-            {moduls.map((modul) => (
-                <ModulCard key={modul.id} modul={modul} className={`modul-card ${modul.className || ''}`} />
-            ))}
+            {moduls.map((modul) => {
+                // always include the base class 'modul-card' and append any extra class
+                const extra = modul.className && modul.className !== 'modul-card' ? modul.className : '';
+                const className = extra ? `modul-card ${extra}` : 'modul-card';
+                return <ModulCard key={modul.id} modul={modul} className={className} />;
+            })}
         </main>
     );
 }

@@ -1,0 +1,25 @@
+.pdf-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.pdf-view-btn {
+  background: linear-gradient(90deg, var(--light-green-color), var(--dark-green-color));
+  color: var(--white-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pdf-download-link {
+  color: var(--light-grey-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Note: viewer-specific styles removed; PDFViewer.tsx deleted when unused. */

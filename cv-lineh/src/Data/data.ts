@@ -1,8 +1,13 @@
 import type { Modul, Portfolio } from "../Types";
 import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
 
-import bugle from '../assets/bugle.png';
-import webshop from '../assets/webshop.png';
+import p12 from '../assets/p-12.png';
+import p21 from '../assets/p-21.png';
+import p33 from '../assets/p-33.png';
+import p42 from '../assets/p-42.png';
+import p55 from '../assets/p-55.png';
+import p63 from '../assets/p-62.png';
+
 import diploma from '../assets/diploma.png';
 import hiking from '../assets/hiking.jpg';
 import climbing from '../assets/climbing.jpg';
@@ -170,38 +175,47 @@ export const moduls: Modul[] = [
 export const portfolio: Portfolio[] = [
     {
         id: 'project-1',
-        title: 'project1',
-        description: 'description',
-        image: bugle,
+        title: 'Web news page',
+        description: 'Exam project built with HTML, CSS and JS',
+        image: p12,
         link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
     },
     {
         id: 'project-2',
-        title: 'Simple web shop',
-        description: 'Description of Project 2',
-        image: webshop,
-        link: '',
+        title: 'TwoFaced',
+        description: 'Web design for the illustrator TwoFaced Artworks',
+        image: p21,
+        link: 'https://github.com/Flowerafro/TwoFacedArtworks',
     },
     {
         id: 'project-3',
-        title: 'Project 3',
-        description: 'Description of Project 3',
-        image: '',
-        link: '',
+        title: 'Web shop',
+        description: 'Exam project built with HTML, CSS and JS',
+        image: p33,
+        link: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
     },
     {
         id: 'project-4',
-        title: 'Project 4',
-        description: 'Description of Project 4',
-        image: '',
-        link: '',
+        title: 'Pokedex',
+        description: 'Exam project with React and API',
+        image: p42,
+        link: 'https://github.com/Flowerafro/PokedexGR18',
     },
     {
         id: 'project-5',
-        title: 'Project 5',
-        description: 'Description of Project 5',
-        image: '',
+        title: 'Laftemannen',
+        description: 'Graphic design manual for Laftemannen AS',
+        image: p55,
         link: '',
+        pdf: '/Profilmanual.pdf',
+    },
+    {
+        id: 'project-6',
+        title: 'Company Website',
+        description: 'A exam building a website for the company',
+        image: p63,
+        link: 'https://github.com/Flowerafro/webeksamen2023',
+        pdf: '',
     }
 ]
 
@@ -211,7 +225,17 @@ export function getPortfolioAsModuls(): Modul[] {
         id: p.id ?? `p${idx + 1}`,
         title: p.title,
         description: p.description,
-        className: 'modul-card',
+        className: 'modul-card-portfolio',
         image: p.image,
+        // put the portfolio item into the projects array so ModulCard can render actions (link/pdf)
+        projects: [
+            {
+                title: p.title,
+                description: p.description,
+                image: p.image,
+                link: p.link,
+                pdf: p.pdf,
+            },
+        ],
     } as Modul));
 }

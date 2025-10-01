@@ -8,8 +8,8 @@ export default function InterestCarousel({ images, altPrefix }: { images: intere
   if (!src) return null;
 
   return (
-    <div className="interest-images-list">
+    <section className="interest-images-list">
       <ImageComponent src={src} alt={`${altPrefix}`} className="interest-image" />
-    </div>
+    </section>
   );
 }

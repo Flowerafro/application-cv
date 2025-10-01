@@ -32,6 +32,8 @@ export interface Project {
     image?: string;
     video?: string;
     link?: string;
+    pdf?: string;
+    images?: interestImages[];
 }
 
 export interface Portfolio {
@@ -40,6 +42,7 @@ export interface Portfolio {
     description: string;
     image?: string;
     link?: string;
+    pdf?: string;
 }
 
 export interface Modul {

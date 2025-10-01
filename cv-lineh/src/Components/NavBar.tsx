@@ -9,6 +9,7 @@ export default function NavBar({ view, onChange }: NavBarProps) {
       <div className="nav-content">
         <button
           aria-pressed={view === 'moduls'}
+          aria-current={view === 'moduls' ? 'page' : undefined}
           className={`nav-button ${view === 'moduls' ? 'active' : ''}`}
           onClick={() => onChange('moduls')}
         >
@@ -16,6 +17,7 @@ export default function NavBar({ view, onChange }: NavBarProps) {
         </button>
         <button
           aria-pressed={view === 'portfolio'}
+          aria-current={view === 'portfolio' ? 'page' : undefined}
           className={`nav-button ${view === 'portfolio' ? 'active' : ''}`}
           onClick={() => onChange('portfolio')}
         >
