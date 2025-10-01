@@ -1,51 +1,31 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import ImageComponent from "./ImageComponent";
-import Tool from "./Tool";
+// Tool rendering is handled by ToolList now
 import Work from "./Work";
+import ToolList from "./ToolList";
+import InterestCarousel from "./InterestCarousel";
 import type { Modul } from "../Types";
+import useViewport from "../Hooks/useViewport";
 
 export default function ModulCard({ modul, className = "modul-card" }: { modul: Modul; className?: string }) {
-    const [currentInterestImage, setCurrentInterestImage] = useState(0);
+    // rotating images handled by InterestCarousel hook
     const [hoveredToolName, setHoveredToolName] = useState<string | null>(null);
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
+    const { isDesktop } = useViewport();
     const ref = useRef<HTMLDivElement | null>(null);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 900);
-        };
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    // Removed mobile reveal IntersectionObserver for Find-me (static card requested)
-
-    useEffect(() => {
-        if (modul.id === '6' && modul.interestImages && modul.interestImages.length > 0) {
-            const interval = setInterval(() => {
-                setCurrentInterestImage((prevIndex) => (prevIndex + 1) % modul.interestImages!.length);
-            }, 3000);
-
-            return () => clearInterval(interval);
-        }
-    }, [modul.id, modul.interestImages]);
-
-    const interestImageSrc = modul.interestImages?.[currentInterestImage]?.src;
-
-    const handleMouseEnter = (toolName: string) => {
+    const handleMouseEnter = useCallback((toolName: string) => {
         if (isDesktop) {
             setHoveredToolName(toolName);
         }
-    };
+    }, [isDesktop]);
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = useCallback(() => {
         if (isDesktop) {
             setHoveredToolName(null);
         }
-    };
+    }, [isDesktop]);
 
-    // click/key handlers removed (flip behaviour reverted)
 
     return (
         <div
@@ -64,23 +44,11 @@ export default function ModulCard({ modul, className = "modul-card" }: { modul: 
                     <p>{modul.description}</p>
                 </div>
                 {modul.tools && modul.tools.length > 0 && (
-                    <div className="tools-list">
-                        {modul.tools.map((tool, index) => (
-                            <div key={index} onMouseEnter={() => handleMouseEnter(tool.name)}>
-                                <Tool icon={tool.icon} link={tool.link} />
-                            </div>
-                        ))}
-                    </div>
+                    <ToolList tools={modul.tools} onHover={handleMouseEnter} onLeave={handleMouseLeave} />
                 )}
                 {modul.work && modul.work.length > 0 && <Work work={modul.work} />}
-                {modul.interestImages && modul.interestImages.length > 0 && interestImageSrc && (
-                    <div className="interest-images-list">
-                        <ImageComponent
-                            src={interestImageSrc}
-                            alt={`Interest image for ${modul.title}`}
-                            className="interest-image"
-                        />
-                    </div>
+                {modul.interestImages && modul.interestImages.length > 0 && (
+                    <InterestCarousel images={modul.interestImages} altPrefix={`Interest image for ${modul.title}`} />
                 )}
             </div>
         </div>

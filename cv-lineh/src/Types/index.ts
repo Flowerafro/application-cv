@@ -9,6 +9,7 @@ export interface SocialLink {
 }
 
 export interface interestImages {
+    id?: string;
     src: string;
     className: string;
 }
@@ -19,6 +20,7 @@ export interface Work {
 }
 
 export interface Tool {
+    id: string;
     icon: IconType;
     link: string;
     name: string;

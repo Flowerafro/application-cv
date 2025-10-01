@@ -24,11 +24,29 @@
   margin-bottom: 2rem;
 }
 
+/* Loading / empty when moduls are not available */
+.modul-list .loading,
+.modul-list .empty {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  font-style: italic;
+  grid-column: span 3;
+  padding: 1rem;
+  text-align: center;
+}
+
+.modul-list .loading {
+  opacity: 0.95;
+}
+
+.modul-list .empty {
+  opacity: 0.9;
+}
+
 .modul-card {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   border-radius: 8px;
   min-height: 300px;
-  /* Fill available grid column but don't grow beyond a reasonable width */
   width: 100%;
   max-width: 380px;
   display: flex;
@@ -185,6 +203,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.tool-item:focus {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  border: none;
+  outline: none;
+  color: var(--oker-color);
+}
+
+.tool-item svg:focus {
+  color: var(--oker-color);
 }
 
 .tool-item svg {

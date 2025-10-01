@@ -12,7 +12,7 @@ import camping from '../assets/camping.jpeg';
 
 export const moduls: Modul[] = [
     {
-        id: '1',
+        id: 'modul-1',
         title: 'Bachelor\'s Degree',
         description: 'in Information systems HIOF',
         className: 'modul-card-education',
@@ -20,133 +20,146 @@ export const moduls: Modul[] = [
         icon: diploma,
     },
     {
-        id: '2',
+        id: 'modul-2',
         title: ' ',
         description: 'I mostly code with',
         className: 'modul-card-coding',
         image: '',
     },
     {
-        id: '3',
+        id: 'modul-3',
         title: 'Tools',
         description: 'but I also worked with these',
         className: 'modul-card-tools',
         image: '',
         tools: [
             {
+                id: 'modul-3-tool-1',
                 icon: SiAdobe,
                 link: 'https://www.adobe.com/',
-                name: 'Adobe'
+                name: 'tool-Adobe'
             },
             {
+                id: 'modul-3-tool-2',
                 icon: SiSanity,
                 link: 'https://www.sanity.io/',
-                name: 'Sanity'
+                name: 'tool-Sanity'
             },
             {
+                id: 'modul-3-tool-3',
                 icon: SiGithub,
                 link: 'https://github.com/',
-                name: 'GitHub'
+                name: 'tool-GitHub'
             },
             {
+                id: 'modul-3-tool-4',
                 icon: SiFigma,
                 link: 'https://www.figma.com/',
-                name: 'Figma'
+                name: 'tool-Figma'
             },
             {
+                id: 'modul-3-tool-5',
                 icon: SiNotion,
                 link: 'https://www.notion.so/',
-                name: 'Notion'
+                name: 'tool-Notion'
             },
             {
+                id: 'modul-3-tool-6',
                 icon: SiTrello,
                 link: 'https://trello.com/',
-                name: 'Trello'
+                name: 'tool-Trello'
             },
             {
+                id: 'modul-3-tool-7',
                 icon: SiSass,
                 link: 'https://sass-lang.com/',
-                name: 'Sass'
+                name: 'tool-Sass'
             },
             {
+                id: 'modul-3-tool-8',
                 icon: SiCanva,
                 link: 'https://www.canva.com/',
-                name: 'Canva'
+                name: 'tool-Canva'
             }
         ]
     },
     {
-        id: '4',
+        id: 'modul-4',
         title: 'I have experience working with',
         description: ' ',
         className: 'modul-card-experience',
         image: '',
         work: [
             {
-                id: '101',
+                id: 'modul-4-work-1',
                 description: 'project management',
             },
             {
-                id: '102',
+                id: 'modul-4-work-2',
                 description: 'team leadership',
             },
             {
-                id: '103',
+                id: 'modul-4-work-3',
                 description: 'problem solving',
             },
             {
-                id: '104',
+                id: 'modul-4-work-4',
                 description: 'decision making in stressed situations',
             },
             {
-                id: '105',
+                id: 'modul-4-work-5',
                 description: 'communication with clients',
             }
         ]
     },
     {
-        id: '5',
+        id: 'modul-5',
         title: 'Stuff',
         description: 'I like doing besides work',
         className: 'modul-card-interests',
         image: '',
         interestImages: [
             {
+                id: 'modul-5-interest-1',
                 src: hiking,
                 className: 'interest-image'
             },
             {
+                id: 'modul-5-interest-2',
                 src: climbing,
                 className: 'interest-image'
             },
             {
+                id: 'modul-5-interest-3',
                 src: reading,
                 className: 'interest-image'
             },
             {
+                id: 'modul-5-interest-4',
                 src: travel1,
                 className: 'interest-image'
             },
             {
+                id: 'modul-5-interest-5',
                 src: camping,
                 className: 'interest-image'
             }
         ]
     },
     {
-        id: '6',
+        id: 'modul-6',
         title: 'Find me',
         description: '-',
         className: 'modul-card-findme',
         image: '',
         socialLinks: [
             {
-                id: '201',
+                id: 'modul-6-social-1',
                 icon: SiGithub,
                 link: 'https://github.com/Flowerafro?tab=repositories'
             },
             {
-                id: '202',
+                id: 'modul-6-social-2',
                 icon: SiLinkedin,
                 link: 'https://www.linkedin.com/in/line-henriksen-542a44290/'
             },
@@ -156,35 +169,35 @@ export const moduls: Modul[] = [
 
 export const portfolio: Portfolio[] = [
     {
-        id: 'p1',
+        id: 'project-1',
         title: 'project1',
         description: 'description',
         image: bugle,
         link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
     },
     {
-        id: 'p2',
+        id: 'project-2',
         title: 'Simple web shop',
         description: 'Description of Project 2',
         image: webshop,
         link: '',
     },
     {
-        id: 'p3',
+        id: 'project-3',
         title: 'Project 3',
         description: 'Description of Project 3',
         image: '',
         link: '',
     },
     {
-        id: 'p4',
+        id: 'project-4',
         title: 'Project 4',
         description: 'Description of Project 4',
         image: '',
         link: '',
     },
     {
-        id: 'p5',
+        id: 'project-5',
         title: 'Project 5',
         description: 'Description of Project 5',
         image: '',
