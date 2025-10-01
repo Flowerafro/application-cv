@@ -1,39 +1,49 @@
     .nav-bar {
-        width: 100%;
+        width: 100vw;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center; /* center the inner content wrapper */
         align-items: center;
         background: linear-gradient(to bottom, var(--dark-grey-color), var(--bg-color));
-        padding: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* inner centered container to match .header-content */
+    .nav-content {
+      width: 100%;
+      padding: 0 1rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
     }
 
     .nav-button {
         border: none;
-        background-color: transparent;
         padding: 0.5rem 1.5rem;
         border-radius: 2px;
         margin: 1rem;
         position: relative; /* for underline pseudo-element */
         color: var(--white-color);
-        font-size: 1rem;
+        background-color: transparent;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: color 260ms ease, letter-spacing 260ms ease, transform 260ms ease;
     }
 
-    /* animated underline using a pseudo-element */
     .nav-button::after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -2px; /* space from text */
+        bottom: -4px;
         transform: translateX(-50%) scaleX(0);
         transform-origin: center;
         width: 80%;
-        height: 1px;
+        height: 3px;
         background: linear-gradient(to right, var(--light-green-color), var(--dark-green-color));
         border-radius: 2px;
-        transition: transform 500ms cubic-bezier(.2,.8,.2,1);
+        transition: transform 300ms cubic-bezier(.22,.9,.3,1);
     }
 
-    /* reveal underline for active/hover/focus states */
     .nav-button.active::after,
     .nav-button:hover::after,
     .nav-button:focus-visible::after {
@@ -42,17 +52,14 @@
 
     .nav-button.active {
         color: var(--white-color);
+        font-weight: 700;
+        font-size: 1rem;
         letter-spacing: 1px;
+        transform: translateY(-1px);
     }
 
-    /* respect reduced motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      .nav-button::after,
-      .nav-button:hover::after,
-      .nav-button:focus-visible::after {
-        transition: none;
-        transform: translateX(-50%) scaleX(1);
-      }
-    }
+/* -------------- tablet -----------------*/
 
-    
+@media only screen and (min-width: 500px) {
+
+}

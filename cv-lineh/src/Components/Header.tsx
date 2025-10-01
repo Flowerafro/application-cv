@@ -27,8 +27,8 @@ export default function Header() {
                     <div className="profile">
                         <img src={lhworks} alt="Profilbilde" className="profile-img" />
                         <div className="profile-info">
-                            <span className="profile-name">Ditt Navn</span>
-                            <span className="profile-title">Student</span>
+                            <span className="profile-name">Line H</span>
+                            <span className="profile-title">Student @ HIOF</span>
                         </div>
                     </div>
                     <button className="contact-btn">Kontakt meg</button>
