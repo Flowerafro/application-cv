@@ -6,7 +6,6 @@
   width: 100vw;
   height: 100vh;
   z-index: 1000;
- /*  padding: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,13 +64,14 @@
   border-radius: 20px;
 }
 
+
 /* header */
 
 .header-bg {
   background-size: cover;
   background-position: center;
   padding: 0;
-  background-color: #2d2d2dff;
+  background-color: var(--dark-grey-color);
 }
 
 .header-content {
@@ -128,8 +128,6 @@
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
-
 
 /*tablet */
 

@@ -2,6 +2,8 @@ import { useCallback } from 'react';
 import Tool from './Tool';
 import type { Tool as ToolType } from '../Types';
 
+// fallback: if tool has a link, render as <a>, else as <button>
+
 export default function ToolList({ tools, onHover, onLeave }: { tools: ToolType[]; onHover: (name: string) => void; onLeave: () => void }) {
   const handleMouseEnter = useCallback((name: string) => onHover(name), [onHover]);
   const handleMouseLeave = useCallback(() => onLeave(), [onLeave]);

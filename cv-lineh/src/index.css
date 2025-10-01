@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import './Styles/header.css';
+@import './Styles/navbar.css';
 @import './Styles/portfolio.css';
 @import './Styles/style.css';
 
@@ -11,13 +12,16 @@
   font-weight: 400;
   line-height: 1.5;
   color-scheme: dark;
-  background-color: #232323ff;
+  background-color: var(--bg-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --light-green-color:#6af7d6 ;
   --green-color: #2dcca7;
+  --dark-green-color: #1ea39d;
+  --darkest-green-color: #0e524f;
   --blue-color: #3e91cc;
   --purple-color: #c472f3;
   --magenta-color: #b62cbb;
@@ -25,8 +29,10 @@
   --black-color: #000000;
   --dark-opacity: #00000089;
   --dark-grey-color: #333333;
+  --grey-color: #818080ff;
   --light-grey-color: #ffffff80;
   --oker-color: #f0a500ff;
+  --bg-color: #232323ff;
 }
 
 * {

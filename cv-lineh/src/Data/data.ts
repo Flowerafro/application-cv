@@ -37,49 +37,49 @@ export const moduls: Modul[] = [
                 id: 'modul-3-tool-1',
                 icon: SiAdobe,
                 link: 'https://www.adobe.com/',
-                name: 'tool-Adobe'
+                name: 'Adobe'
             },
             {
                 id: 'modul-3-tool-2',
                 icon: SiSanity,
                 link: 'https://www.sanity.io/',
-                name: 'tool-Sanity'
+                name: 'Sanity'
             },
             {
                 id: 'modul-3-tool-3',
                 icon: SiGithub,
                 link: 'https://github.com/',
-                name: 'tool-GitHub'
+                name: 'GitHub'
             },
             {
                 id: 'modul-3-tool-4',
                 icon: SiFigma,
                 link: 'https://www.figma.com/',
-                name: 'tool-Figma'
+                name: 'Figma'
             },
             {
                 id: 'modul-3-tool-5',
                 icon: SiNotion,
                 link: 'https://www.notion.so/',
-                name: 'tool-Notion'
+                name: 'Notion'
             },
             {
                 id: 'modul-3-tool-6',
                 icon: SiTrello,
                 link: 'https://trello.com/',
-                name: 'tool-Trello'
+                name: 'Trello'
             },
             {
                 id: 'modul-3-tool-7',
                 icon: SiSass,
                 link: 'https://sass-lang.com/',
-                name: 'tool-Sass'
+                name: 'Sass'
             },
             {
                 id: 'modul-3-tool-8',
                 icon: SiCanva,
                 link: 'https://www.canva.com/',
-                name: 'tool-Canva'
+                name: 'Canva'
             }
         ]
     },
