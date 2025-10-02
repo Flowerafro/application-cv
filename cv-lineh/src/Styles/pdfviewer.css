@@ -7,19 +7,31 @@
 }
 
 .pdf-view-btn {
-  background: linear-gradient(90deg, var(--light-green-color), var(--dark-green-color));
-  color: var(--white-color);
+  background: linear-gradient(90deg, var(--button-gradient-start), var(--button-gradient-end));
+  color: var(--button-text-color);
   padding: 0.5rem 0.8rem;
   border-radius: 6px;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pdf-view-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .pdf-download-link {
-  color: var(--light-grey-color);
+  color: var(--link-color);
   text-decoration: none;
   font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.pdf-download-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 /* Note: viewer-specific styles removed; PDFViewer.tsx deleted when unused. */

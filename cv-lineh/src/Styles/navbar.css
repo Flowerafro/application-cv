@@ -39,7 +39,7 @@
         transform-origin: center;
         width: 80%;
         height: 3px;
-        background: linear-gradient(to right, var(--light-green-color), var(--dark-green-color));
+        background: linear-gradient(to right, var(--button-gradient-start), var(--button-gradient-end));
         border-radius: 2px;
         transition: transform 300ms cubic-bezier(.22,.9,.3,1);
     }

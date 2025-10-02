@@ -225,7 +225,7 @@ export function getPortfolioAsModuls(): Modul[] {
         id: p.id ?? `p${idx + 1}`,
         title: p.title,
         description: p.description,
-        className: 'modul-card-portfolio',
+        className: `modul-card-portfolio ${p.id ?? `p${idx + 1}`}`,
         image: p.image,
         // put the portfolio item into the projects array so ModulCard can render actions (link/pdf)
         projects: [

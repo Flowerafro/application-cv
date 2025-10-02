@@ -47,8 +47,8 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   border-radius: 8px;
   min-height: 300px;
-  width: 100%;
-  max-width: 380px;
+ /*  width: 100%;
+  max-width: 380px; */
   display: flex;
 }
 
@@ -378,11 +378,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .modul-card, .portfolio-item {
+  /* .modul-card, .portfolio-item {
     width: 100%;
     max-width: 350px;
     min-height: clamp(300px, 96%, 300px);
-  }
+  } */
 
   .modul-card-education .modul-text h3 {
     font-size: 1rem;
@@ -422,7 +422,7 @@
 }
 
 
-/* desktop */
+/* ------------- desktop ------------------- */
 @media only screen and (min-width: 900px) {
   .layout {
     max-width: 1200px;
@@ -444,11 +444,9 @@
     width: clamp(500px, 96%, 100vw);
   }
 
-
-
   .modul-card {
     width: 100%;
-    max-width: 320px;
+    /* max-width: 320px; */
     height: auto; 
   }
 

@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Color palette */
+  /* Other colors palette */
   --light-green-color:#6af7d6 ;
   --green-color: #2dcca7;
   --dark-green-color: #1ea39d;
@@ -29,16 +29,41 @@
   --black-color: #000000;
   --oker-color: #f0a500ff;
 
+  --spring-warm: #EDB458;
+  --spring-warm-2: #E8871E;
+  --spring-green-light: #EBF5DF;
+  --spring-green: #BAD4AA;
+  --spring-green-yellow: #D4D4AAf4;
+
+  --midnight-dark: #11151C;
+  --midnight-medium: #212D40;
+  --midnight-light: #364156;
+  --midnight-cool: #9A8C98;
+  --midnight-cool-2: #C9ADA7;
+
+
   /* Light theme (default) */
-  --bg-color: #ffffff;                /* Main body background */
-  --header-bg-color: #f8f9fa;        /* Light grey for header */
-  --navbar-bg-color: #f1f3f4;        /* Slightly darker grey for navbar */
-  --card-bg-color: #ffffff;          /* White for cards/content */
+  --bg-color: var(--spring-green-light);                
+  --header-bg-color: var(--spring-green);        
+  --navbar-bg-color: var(--spring-green-yellow);  
+
+  --card-bg-color: #f4f4f4;       
   --text-color: #333333;
   --dark-grey-color: #333333;
   --grey-color: #818080ff;
   --light-grey-color: #f4f4f4;
   --dark-opacity: #00000089;
+  
+  /* Theme-aware button colors */
+  --accent-primary: var(--green-color);
+  --accent-secondary: var(--dark-green-color);
+
+  --button-gradient-start: var(--spring-warm);
+  --button-gradient-end: var(--spring-warm-2);
+  --button-text-color: var(--white-color);
+
+  --link-color: #5a5a5a;
+  --link-hover-color: var(--text-color);
   
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -47,15 +72,28 @@
 
 /* Dark theme */
 :root[data-theme="dark"] {
-  --bg-color: #1a1a1a;               /* Dark body background */
-  --header-bg-color: #2d2d2d;        /* Dark grey for header */
-  --navbar-bg-color: #333333;        /* Lighter dark grey for navbar */
-  --card-bg-color: #232323ff;        /* Slightly lighter for cards/content */
+  --bg-color: var(--midnight-dark);               
+  --header-bg-color: var(--midnight-medium);       
+  --navbar-bg-color: var(--midnight-light);
+  --card-bg-color: var(--midnight-medium);        
+
+
   --text-color: #ffffff;
   --dark-grey-color: #333333;
   --grey-color: #cccccc;
   --light-grey-color: #ffffff80;
   --dark-opacity: #ffffff20;
+  
+  /* Theme-aware button colors for dark mode */
+  --accent-primary: var(--light-green-color);
+  --accent-secondary: var(--green-color);
+  --button-gradient-start: var(--midnight-cool);
+  --button-gradient-end: var(--midnight-cool-2);
+  --button-text-color: var(--midnight-dark);
+
+
+  --link-color: var(--midnight-cool-2);
+  --link-hover-color: var(--midnight-cool);
   
   color-scheme: dark;
 }
