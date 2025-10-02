@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import lhworks from '../assets/LHworks.jpeg';
+import ColorModeToggle from "./ColorModeToggle";
 
 export default function Header() {
     // state som styrer at headeren skal gå fra fullscreen til shrink til normal
@@ -31,7 +32,8 @@ export default function Header() {
                             <span className="profile-title">Student @ HIOF</span>
                         </div>
                     </div>
-                    <button className="contact-btn">Kontakt meg</button>
+                    {/* <button className="contact-btn">Kontakt meg</button> */}
+                    <ColorModeToggle />
                 </div>
             )}
             

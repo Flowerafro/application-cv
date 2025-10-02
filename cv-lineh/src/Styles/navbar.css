@@ -3,7 +3,7 @@
         display: flex;
         justify-content: center; /* center the inner content wrapper */
         align-items: center;
-        background: linear-gradient(to bottom, var(--dark-grey-color), var(--bg-color));
+        background-color: var(--navbar-bg-color);
         padding-bottom: 0.5rem;
     }
 
@@ -23,7 +23,7 @@
         border-radius: 2px;
         margin: 0.25rem 0.5rem; /* smaller margins to fit centered container */
         position: relative; /* for underline pseudo-element */
-        color: var(--white-color);
+        color: var(--text-color);
         background-color: transparent;
         font-size: 0.9rem;
         font-weight: 600;
@@ -51,7 +51,7 @@
     }
 
     .nav-button.active {
-        color: var(--white-color);
+        color: var(--text-color);
         font-weight: 700;
         font-size: 1rem;
         letter-spacing: 1px;

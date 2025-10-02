@@ -6,18 +6,17 @@
 
 
 :root {
- height: 100%;
+  height: 100%;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color-scheme: dark;
-  background-color: var(--bg-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* Color palette */
   --light-green-color:#6af7d6 ;
   --green-color: #2dcca7;
   --dark-green-color: #1ea39d;
@@ -28,12 +27,37 @@
   --magenta-color: #b62cbb;
   --white-color: #ffffff;
   --black-color: #000000;
-  --dark-opacity: #00000089;
+  --oker-color: #f0a500ff;
+
+  /* Light theme (default) */
+  --bg-color: #ffffff;                /* Main body background */
+  --header-bg-color: #f8f9fa;        /* Light grey for header */
+  --navbar-bg-color: #f1f3f4;        /* Slightly darker grey for navbar */
+  --card-bg-color: #ffffff;          /* White for cards/content */
+  --text-color: #333333;
   --dark-grey-color: #333333;
   --grey-color: #818080ff;
+  --light-grey-color: #f4f4f4;
+  --dark-opacity: #00000089;
+  
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  color-scheme: light;
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+  --bg-color: #1a1a1a;               /* Dark body background */
+  --header-bg-color: #2d2d2d;        /* Dark grey for header */
+  --navbar-bg-color: #333333;        /* Lighter dark grey for navbar */
+  --card-bg-color: #232323ff;        /* Slightly lighter for cards/content */
+  --text-color: #ffffff;
+  --dark-grey-color: #333333;
+  --grey-color: #cccccc;
   --light-grey-color: #ffffff80;
-  --oker-color: #f0a500ff;
-  --bg-color: #232323ff;
+  --dark-opacity: #ffffff20;
+  
+  color-scheme: dark;
 }
 
 * {
@@ -68,4 +92,36 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Theme toggle button styling */
+.ColorToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ColorToggle button {
+  background: transparent;
+  border: 1px solid var(--grey-color);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.ColorToggle button:hover {
+  background-color: var(--card-bg-color);
+  border-color: var(--text-color);
+  transform: scale(1.05);
+}
+
+.ColorToggle button:focus-visible {
+  outline: 2px solid var(--green-color);
+  outline-offset: 2px;
 }

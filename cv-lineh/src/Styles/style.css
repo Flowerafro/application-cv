@@ -1,7 +1,7 @@
 /* Global styles */
-#root {
+/* #root {
   background-color: var(--bg-color);
-}
+} */
 
 .layout {
   width: 100%;
@@ -27,7 +27,7 @@
 /* Loading / empty when moduls are not available */
 .modul-list .loading,
 .modul-list .empty {
-  color: rgba(255,255,255,0.7);
+  /* color: rgba(255,255,255,0.7); */
   font-size: 0.95rem;
   font-style: italic;
   grid-column: span 3;
@@ -119,8 +119,8 @@
 
 /** card id 3 **/
 .modul-card-coding {
-  background-color: var(--white-color);
-  color: var(--black-color);
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
   align-items: center;
   padding: 1rem;
 }
@@ -488,7 +488,7 @@
     grid-row: 3;
   }
   .indicator-dot:hover {
-    background-color: var(--white-color);
+    background-color: var(--card-bg-color);
   }
 
   .tool-item:hover {

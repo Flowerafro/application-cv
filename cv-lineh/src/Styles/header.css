@@ -71,7 +71,7 @@
   background-size: cover;
   background-position: center;
   padding: 0;
-  background-color: var(--dark-grey-color);
+  background-color: var(--header-bg-color);
 }
 
 .header-content {
@@ -114,7 +114,7 @@
 
 .profile-title {
   font-size: 0.8rem;
-  color: #818080ff;
+/*   color: #818080ff; */
 }
 
 .contact-btn {

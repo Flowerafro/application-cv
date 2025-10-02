@@ -58,3 +58,9 @@ export interface Modul {
     interestImages?: interestImages[]; // optional property - array of interestImages objects til Interests module
     socialLinks?: SocialLink[]; // optional property - array of SocialLink objects til FindMe module
 }
+
+// Context types
+export interface DarkModeContextType {
+    darkMode: boolean;
+    toggleDarkMode: () => void;
+}

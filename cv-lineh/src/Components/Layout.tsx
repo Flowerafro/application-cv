@@ -1,5 +1,4 @@
 import Header from "./Header";
-
 import type { Modul } from "../Types";
 import ModulList from "./ModulList";
 import NavBar from "./NavBar";
