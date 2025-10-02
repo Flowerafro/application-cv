@@ -9,10 +9,10 @@
 .pdf-view-btn {
   background: linear-gradient(90deg, var(--button-gradient-start), var(--button-gradient-end));
   color: var(--button-text-color);
-  padding: 0.5rem 0.8rem;
+  padding: 0.8rem 1rem;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

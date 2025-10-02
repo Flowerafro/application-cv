@@ -52,6 +52,11 @@
   display: flex;
 }
 
+.modul-card-education, .modul-card-coding, .modul-card-tools, .modul-card-experience, .modul-card-interests, .modul-card-findme {
+  width: 100%;
+  max-width: 380px;
+}
+
 /************ Moduls About me  *************/
 /** card id 2 **/
 

@@ -1,19 +1,17 @@
 import type { Modul, Portfolio } from "../Types";
 import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
 
-import p12 from '../assets/p-12.png';
-import p21 from '../assets/p-21.png';
-import p33 from '../assets/p-33.png';
-import p42 from '../assets/p-42.png';
-import p55 from '../assets/p-55.png';
-import p63 from '../assets/p-62.png';
-
 import diploma from '../assets/diploma.png';
 import hiking from '../assets/hiking.jpg';
 import climbing from '../assets/climbing.jpg';
 import reading from '../assets/reading.jpg';
 import travel1 from '../assets/travel1.jpg';
 import camping from '../assets/camping.jpeg';
+
+import p11 from '../assets/p-11.png';
+import p12 from '../assets/p-12.png';
+import p13 from '../assets/p-13.png';
+import p14 from '../assets/p-14.png';
 
 export const moduls: Modul[] = [
     {
@@ -175,45 +173,127 @@ export const moduls: Modul[] = [
 export const portfolio: Portfolio[] = [
     {
         id: 'project-1',
-        title: 'Web news page',
-        description: 'Exam project built with HTML, CSS and JS',
-        image: p12,
+        title: 'News web site',
+        description: 'Communication design exam project built with HTML, CSS and JS',
+        image: '',
+        images: [
+            {
+                id: 'project-1-image-1',
+                src: p11,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-1-image-2',
+                src: p12,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-1-image-3',
+                src: p13,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-1-image-4',
+                src: p14,
+                className: 'portfolio-image',
+            }
+        ],
         link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
     },
     {
         id: 'project-2',
         title: 'TwoFaced',
         description: 'Web design for the illustrator TwoFaced Artworks',
-        image: p21,
+        image: '',
+        images: [
+            {
+                id: 'project-2-image-1',
+                src: '',
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-2-image-2',
+                src: '',
+                className: 'portfolio-image',
+            }
+        ],
         link: 'https://github.com/Flowerafro/TwoFacedArtworks',
     },
     {
         id: 'project-3',
         title: 'Web shop',
         description: 'Exam project built with HTML, CSS and JS',
-        image: p33,
+        image: '',
+        images: [
+            {
+                id: 'project-3-image-1',
+                src: '',
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-3-image-2',
+                src: '',
+                className: 'portfolio-image',
+            }
+        ],
         link: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
     },
     {
         id: 'project-4',
         title: 'Pokedex',
         description: 'Exam project with React and API',
-        image: p42,
+        image: '',
+        images: [
+            {
+                id: 'project-4-image-1',
+                src: '',
+                className: 'portfolio-image',
+            }
+        ],
         link: 'https://github.com/Flowerafro/PokedexGR18',
     },
     {
         id: 'project-5',
         title: 'Laftemannen',
         description: 'Graphic design manual for Laftemannen AS',
-        image: p55,
+        image: '',
+        images: [
+            {
+                id: 'project-5-image-1',
+                src: '',
+                className: 'portfolio-image',
+            }
+        ],
         link: '',
         pdf: '/Profilmanual.pdf',
     },
     {
         id: 'project-6',
         title: 'Company Website',
-        description: 'A exam building a website for the company',
-        image: p63,
+        description: 'A exam building a website for a fake company',
+        image: '',
+        images: [
+            {
+                id: 'project-6-image-1',
+                src: '',
+                className: 'portfolio-image',
+            }
+        ],
+        link: 'https://github.com/Flowerafro/webeksamen2023',
+        pdf: '',
+    },
+    {
+        id: 'project-7',
+        title: 'ContractFlow',
+        description: 'A exam building a logistics application',
+        image: '',
+        images: [
+            {
+                id: 'project-7-image-1',
+                src: '',
+                className: 'portfolio-image',
+            }
+        ],
         link: 'https://github.com/Flowerafro/webeksamen2023',
         pdf: '',
     }
@@ -235,6 +315,11 @@ export function getPortfolioAsModuls(): Modul[] {
                 image: p.image,
                 link: p.link,
                 pdf: p.pdf,
+                images: p.images?.map(img => ({
+                    id: img.id,
+                    src: img.src,
+                    className: img.className
+                })),
             },
         ],
     } as Modul));

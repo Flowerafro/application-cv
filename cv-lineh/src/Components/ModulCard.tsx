@@ -3,6 +3,7 @@ import ImageComponent from './ImageComponent';
 import Work from './Work';
 import ToolList from './ToolList';
 import InterestCarousel from './InterestCarousel';
+import PortfolioImageSlider from './PortfolioImageSlider';
 import type { Modul } from '../Types';
 import useViewport from '../Hooks/useViewport';
 import PDFButton from './PDFButton';
@@ -55,13 +56,25 @@ export default function ModulCard({ modul, className = 'modul-card' }: { modul: 
                     <section className="modul-projects">
                         {modul.projects.map((p, idx) => (
                             <div key={(p.title || '') + idx} className="project-item">
+                                {/* Portfolio Image Slider */}
+                                {p.images && p.images.length > 0 && (
+                                    <PortfolioImageSlider 
+                                        images={p.images.map(img => ({
+                                            id: img.id || `img-${idx}`,
+                                            src: img.src,
+                                            className: img.className
+                                        }))}
+                                        projectTitle={p.title}
+                                    />
+                                )}
+                                
                                 <div className="project-actions">
                                     {p.pdf ? (
                                         <PDFButton filePath={p.pdf} title={`Open`} />
                                     ) : p.link ? (
                                         <div className="pdf-button-wrapper">
                                             <a className="pdf-view-btn" href={p.link} target="_blank" rel="noopener noreferrer">
-                                                Visit
+                                                Check it out
                                             </a>
                                         </div>
                                     ) : null}

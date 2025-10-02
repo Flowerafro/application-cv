@@ -41,8 +41,15 @@ export interface Portfolio {
     title: string;
     description: string;
     image?: string;
+    images?: PortfolioImages[];
     link?: string;
     pdf?: string;
+}
+
+export interface PortfolioImages {
+    id: string;
+    src: string;
+    className: string;
 }
 
 export interface Modul {
