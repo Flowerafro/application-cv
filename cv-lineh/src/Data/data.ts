@@ -298,29 +298,3 @@ export const portfolio: Portfolio[] = [
         pdf: '',
     }
 ]
-
-// Helper: map portfolio items into Modul-shaped objects for UI reuse
-export function getPortfolioAsModuls(): Modul[] {
-    return portfolio.map((p, idx) => ({
-        id: p.id ?? `p${idx + 1}`,
-        title: p.title,
-        description: p.description,
-        className: `modul-card-portfolio ${p.id ?? `p${idx + 1}`}`,
-        image: p.image,
-        // put the portfolio item into the projects array so ModulCard can render actions (link/pdf)
-        projects: [
-            {
-                title: p.title,
-                description: p.description,
-                image: p.image,
-                link: p.link,
-                pdf: p.pdf,
-                images: p.images?.map(img => ({
-                    id: img.id,
-                    src: img.src,
-                    className: img.className
-                })),
-            },
-        ],
-    } as Modul));
-}

@@ -1,22 +1,16 @@
 import Header from "./Header";
-import type { Modul } from "../Types";
-import ModulList from "./ModulList";
 import NavBar from "./NavBar";
-import { getPortfolioAsModuls } from "../Data/data";
-import { useState } from "react";
+import {  Outlet } from "react-router-dom";
 
-export default function Layout({ moduls }: { moduls: Modul[] }) {
-  const [view, setView] = useState<'moduls' | 'portfolio'>('moduls');
+export default function Layout() {
 
   return (
-    <div className="layout">
-      <Header />
-      <NavBar view={view} onChange={(v) => setView(v)} />
-      {view === 'moduls' ? (
-        <ModulList moduls={moduls} />
-      ) : (
-        <ModulList moduls={getPortfolioAsModuls()} />
-      )}
-    </div>
+        <div className="layout">
+          <Header />
+          <NavBar  />
+          <main>
+            <Outlet />
+          </main>
+        </div>
   );
 }

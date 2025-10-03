@@ -1,28 +1,25 @@
-interface NavBarProps {
-  view: 'moduls' | 'portfolio';
-  onChange: (view: 'moduls' | 'portfolio') => void;
-}
+import { NavLink } from "react-router-dom";
 
-export default function NavBar({ view, onChange }: NavBarProps) {
+export default function NavBar() {
   return (
     <nav className="nav-bar">
       <div className="nav-content">
-        <button
-          aria-pressed={view === 'moduls'}
-          aria-current={view === 'moduls' ? 'page' : undefined}
-          className={`nav-button ${view === 'moduls' ? 'active' : ''}`}
-          onClick={() => onChange('moduls')}
+        <NavLink
+          to="/aboutme"
+          className={({ isActive }) =>
+            `nav-button ${isActive ? "active" : ""}`
+          }
         >
-         About me
-        </button>
-        <button
-          aria-pressed={view === 'portfolio'}
-          aria-current={view === 'portfolio' ? 'page' : undefined}
-          className={`nav-button ${view === 'portfolio' ? 'active' : ''}`}
-          onClick={() => onChange('portfolio')}
+          About me
+        </NavLink>
+        <NavLink
+          to="/portfolio"
+          className={({ isActive }) =>
+            `nav-button ${isActive ? "active" : ""}`
+          }
         >
           Portfolio
-        </button>
+        </NavLink>
       </div>
     </nav>
   );

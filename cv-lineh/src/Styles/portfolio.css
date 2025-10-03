@@ -1,7 +1,6 @@
 
 /* ----------------------------- Portfolio ------------------------------------ */
-.grid,
-.modul-list,
+
 .portfolio-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -20,45 +19,6 @@
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.modul-card-image {
-  width: 100%;
-  max-height: auto;
-  object-fit: cover;
-}
-
-.modul-text-portfolio {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.modul-card-portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  margin: 0.5rem;
-
-  background-color: var(--card-bg-color);
-}
-
-.modul-card-portfolio .modul-content-wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.modul-card-portfolio .modul-text {
-  border: red 1px solid;
-  margin: 1rem 0;
-}
-
-.modul-card-portfolio .project-actions {
-  place-self: center;
-  
-} 
 
 
 /* ----------------------------- tablet------------------------------------ */
