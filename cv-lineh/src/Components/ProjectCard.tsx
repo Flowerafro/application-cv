@@ -3,13 +3,11 @@ import type { Portfolio } from '../Types';
 import PDFButton from './PDFButton';
 
 export default function ProjectCard({ project }: { project: Portfolio }) {
+
+    const cardClassName = `project-card ${project.id}`;
+
     return (
-        <div className="project-card">
-            <div className="project-content-wrapper">
-                <div className="project-text">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                </div>
+        <div className={cardClassName}>
 
                 {project.images && project.images.length > 0 && (
                     <PortfolioImageSlider 
@@ -21,6 +19,12 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                         projectTitle={project.title}
                     />
                 )}
+            
+                 <div className="project-content">
+                <div className="modul-text">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                </div>
                 
                 <div className="project-actions">
                     {project.pdf ? (

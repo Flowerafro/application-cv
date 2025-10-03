@@ -8,10 +8,14 @@ import reading from '../assets/reading.jpg';
 import travel1 from '../assets/travel1.jpg';
 import camping from '../assets/camping.jpeg';
 
+import p10 from '../assets/p-10.png';
 import p11 from '../assets/p-11.png';
 import p12 from '../assets/p-12.png';
 import p13 from '../assets/p-13.png';
 import p14 from '../assets/p-14.png';
+import p15 from '../assets/p-15.png';
+import p16 from '../assets/p-16.png';
+
 
 export const moduls: Modul[] = [
     {
@@ -178,6 +182,11 @@ export const portfolio: Portfolio[] = [
         image: '',
         images: [
             {
+                id: 'project-1-image-0',
+                src: p10,
+                className: 'portfolio-image',
+            },
+            {
                 id: 'project-1-image-1',
                 src: p11,
                 className: 'portfolio-image',
@@ -195,6 +204,16 @@ export const portfolio: Portfolio[] = [
             {
                 id: 'project-1-image-4',
                 src: p14,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-1-image-5',
+                src: p15,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-1-image-6',
+                src: p16,
                 className: 'portfolio-image',
             }
         ],
