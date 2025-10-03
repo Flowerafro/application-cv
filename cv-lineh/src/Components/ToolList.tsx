@@ -10,6 +10,7 @@ export default function ToolList({ tools, onHover, onLeave }: { tools: ToolType[
 
   return (
     <div className="tools-list">
+      
       {tools.map((tool) => (
         tool.link ? (
           <a
