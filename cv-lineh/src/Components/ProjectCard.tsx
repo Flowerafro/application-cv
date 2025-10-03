@@ -21,22 +21,22 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                 )}
             
                  <div className="project-content">
-                <div className="modul-text">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                </div>
-                
-                <div className="project-actions">
-                    {project.pdf ? (
-                        <PDFButton filePath={project.pdf} title={`Open`} />
-                    ) : project.link ? (
-                        <div className="pdf-button-wrapper">
-                            <a className="pdf-view-btn" href={project.link} target="_blank" rel="noopener noreferrer">
-                                Check it out
-                            </a>
-                        </div>
-                    ) : null}
-                </div>
+                    <div className="project-text">
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                    </div>
+                    
+                    <div className="project-actions">
+                        {project.pdf ? (
+                            <PDFButton filePath={project.pdf} title={`Open`} />
+                        ) : project.link ? (
+                            <div className="pdf-button-wrapper">
+                                <a className="pdf-view-btn" href={project.link} target="_blank" rel="noopener noreferrer">
+                                    Check it out
+                                </a>
+                            </div>
+                        ) : null}
+                    </div>
             </div>
         </div>
     );

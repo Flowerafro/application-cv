@@ -1,9 +1,7 @@
 .pdf-button-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  padding: 0.5rem;
+  align-items: center;
 }
 
 .pdf-view-btn {
@@ -27,11 +25,16 @@
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
+  margin-left: 1rem;
 }
 
+/* ----------------- Desktop ----------------- */
+
+@media only screen and (min-width: 900px) {
 .pdf-download-link:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
+}
 }
 
 /* Note: viewer-specific styles removed; PDFViewer.tsx deleted when unused. */

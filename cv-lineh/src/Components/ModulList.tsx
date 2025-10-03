@@ -1,6 +1,6 @@
 
 import ModulCard from "./ModulCard";
-import { moduls } from '../Data/data';
+import { moduls } from '../Data';
 
 export default function ModulList() {
 

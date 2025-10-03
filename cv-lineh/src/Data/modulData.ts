@@ -1,4 +1,4 @@
-import type { Modul, Portfolio } from "../Types";
+import type { Modul } from "../Types";
 import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
 
 import diploma from '../assets/diploma.png';
@@ -7,15 +7,6 @@ import climbing from '../assets/climbing.jpg';
 import reading from '../assets/reading.jpg';
 import travel1 from '../assets/travel1.jpg';
 import camping from '../assets/camping.jpeg';
-
-import p10 from '../assets/p-10.png';
-import p11 from '../assets/p-11.png';
-import p12 from '../assets/p-12.png';
-import p13 from '../assets/p-13.png';
-import p14 from '../assets/p-14.png';
-import p15 from '../assets/p-15.png';
-import p16 from '../assets/p-16.png';
-
 
 export const moduls: Modul[] = [
     {
@@ -171,149 +162,5 @@ export const moduls: Modul[] = [
                 link: 'https://www.linkedin.com/in/line-henriksen-542a44290/'
             },
         ]
-    }
-]
-
-export const portfolio: Portfolio[] = [
-    {
-        id: 'project-1',
-        title: 'News web site',
-        description: 'Communication design exam project built with HTML, CSS and JS',
-        image: '',
-        images: [
-            {
-                id: 'project-1-image-0',
-                src: p10,
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-1-image-1',
-                src: p11,
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-1-image-2',
-                src: p12,
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-1-image-3',
-                src: p13,
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-1-image-4',
-                src: p14,
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-1-image-5',
-                src: p15,
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-1-image-6',
-                src: p16,
-                className: 'portfolio-image',
-            }
-        ],
-        link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
-    },
-    {
-        id: 'project-2',
-        title: 'TwoFaced',
-        description: 'Web design for the illustrator TwoFaced Artworks',
-        image: '',
-        images: [
-            {
-                id: 'project-2-image-1',
-                src: '',
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-2-image-2',
-                src: '',
-                className: 'portfolio-image',
-            }
-        ],
-        link: 'https://github.com/Flowerafro/TwoFacedArtworks',
-    },
-    {
-        id: 'project-3',
-        title: 'Web shop',
-        description: 'Exam project built with HTML, CSS and JS',
-        image: '',
-        images: [
-            {
-                id: 'project-3-image-1',
-                src: '',
-                className: 'portfolio-image',
-            },
-            {
-                id: 'project-3-image-2',
-                src: '',
-                className: 'portfolio-image',
-            }
-        ],
-        link: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
-    },
-    {
-        id: 'project-4',
-        title: 'Pokedex',
-        description: 'Exam project with React and API',
-        image: '',
-        images: [
-            {
-                id: 'project-4-image-1',
-                src: '',
-                className: 'portfolio-image',
-            }
-        ],
-        link: 'https://github.com/Flowerafro/PokedexGR18',
-    },
-    {
-        id: 'project-5',
-        title: 'Laftemannen',
-        description: 'Graphic design manual for Laftemannen AS',
-        image: '',
-        images: [
-            {
-                id: 'project-5-image-1',
-                src: '',
-                className: 'portfolio-image',
-            }
-        ],
-        link: '',
-        pdf: '/Profilmanual.pdf',
-    },
-    {
-        id: 'project-6',
-        title: 'Company Website',
-        description: 'A exam building a website for a fake company',
-        image: '',
-        images: [
-            {
-                id: 'project-6-image-1',
-                src: '',
-                className: 'portfolio-image',
-            }
-        ],
-        link: 'https://github.com/Flowerafro/webeksamen2023',
-        pdf: '',
-    },
-    {
-        id: 'project-7',
-        title: 'ContractFlow',
-        description: 'A exam building a logistics application',
-        image: '',
-        images: [
-            {
-                id: 'project-7-image-1',
-                src: '',
-                className: 'portfolio-image',
-            }
-        ],
-        link: 'https://github.com/Flowerafro/webeksamen2023',
-        pdf: '',
     }
 ]

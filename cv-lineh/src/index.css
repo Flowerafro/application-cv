@@ -87,6 +87,9 @@
 
   --portfolio-card-bg-color: var(--twilight-medium);
 
+  --project-title-color: var(--white-color);
+  --project-text-color: var(--light-grey-color);
+
   --text-color: #ffffff;
   --dark-grey-color: #333333;
   --grey-color: #cccccc;

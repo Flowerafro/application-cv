@@ -1,4 +1,4 @@
-import { portfolio } from '../Data/data';
+import { portfolio } from '../Data';
 import ProjectCard from './ProjectCard';
 import type { Portfolio } from '../Types';
 
@@ -14,7 +14,7 @@ export default function PortfolioList() {
     return (
         <main className="portfolio-list">
             {portfolio.map((project: Portfolio) => (
-                <ProjectCard key={project.id} project={project} />
+                <ProjectCard key={project.id} project={project}  />
             ))}
         </main>
     );
