@@ -7,7 +7,7 @@
 }
 
 .pdf-view-btn {
-  background: linear-gradient(90deg, var(--button-gradient-start), var(--button-gradient-end));
+  background-color: var(--accent-secondary);
   color: var(--button-text-color);
   padding: 0.8rem 1rem;
   border-radius: 6px;
