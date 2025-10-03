@@ -1,8 +1,8 @@
 
 import ModulCard from "./ModulCard";
-import type { Modul } from "../Types";
+import { moduls } from '../Data';
 
-export default function ModulList({ moduls }: { moduls?: Modul[] }) {
+export default function ModulList() {
 
     //moduls = undefined; // <-- temporary: forces the loading state for testing
     // data loading check

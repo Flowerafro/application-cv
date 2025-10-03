@@ -1,18 +1,24 @@
-
-import Layout from './Components/Layout'
-import { DarkModeProvider } from './Context/ThemeContext'
-import './index.css'
-import { moduls } from './Data/data'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './Components/Layout';
+import AboutMe from './Pages/AboutMe';
+import Portfolio from './Pages/Portfolio';
+import { DarkModeProvider } from './Context/ThemeContext';
+import './index.css';
 
 function App() {
   return (
-    <DarkModeProvider>
-      <div className="app">
-        <Layout moduls={moduls}/>
-      </div>
-    </DarkModeProvider>
-  )
+    <BrowserRouter>
+      <DarkModeProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<AboutMe />} />
+            <Route path="aboutme" element={<AboutMe />} />
+            <Route path="portfolio" element={<Portfolio />} />
+          </Route>
+        </Routes>
+      </DarkModeProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

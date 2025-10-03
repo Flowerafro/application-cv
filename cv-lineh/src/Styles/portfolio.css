@@ -1,180 +1,123 @@
-
-/* ----------------------------- Portfolio ------------------------------------ */
-.grid,
-.modul-list,
 .portfolio-list {
+  position: absolute;
+  top: 200px; /* Juster til høyden på headeren */
+  max-width: 600px;
+  margin: 2rem 0;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 1rem;
-  justify-items: center;
 }
 
-.portfolio-item {
-  background: var(--card-bg-color);
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.project-card {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  margin: 1rem;
+  background: var(--card-bg-color);
   transition: transform 220ms ease, box-shadow 220ms ease;
-}
 
-.modul-card-image {
-  width: 100%;
-  max-height: auto;
-  object-fit: cover;
-}
-
-.modul-text-portfolio {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  background-color: var(--portfolio-card-bg-color);
+  border-radius: 8px;
+  overflow: hidden;
 
-.modul-card-portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  margin: 0.5rem;
-
-  background-color: var(--card-bg-color);
-}
-
-.modul-card-portfolio .modul-content-wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.modul-card-portfolio .modul-text {
-  border: red 1px solid;
-  margin: 1rem 0;
-}
-
-.modul-card-portfolio .project-actions {
-  place-self: center;
-  
-} 
-
-
-/* ----------------------------- tablet------------------------------------ */
-
-@media only screen and (min-width: 500px) {
-    .modul-list,
-  .portfolio-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-   /*  .modul-card, .portfolio-item {
-    width: 100%;
-    max-width: 350px;
-    min-height: clamp(300px, 96%, 300px);
-  } */
-}
-
-/* ----------------------------- desktop ------------------------------------ */
-
-@media only screen and (min-width: 900px) {
-  .portfolio-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 200px);
-    gap: 1rem;
-  }
-
-  .project-1 { /* Web news page  */
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-  }
-
-  .project-2 { /* TwoFaced  */
-    grid-column: 3;
-    grid-row: 1 / 3;
-  }
-
-  .project-3 { /* Web shop  */
-    grid-column: 1;
-    grid-row: 3 / 5;
-  }
-
-  .project-4 { /* Pokedex */
-    grid-column: 2;
-    grid-row: 3 / 4;
-  }
-
-  .project-5 { /* Laftemannen  */
-    grid-column: 2 / 4;
-    grid-row: 4 / 5;
-  }
-
-  .project-6 { /* Company Website */
-    grid-column: 3;
-    grid-row: 3 / 4;
-  }
-}
-
-/* ----------------------------- Portfolio Image Slider ------------------------------------ */
-
-.portfolio-image-slider {
-  position: relative;
-  width: 100%;
-  margin-bottom: 1rem;
+  position: relative; /* festepunkt for knapper*/
 }
 
 .portfolio-image-container {
-  position: relative;
+    max-width: 600px; /* må være samme som vidden på portfolio-list*/
+    display: flex;
+    justify-content: center;
+  }
+
+.portfolio-image-slider .slider-image {
+    width: 100%; 
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background-color: var(--light-gray); 
+}
+
+.portfolio-image-slider {
   width: 100%;
+ padding: 1rem;
+}
+
+.portfolio-image-container {
+  /* position: relative; */
   overflow: hidden;
   border-radius: 8px;
 }
 
-.portfolio-image-container img {
-  width: 100%;
+.portfolio-image {
+  width: clamp(300px, 90%, 600px);
   height: auto;
   display: block;
   transition: opacity 0.3s ease;
 }
 
+.project-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.project-text h3 {
+  color: var(--project-title-color);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.project-text p {
+  color: var(--project-text-color);
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem 0;
+  flex-grow: 1;
+}
+
+/* -------------------- portfolio-nav buttons -------------------- */
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .portfolio-nav-btn {
   position: absolute;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: var(--accent-primary);
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  background-color: transparent;
+ 
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   transition: background-color 0.2s ease, opacity 0.2s ease;
   z-index: 10;
-  opacity: 0.8;
-}
-
-.portfolio-nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .portfolio-nav-prev {
-  left: 10px;
+  left: 0px;
 }
 
 .portfolio-nav-next {
-  right: 10px;
+  right: 0px;
 }
 
 .portfolio-slider-dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
   margin-top: 0.75rem;
 }
@@ -184,18 +127,18 @@
   height: 10px;
   border-radius: 50%;
   border: none;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--accent-secondary);
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.portfolio-dot:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-dot.active {
-  background-color: var(--accent-color, #007acc);
+  background-color: var(--accent-primary);
+   width: 12px;
+  height: 12px;
 }
 
 .portfolio-image-counter {
@@ -210,44 +153,123 @@
   font-weight: 500;
 }
 
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .portfolio-dot {
-    background-color: rgba(255, 255, 255, 0.3);
+
+/* ----------------------------- tablet------------------------------------ */
+
+@media only screen and (min-width: 500px) {
+  .portfolio-list {
+    /* grid-template-columns: repeat(2, 1fr); */
+    max-width: 800px;
   }
-  
-  .portfolio-dot:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+
+  .portfolio-image-container {
+    max-width: 800px; /* må være samme som vidden på portfolio-list*/
   }
-  
+
+  .portfolio-image-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-text {
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+
+  .project-actions {
+    justify-content: center;
+  }
+
   .portfolio-nav-btn {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+  top: 50%;
+  font-size: 2.2rem;
+}
+
+.portfolio-nav-prev {
+  left: 10px;
+}
+
+.portfolio-nav-next {
+  right: 10px;
+}
+
+}
+
+/* ----------------------------- desktop ------------------------------------ */
+
+@media only screen and (min-width: 900px) {
+  .portfolio-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin: 0;
+    max-width: 1000px;
   }
-  
-  .portfolio-nav-btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+
+  .project-card {
+    margin: 0;
+  }
+
+  .portfolio-dot:hover {
+  background-color: var(--accent-primary);
+  transform: scale(1.1);
+}
+
+  .project-1 { /* Web news page  */
+    grid-column: 1 / 4;
+    grid-row: 1;
+  }
+
+  .project-2 { /* TwoFaced  */
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+
+  .project-3 { /* Web shop  */
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+
+  .project-4 { /* Pokedex */
+    grid-column: 1 / 4;
+    grid-row: 4;
+  }
+
+  .project-5 { /* Laftemannen  */
+   grid-column: 1 / 4;
+    grid-row: 5;
+  }
+
+  .project-6 { /* Company Website */
+    grid-column: 1 / 4;
+    grid-row: 6;
+  }
+
+  .project-7 { /* Contract Flow */
+   grid-column: 1 / 4;
+    grid-row: 7;
   }
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .portfolio-nav-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
+/* ----------------------------- Portfolio Image Slider ------------------------------------ */
+
+
+
+
+/* Dark mode adjustments */
+/* @media (prefers-color-scheme: dark) {
+  .portfolio-dot {
+    background-color: var(--accent-secondary);
+  }
+
+  .portfolio-dot.active {
+    background-color: var(--accent-primary);
   }
   
-  .portfolio-nav-prev {
-    left: 5px;
+  .portfolio-dot:hover {
+    background-color: var(--accent-primary);
   }
   
-  .portfolio-nav-next {
-    right: 5px;
-  }
-  
-  .portfolio-image-counter {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-  }
-}
+} */
+

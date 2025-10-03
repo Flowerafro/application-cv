@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 
-// rotating images for modul of interests, based on index and interval
-// if user prefers reduced motion, do not rotate - redused motion  
+// image rotation hook on loop
 
-export function useRotatingImages(images?: { src: string }[], enabled = true, intervalMs = 3000) {
+export function useRotatingImages(images?: { src: string }[], enabled = true, intervalMs = 2000) {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {

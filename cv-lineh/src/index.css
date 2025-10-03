@@ -3,6 +3,7 @@
 @import './Styles/navbar.css';
 @import './Styles/portfolio.css';
 @import './Styles/style.css';
+@import './Styles/aboutme.css';
 
 
 :root {
@@ -27,19 +28,25 @@
   --magenta-color: #b62cbb;
   --white-color: #ffffff;
   --black-color: #000000;
+  --black-opacity40: #00000040;
   --oker-color: #f0a500ff;
 
-  --spring-warm: #EDB458;
-  --spring-warm-2: #E8871E;
+  /*Light mode colors inspired by spring*/
+
+  --spring-contrast: #E8871E;
+  --spring-contrast-2:#EDB458;
   --spring-green-light: #EBF5DF;
   --spring-green: #BAD4AA;
   --spring-green-yellow: #D4D4AAf4;
 
-  --midnight-dark: #11151C;
-  --midnight-medium: #212D40;
-  --midnight-light: #364156;
-  --midnight-cool: #9A8C98;
-  --midnight-cool-2: #C9ADA7;
+    /*Light mode colors inspired by twilight*/
+
+  --twilight-dark: #11151C;
+  --twilight-medium: #212D40;
+  --twilight-light: #364156;
+
+  --twilight-contrast: #ef4f91;
+  --twilight-contrast-2: 	#c79dd7;
 
 
   /* Light theme (default) */
@@ -55,12 +62,14 @@
   --dark-opacity: #00000089;
   
   /* Theme-aware button colors */
-  --accent-primary: var(--green-color);
-  --accent-secondary: var(--dark-green-color);
+  --accent-primary: var(--spring-contrast);
+  --accent-secondary: var(--spring-contrast-2);
 
-  --button-gradient-start: var(--spring-warm);
-  --button-gradient-end: var(--spring-warm-2);
+  --button-gradient-start: var(--spring-contrast);
+  --button-gradient-end: var(--spring-contrast-2);
   --button-text-color: var(--white-color);
+
+   --nav-btn: var(--spring-contrast-2);
 
   --link-color: #5a5a5a;
   --link-hover-color: var(--text-color);
@@ -72,11 +81,14 @@
 
 /* Dark theme */
 :root[data-theme="dark"] {
-  --bg-color: var(--midnight-dark);               
-  --header-bg-color: var(--midnight-medium);       
-  --navbar-bg-color: var(--midnight-light);
-  --card-bg-color: var(--midnight-medium);        
+  --bg-color: var(--twilight-dark);               
+  --header-bg-color: var(--twilight-medium);       
+  --navbar-bg-color: var(--twilight-light);
 
+  --portfolio-card-bg-color: var(--twilight-medium);
+
+  --project-title-color: var(--white-color);
+  --project-text-color: var(--light-grey-color);
 
   --text-color: #ffffff;
   --dark-grey-color: #333333;
@@ -85,15 +97,18 @@
   --dark-opacity: #ffffff20;
   
   /* Theme-aware button colors for dark mode */
-  --accent-primary: var(--light-green-color);
-  --accent-secondary: var(--green-color);
-  --button-gradient-start: var(--midnight-cool);
-  --button-gradient-end: var(--midnight-cool-2);
-  --button-text-color: var(--midnight-dark);
+  --accent-primary: var(--twilight-contrast);
+  --accent-secondary: var(--twilight-contrast-2);
+
+  --button-gradient-start: var(--twilight-contrast);
+  --button-gradient-end: var(--twilight-contrast-2);
+  --button-text-color: var(--twilight-dark);
+
+  --nav-btn: var(--twilight-contrast-2);
 
 
-  --link-color: var(--midnight-cool-2);
-  --link-hover-color: var(--midnight-cool);
+  --link-color: var(--twilight-contrast-2);
+  --link-hover-color: var(--twilight-contrast);
   
   color-scheme: dark;
 }

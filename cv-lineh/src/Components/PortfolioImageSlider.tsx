@@ -1,5 +1,7 @@
 import { useImageSlider } from '../Hooks/useImageSlider';
 import type { PortfolioImages } from '../Types';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 interface PortfolioImageSliderProps {
     images: PortfolioImages[];
@@ -53,7 +55,8 @@ export default function PortfolioImageSlider({ images, projectTitle }: Portfolio
                     onClick={prevImage}
                     aria-label="Previous image"
                 >
-                    &#8249;
+                    <IoIosArrowDropleftCircle />
+                    
                 </button>
                 
                 <button 
@@ -61,7 +64,7 @@ export default function PortfolioImageSlider({ images, projectTitle }: Portfolio
                     onClick={nextImage}
                     aria-label="Next image"
                 >
-                    &#8250;
+                   <IoIosArrowDroprightCircle />
                 </button>
             </div>
 
@@ -75,11 +78,6 @@ export default function PortfolioImageSlider({ images, projectTitle }: Portfolio
                         aria-label={`Go to image ${index + 1}`}
                     />
                 ))}
-            </div>
-
-            {/* Image counter */}
-            <div className="portfolio-image-counter">
-                {currentIndex + 1} / {images.length}
             </div>
         </div>
     );
