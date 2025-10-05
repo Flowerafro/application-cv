@@ -71,7 +71,7 @@
 
    --nav-btn: var(--spring-contrast-2);
 
-  --link-color: #5a5a5a;
+  --link-color: var(--spring-contrast-2);
   --link-hover-color: var(--text-color);
   
   background-color: var(--bg-color);

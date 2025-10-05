@@ -13,6 +13,7 @@ export interface EmploymentFlipCardProps {
     tagline: string;
     employees: Employment[];
     height?: number; // allow override if list grows
+    onFlip?: (flipped: boolean) => void;
 }
 
 export interface interestImages {

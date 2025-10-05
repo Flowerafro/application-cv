@@ -1,6 +1,5 @@
 import type { Modul } from "../Types";
 import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity } from "react-icons/si";
-import { LuMousePointerClick } from "react-icons/lu";
 
 import diploma from '../assets/diploma.png';
 import hiking from '../assets/hiking.jpg';
@@ -84,30 +83,30 @@ export const moduls: Modul[] = [
     },
     {
         id: 'modul-4',
-        title: 'I have experience working with',
+        title: 'I have experience with',
         description: ' ',
         className: 'modul-card-experience',
         image: '',
         work: [
             {
                 id: 'modul-4-work-1',
-                description: 'project management',
+                description: 'Coordination and execution of events and performances',
             },
             {
                 id: 'modul-4-work-2',
-                description: 'team leadership',
+                description: 'team leadership and collaboration',
             },
             {
                 id: 'modul-4-work-3',
-                description: 'problem solving',
+                description: 'quick thinking and problem solving',
             },
             {
                 id: 'modul-4-work-4',
-                description: 'decision making in stressed situations',
+                description: 'organizational skills and multitasking',
             },
             {
                 id: 'modul-4-work-5',
-                description: 'communication with clients',
+                description: 'demonstrating precision and adherence to safety protocols',
             }
         ]
     },
@@ -151,17 +150,22 @@ export const moduls: Modul[] = [
         description: '',
         className: 'modul-card-employment',
         image: '',
-        tagline: 'My past employees',
+        tagline: 'Flip to view last employers',
         employees: [
             {
+                id: 'modul-6-employment-0',
+                title: 'Sporveien',
+                period: '2020 - 2025',
+            },
+            {
                 id: 'modul-6-employment-1',
-                title: 'Parkteatret',
+                title: 'Parkteatret SCENE AS',
                 period: '2013 - 2020',
             },
             {
                 id: 'modul-6-employment-2',
-                title: 'Freelance Web Projects',
-                period: '2022 - 2024',
+                title: 'Backstage M&P',
+                period: '2017 - 2019',
             }
         ]
     }
