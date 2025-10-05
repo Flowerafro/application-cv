@@ -4,13 +4,12 @@
         justify-content: center; /* center the inner content wrapper */
         align-items: center;
         background-color: var(--navbar-bg-color);
-        padding-bottom: 0.5rem;
     }
 
     /* inner centered container to match .header-content */
     .nav-content {
       width: 100%;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       margin: 0 auto;
       display: flex;
       justify-content: space-evenly;
@@ -21,7 +20,7 @@
         border: none;
         padding: 0.5rem 1rem;
         border-radius: 2px;
-        margin: 0.25rem 0.5rem; /* smaller margins to fit centered container */
+        margin: 0.25rem; /* smaller margins to fit centered container */
         position: relative; /* for underline pseudo-element */
         color: var(--text-color);
         background-color: transparent;
@@ -35,7 +34,7 @@
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -4px;
+        bottom: -2px;
         transform: translateX(-50%) scaleX(0);
         transform-origin: center;
         width: 80%;
@@ -54,7 +53,7 @@
     .nav-button.active {
         color: var(--text-color);
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 1px;
         transform: translateY(-1px);
     }

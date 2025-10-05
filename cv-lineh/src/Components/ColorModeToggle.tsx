@@ -9,7 +9,7 @@ function ColorModeToggle() {
     }
 
     return (
-        <div className="ColorToggle">
+        <div className="colortoggle">
             <button 
                 onClick={handleClick}
                 aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}

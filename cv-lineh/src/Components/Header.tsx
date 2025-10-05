@@ -2,8 +2,10 @@ import { useState, useRef } from "react";
 import lhworks from '../assets/LHworks.jpeg';
 import ColorModeToggle from "./ColorModeToggle";
 import { NavLink } from "react-router-dom";
-import { DiGithubBadge } from "react-icons/di";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaBehance } from "react-icons/fa6";
+import { FaDeviantart } from "react-icons/fa";
 
 export default function Header() {
     // state som styrer at headeren skal gå fra fullscreen til shrink til normal
@@ -39,11 +41,16 @@ export default function Header() {
                     </div>
                     <div className="contact-links">
                         <ul>
-                        <li><a href="#"><DiGithubBadge /></a></li>
-                        <li><a href="#"><FaLinkedin /></a></li>
+                        <li><a href="https://github.com/Flowerafro" target="_blank" rel="noopener noreferrer"><FaGithub /></a></li>
+                        <li><a href="https://www.linkedin.com/in/line-henriksen-542a44290/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a></li>
+                        <li><a href="https://www.behance.net/linehenriksen2" target="_blank" rel="noopener noreferrer"><FaBehance /></a></li>
+                        <li><a href="https://www.deviantart.com/fl0werafr0" target="_blank" rel="noopener noreferrer"><FaDeviantart /></a></li>
                     </ul>
                     </div>
-                    <ColorModeToggle />
+                    <div className="colortogglediv">
+                        <ColorModeToggle />
+                    </div>
+                    
                 </div>
             )}
             
