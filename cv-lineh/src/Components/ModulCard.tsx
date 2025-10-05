@@ -4,6 +4,7 @@ import ToolList from './ToolList';
 import InterestCarousel from './InterestCarousel';
 import type { Modul } from '../Types';
 import useViewport from '../Hooks/useViewport';
+import EmploymentFlipCard from './EmploymentFlipCard';
 
 export default function ModulCard({ modul, className = 'modul-card' }: { modul: Modul; className?: string }) {
     const [hoveredToolName, setHoveredToolName] = useState<string | null>(null);
@@ -36,7 +37,7 @@ export default function ModulCard({ modul, className = 'modul-card' }: { modul: 
 
                 <div className="modul-text">
                     <h3>{isDesktop && hoveredToolName ? hoveredToolName : modul.title}</h3>
-                    <p>{modul.description}</p>
+                    {modul.description && modul.description !== '-' && <p>{modul.description}</p>}
                 </div>
 
                 {modul.tools && modul.tools.length > 0 && (
@@ -47,6 +48,20 @@ export default function ModulCard({ modul, className = 'modul-card' }: { modul: 
 
                 {modul.interestImages && modul.interestImages.length > 0 && (
                     <InterestCarousel images={modul.interestImages} altPrefix={`Image for ${modul.title}`} />
+                )}
+
+                {modul.className === 'modul-card-employment' && modul.employees && modul.employees.length > 0 && (
+                    <EmploymentFlipCard tagline={modul.tagline ?? ''} employees={modul.employees} />
+                )}
+
+                {modul.className !== 'modul-card-employment' && modul.employees && modul.employees.length > 0 && (
+                    <ul className="employment-list">
+                        {modul.employees.map(emp => (
+                            <li key={emp.id} className="employment-item">
+                                {emp.period && <span className="employment-period">{emp.period}</span>}
+                            </li>
+                        ))}
+                    </ul>
                 )}
 
             </div>

@@ -17,7 +17,7 @@
   display: flex;
 }
 
-.modul-card-education, .modul-card-coding, .modul-card-tools, .modul-card-experience, .modul-card-interests, .modul-card-findme {
+.modul-card-education, .modul-card-coding, .modul-card-tools, .modul-card-experience, .modul-card-interests, .modul-card-employment {
   width: 100%;
   max-width: 380px;
 }
@@ -315,30 +315,74 @@
 
 /*** card id 7*/
 
-.modul-card-findme {
-  background-color: var(--dark-grey-color);
+.modul-card-employment {
+   background-color: var(--dark-grey-color);
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start; /* so content starts at top */
+  align-items: stretch;
+  color: var(--white-color);
+  padding: 1rem;
 }
 
-.modul-card-findme .modul-text {
+.modul-card-employment .modul-text {
   color: var(--white-color);
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
 }
 
-.modul-card-findme .modul-text h3 {
-  font-size: 2rem;
+.modul-card-employment .modul-text h3 {
+  font-size: 1rem;
   font-weight: 600;
 }
 
-.modul-card-findme .modul-text p {
-  font-size: 1rem;
+.modul-card-employment .modul-text p {
+  font-size: 0.7rem;
   font-weight: 300;
   padding-bottom: 1rem;
 }
+
+.employment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.employment-item strong {
+  font-weight: 600;
+  display: block;
+  line-height: 1.2;
+}
+
+.employment-period {
+  opacity: 0.75;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+/* add subtle separators for clarity */
+.employment-item {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.employment-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Minimal employment flip (restored) */
+.employment-flip { position: relative; perspective: 800px; }
+.ef-inner { position: relative; width: 100%; height: 160px; transform-style: preserve-3d; transition: transform .5s; }
+.ef-inner.flipped { transform: rotateY(180deg); }
+.ef-face { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; padding:.5rem; backface-visibility: hidden; -webkit-backface-visibility:hidden; }
+.ef-front { }
+.ef-back { transform: rotateY(180deg); overflow-y:auto; }
+.employment-flip:focus-visible { outline:2px solid var(--accent-primary,#4dd); outline-offset:3px; }
 
 
 /* ------------- tablet ------------------- */
@@ -425,7 +469,7 @@
     grid-row: 3;
   }
 
-    .modul-card-findme {
+    .modul-card-employment {
     grid-column: 3;
     grid-row: 3;
   }

@@ -1,6 +1,9 @@
 import { useState, useRef } from "react";
 import lhworks from '../assets/LHworks.jpeg';
 import ColorModeToggle from "./ColorModeToggle";
+import { NavLink } from "react-router-dom";
+import { DiGithubBadge } from "react-icons/di";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Header() {
     // state som styrer at headeren skal gå fra fullscreen til shrink til normal
@@ -21,18 +24,25 @@ export default function Header() {
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
                     <h1> </h1>
-                    <button className="intro-btn" onClick={handleClick}> Go.</button>
+                    <button className="intro-btn" onClick={handleClick}> welcome </button>
                 </div>
             ) : (
                 <div className="header-content">
                     <div className="profile">
-                        <img src={lhworks} alt="Profilbilde" className="profile-img" />
+                        <NavLink to="/aboutme" className="profile-link" >
+                            <img src={lhworks} alt="Profilbilde" className="profile-img" />
+                        </NavLink>
                         <div className="profile-info">
                             <span className="profile-name">Line H</span>
                             <span className="profile-title">Student @ HIOF</span>
                         </div>
                     </div>
-                    {/* <button className="contact-btn">Kontakt meg</button> */}
+                    <div className="contact-links">
+                        <ul>
+                        <li><a href="#"><DiGithubBadge /></a></li>
+                        <li><a href="#"><FaLinkedin /></a></li>
+                    </ul>
+                    </div>
                     <ColorModeToggle />
                 </div>
             )}

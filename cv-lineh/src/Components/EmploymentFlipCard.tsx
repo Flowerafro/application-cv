@@ -1,0 +1,34 @@
+import { useState } from 'react';
+import Employment from './Employment';
+import type { EmploymentFlipCardProps } from '../Types';
+import PDFButton from './PDFButton';
+
+
+export default function EmploymentFlipCard({ tagline, employees, height = 160 }: EmploymentFlipCardProps) {
+  const [flipped, setFlipped] = useState(false);
+
+  if (!employees || employees.length === 0) return null;
+
+  const handleClick = () => setFlipped(f => !f);
+
+  return (
+    <div
+      className="employment-flip"
+      role="button"
+      tabIndex={0}
+      aria-pressed={flipped}
+      onClick={handleClick}
+      style={{ height }}
+    >
+      <div className={`ef-inner ${flipped ? 'flipped' : ''}`}>
+        <div className="ef-face ef-front" aria-hidden={flipped}>
+          <h3>{tagline} + </h3>
+        </div>
+        <div className="ef-face ef-back" aria-hidden={!flipped}>
+          <Employment employees={employees} />
+        </div>
+      </div>
+      <PDFButton filePath="/application-cv/Resume2025.pdf" title="Resume" />
+    </div>
+  );
+}

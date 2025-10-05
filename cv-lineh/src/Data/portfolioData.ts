@@ -221,7 +221,7 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: '',
-        pdf: '/Profilmanual.pdf',
+        pdf: '/application-cv/Profilmanual.pdf',
     },
     {
         id: 'project-6',

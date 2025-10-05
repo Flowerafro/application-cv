@@ -28,6 +28,7 @@
         font-size: 0.9rem;
         font-weight: 600;
         transition: color 260ms ease, letter-spacing 260ms ease, transform 260ms ease;
+        text-decoration: none;
     }
 
     .nav-button::after {

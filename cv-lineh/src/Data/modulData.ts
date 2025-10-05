@@ -1,5 +1,6 @@
 import type { Modul } from "../Types";
-import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiLinkedin } from "react-icons/si";
+import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity } from "react-icons/si";
+import { LuMousePointerClick } from "react-icons/lu";
 
 import diploma from '../assets/diploma.png';
 import hiking from '../assets/hiking.jpg';
@@ -146,21 +147,22 @@ export const moduls: Modul[] = [
     },
     {
         id: 'modul-6',
-        title: 'Find me',
-        description: '-',
-        className: 'modul-card-findme',
+        title: 'Employment',
+        description: '',
+        className: 'modul-card-employment',
         image: '',
-        socialLinks: [
+        tagline: 'My past employees',
+        employees: [
             {
-                id: 'modul-6-social-1',
-                icon: SiGithub,
-                link: 'https://github.com/Flowerafro?tab=repositories'
+                id: 'modul-6-employment-1',
+                title: 'Parkteatret',
+                period: '2013 - 2020',
             },
             {
-                id: 'modul-6-social-2',
-                icon: SiLinkedin,
-                link: 'https://www.linkedin.com/in/line-henriksen-542a44290/'
-            },
+                id: 'modul-6-employment-2',
+                title: 'Freelance Web Projects',
+                period: '2022 - 2024',
+            }
         ]
     }
 ]
