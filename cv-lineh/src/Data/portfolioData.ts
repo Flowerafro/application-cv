@@ -256,7 +256,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-7',
         title: 'Contract Flow',
-        description: 'Exam project: building a logistics application with React, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma',
+        description: 'Current Exam project (2025): building a logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
         image: '',
         images: [
             {
@@ -302,5 +302,23 @@ export const portfolio: Portfolio[] = [
         ],
         link: 'https://github.com/Flowerafro/webeksamen2023',
         pdf: '',
+    },
+    {
+        id: 'project-8',
+        title: 'Trollstien',
+        description: 'UI/UX project: How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma.',
+        image: '',
+        images: [],
+        link: '#',
+        pdf: ''
+    },
+    {
+        id: 'project-9',
+        title: 'Application CV',
+        description: 'This portfolio site you are visiting right now. Built with React, SASS and TypeScript!',
+        image: '',
+        images: [],
+        link: '',
+        pdf: ''
     }
 ]

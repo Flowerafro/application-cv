@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                         ) : project.link ? (
                             <div className="pdf-button-wrapper">
                                 <a className="pdf-view-btn" href={project.link} target="_blank" rel="noopener noreferrer">
-                                    Profile Manual
+                                    View
                                 </a>
                             </div>
                         ) : null}

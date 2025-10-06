@@ -22,10 +22,10 @@ export default function Header() {
     };
 
     return (
-        <header className={`header-bg ${headerState}`}>
+        <header className={`header-bg ${headerState} aurora-drift`}>
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
-                    <h1> </h1>
+                    <h1> Hi!  Im Line a designer of digital experiences and web designs</h1>
                     <button className="intro-btn" onClick={handleClick}> welcome </button>
                 </div>
             ) : (

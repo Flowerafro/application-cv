@@ -1,0 +1,179 @@
+/* header animasjon states */
+.header-bg.fullscreen {
+  position: fixed;
+   overflow: hidden;
+  top: 0; left: 0; right: 0;
+  
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.7s cubic-bezier(0.77,0,0.175,1), padding 0.7s ease-in-out, background-color 0.5s ease-in-out;
+  will-change: height, padding, background-color;
+}
+
+.header-bg.shrink {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100vw;
+  height: 200px;
+  z-index: 1000;
+  transition: height 0.8s cubic-bezier(0.77,0,0.175,1), padding 0.7s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-bg.normal {
+  position: static;
+    top: 0; left: 0; right: 0;
+  /* width: 100%; */
+  width: 100vw;
+  height: 200px;
+  transition: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: clamp(280px, 90vw, 600px);
+  position: relative;
+}
+
+
+.intro-btn {
+  margin: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s;
+  overflow: hidden;
+  border-radius: 20px;
+
+  animation: btn-reveal 3s ease forwards;
+}
+
+@keyframes btn-reveal {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/** Landing page text reveal **/
+
+.intro-content h1 {
+  animation: title-rise 3s cubic-bezier(.55,.1,.25,1) forwards;
+  will-change: transform, opacity;
+  flex-wrap: wrap;
+
+  border: none;
+  padding: 1rem;
+}
+
+
+@keyframes title-rise {
+  0%   { opacity: 0; transform: translateY(200px); }
+  50%  { transform: translateY(0px); }
+  90%  { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 1; }
+}
+
+/* Landing page background */
+/* Aurora state opacity variables */
+.header-bg.aurora-drift { --aurora-opacity: 0; }
+.header-bg.fullscreen.aurora-drift { --aurora-opacity: 0.92; }
+.header-bg.shrink.aurora-drift { --aurora-opacity: 0.45; }
+.header-bg.normal.aurora-drift { --aurora-opacity: 0; }
+
+/* Base pseudo elements persist across states so opacity can transition smoothly */
+.header-bg.aurora-drift::before,
+.header-bg.aurora-drift::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: blur(70px) saturate(140%);
+  opacity: var(--aurora-opacity);
+  will-change: transform, filter, opacity;
+  z-index: 0;
+  transition: opacity 1.3s cubic-bezier(.55,.1,.25,1), filter 4s linear;
+}
+
+/* Layer specifics */
+.header-bg.aurora-drift::before {
+  background:
+    radial-gradient(circle at 18% 72%, rgba(10, 0, 20, 0.85), transparent 62%),
+    radial-gradient(circle at 78% 32%, rgba(25,140,185,0.28), transparent 64%),
+    linear-gradient(300deg, rgb(0, 0, 0), rgb(40, 90, 100));
+  animation: auroraDriftA 12s linear infinite, auroraHue 18s linear infinite;
+}
+
+.header-bg.aurora-drift::after {
+  background:
+    radial-gradient(circle at 25% 40%, rgba(40, 0, 70, 0.75), transparent 60%),
+    radial-gradient(circle at 70% 65%, rgba(15,120,160,0.25), transparent 65%),
+    linear-gradient(320deg, rgb(15, 15, 35), rgb(20, 60, 95));
+  animation: auroraDriftB 28s linear infinite reverse, auroraHue 46s linear infinite reverse;
+  opacity: calc(var(--aurora-opacity) * 0.82);
+}
+
+/* Optional: slower fade when going to normal (delay after shrink conversion) */
+.header-bg.normal.aurora-drift::before,
+.header-bg.normal.aurora-drift::after {
+  transition-duration: 2.2s;
+}
+
+@keyframes auroraDriftA {
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  50%  { transform: translate3d(4%, -3%, 0) scale(1.06); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+@keyframes auroraDriftB {
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  50%  { transform: translate3d(-5%, 4%, 0) scale(1.07); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+@keyframes auroraHue {
+  0%   { filter: hue-rotate(0deg) blur(70px) saturate(140%); }
+  100% { filter: hue-rotate(360deg) blur(70px) saturate(140%); }
+}
+
+@media only screen and (min-width: 600px) {
+.header-bg.normal {
+  height: 100px;
+}
+
+.header-bg.shrink {
+  height: 100px;
+}
+}
+
+/* desktop */
+@media only screen and (min-width: 900px) {
+  .intro-btn:hover {
+   
+  }
+}

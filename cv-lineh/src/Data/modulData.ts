@@ -90,23 +90,23 @@ export const moduls: Modul[] = [
         work: [
             {
                 id: 'modul-4-work-1',
-                description: 'Coordination and execution of events and performances',
+                description: 'Coordination, organizing and execution of events and performances',
             },
             {
                 id: 'modul-4-work-2',
-                description: 'team leadership and collaboration',
+                description: 'Team leadership and collaboration',
             },
             {
                 id: 'modul-4-work-3',
-                description: 'quick thinking and problem solving',
+                description: 'Quick thinking and problem solving',
             },
             {
                 id: 'modul-4-work-4',
-                description: 'organizational skills and multitasking',
+                description: 'Using design methods to create user-friendly solutions',
             },
             {
                 id: 'modul-4-work-5',
-                description: 'demonstrating precision and adherence to safety protocols',
+                description: 'Demonstrating precision and adherence to safety protocols',
             }
         ]
     },

@@ -1,71 +1,4 @@
-/* header animasjon states */
-.header-bg.fullscreen {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: height 0.7s cubic-bezier(0.77,0,0.175,1), padding 0.7s ease-in-out, background-color 0.5s ease-in-out;
-  will-change: height, padding, background-color;
-}
-
-.header-bg.shrink {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  width: 100vw;
-  height: 200px;
-  z-index: 1000;
-  transition: height 0.8s cubic-bezier(0.77,0,0.175,1), padding 0.7s;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.header-bg.normal {
-  position: static;
-    top: 0; left: 0; right: 0;
-  /* width: 100%; */
-  width: 100vw;
-  height: 200px;
-  transition: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.intro-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  height: 100%;
-}
-
-.intro-btn {
-  position: relative;
-  margin: 2rem;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  border: none;
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.3s;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-
-/* header */
+/* ---------- header ------------ */
 
 .header-bg {
   background-size: cover;
@@ -139,7 +72,7 @@
   outline-offset: 2px;
 }
 
-.contact-btn {
+/* .contact-btn {
   background-color: transparent;
   border: 1px solid var(--light-grey-color);
   border-radius: 4px;
@@ -149,11 +82,9 @@
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+} */
 
 /* ColorToggle */
-
-/* Theme toggle button styling */
 
 .colortogglediv {
   position: absolute;
@@ -198,13 +129,7 @@
 /*tablet */
 
 @media only screen and (min-width: 600px) {
-.header-bg.normal {
-  height: 100px;
-}
 
-.header-bg.shrink {
-  height: 100px;
-}
 
 .header-content {
   flex-direction: row;
@@ -246,13 +171,6 @@
 
 /* desktop */
 @media only screen and (min-width: 900px) {
-  .header-bg.normal {
-  height: 110px;
-}
-
-.header-bg.shrink {
-  height: 110px;
-}
 
 .header-content {
   padding: 0;
