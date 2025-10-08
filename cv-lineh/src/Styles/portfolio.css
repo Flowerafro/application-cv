@@ -250,6 +250,19 @@
    grid-column: 1 / 4;
     grid-row: 7;
   }
+
+  .project-8 { /* Contract Flow */
+   grid-column: 1 / 4;
+    grid-row: 8;
+  }
+  .project-9 { /* Contract Flow */
+   grid-column: 1 / 4;
+    grid-row: 9;
+  }
+  .project-10 { /* Contract Flow */
+   grid-column: 1 / 4;
+    grid-row: 10;
+  }
 }
 
 /* ----------------------------- Portfolio Image Slider ------------------------------------ */

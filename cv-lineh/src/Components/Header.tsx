@@ -6,7 +6,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa6";
 import { FaDeviantart } from "react-icons/fa";
-import MovingBorderButton from './MovingBorderButton';
 
 export default function Header() {
     // state som styrer at headeren skal gå fra fullscreen til shrink til normal
@@ -17,7 +16,7 @@ export default function Header() {
     const handleClick = () => {
         setHeaderState("shrink");
         // Etter animasjonen, bytt til normal header
-        timeoutRef.current = window.setTimeout(() => {
+        timeoutRef.current = setTimeout(() => {
             setHeaderState("normal");
         }, 900); // Samme som transition-tid i CSS
     };
@@ -27,9 +26,7 @@ export default function Header() {
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
                     <h1> Hi!  Im Line a designer of digital experiences and web designs</h1>
-                    <MovingBorderButton onClick={handleClick} glow borderRadius="2.2rem">
-                        welcome
-                    </MovingBorderButton>
+                    <button className="intro-btn" onClick={handleClick}> welcome </button>
                 </div>
             ) : (
                 <div className="header-content">

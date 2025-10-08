@@ -17,6 +17,9 @@ import p30 from '../assets/p-30.png';
 import p31 from '../assets/p-31.png';
 import p32 from '../assets/p-32.png';
 import p33 from '../assets/p-33.png';
+import p34 from '../assets/p-34.png';
+import p35 from '../assets/p-35.png';
+
 
 import p40 from '../assets/p-40.png';
 import p41 from '../assets/p-41.png';
@@ -45,12 +48,24 @@ import p75 from '../assets/p-75.png';
 import p76 from '../assets/p-76.png';
 import p77 from '../assets/p-77.png';
 
+import p90 from '../assets/p-90.png';
+import p91 from '../assets/p-91.png';
+import p92 from '../assets/p-92.png';
+import p93 from '../assets/p-93.png';
+
+import p100 from '../assets/p-100.png';
+import p101 from '../assets/p-101.png';
+import p102 from '../assets/p-102.png';
+import p103 from '../assets/p-103.png';
+
+import troll from '../assets/logoMnavn.png';
+
 
 export const portfolio: Portfolio[] = [
     {
         id: 'project-1',
         title: 'News web site',
-        description: 'Communication design exam project built with HTML, CSS and JS',
+        description: 'Exam project 2024: Communication design exam project built with HTML, CSS and JS',
         image: '',
         images: [
             {
@@ -94,7 +109,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-2',
         title: 'TwoFaced Artworks',
-        description: 'Web design for the illustrator TwoFaced Artworks. Built with React, SASS and Sanity',
+        description: 'As a practice project, I created web design for the norwegian illustrator TwoFaced Artworks. Built with React, SASS and Sanity',
         image: '',
         images: [
             {
@@ -123,8 +138,8 @@ export const portfolio: Portfolio[] = [
     },
     {
         id: 'project-3',
-        title: 'Web shop',
-        description: 'Exam project: building a web shop with HTML, CSS and JS',
+        title: 'EuroThrift',
+        description: 'Acting as a prompt engineer, I created a functional web app using React, TypeScript, OpenAI API, and TailwindCSS. EuroThrift is a Travel Guide for travelers on a budget, with  search function and budget calculator.',
         image: '',
         images: [
             {
@@ -146,14 +161,24 @@ export const portfolio: Portfolio[] = [
                 id: 'project-3-image-3',
                 src: p33,
                 className: 'portfolio-image',
+            },
+            {
+                id: 'project-3-image-4',
+                src: p34,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-3-image-5',
+                src: p35,
+                className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
+        link: 'https://flowerafro.github.io/EuroThrift/',
     },
     {
         id: 'project-4',
         title: 'Pokedex',
-        description: 'Exam project: building a Pokedex with React, Sanity and API',
+        description: 'Exam project 2024: Gotta catch them all - building a Pokedex with React, Sanity and API',
         image: '',
         images: [
             {
@@ -176,7 +201,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-5',
         title: 'Laftemannen',
-        description: 'Exam project: A graphic design manual for Laftemannen Company using ADOBE ID/AI/PS',
+        description: 'Exam project 2025: A graphic design manual for Laftemannen Company using ADOBE ID/AI/PS',
         image: '',
         images: [
             {
@@ -226,7 +251,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-6',
         title: 'Company Website',
-        description: 'Exam project: building a website for a fake company using HTML, CSS and JS',
+        description: 'Exam project 2023: building a website for a fake company using HTML, CSS and JS',
         image: '',
         images: [
             {
@@ -306,14 +331,79 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-8',
         title: 'Trollstien',
-        description: 'UI/UX project: How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma.',
+        description: 'UI/UX exam project 2025: How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma.',
         image: '',
-        images: [],
-        link: '#',
+        images: [
+            {
+                id: 'project-8-image-0',
+                src: troll,
+                className: 'portfolio-image',
+            }
+        ],
+        link: 'https://www.figma.com/design/3CAyTL98S1AUsNK0mRf7B5/Trollstien-APP?node-id=0-1&m=dev',
         pdf: ''
     },
     {
         id: 'project-9',
+        title: 'Web shop',
+        description: 'Exam project 2024: building a web shop with HTML, CSS and JS',
+        image: '',
+        images: [
+            {
+                id: 'project-9-image-0',
+                src: p90,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-9-image-1',
+                src: p91,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-9-image-2',
+                src: p92,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-9-image-3',
+                src: p93,
+                className: 'portfolio-image',
+            }
+        ],
+        link: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
+    },
+    {
+        id: 'project-10',
+        title: 'Digital Marketing Campaign',
+        description: 'Exam project 2024: Marketing campaign for local cinema in Halden, Norway. Campaign graphic design materials made using ADOBE ID/AI/PS.',
+        image: '',
+        images: [
+            {
+                id: 'project-10-image-0',
+                src: p100,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-10-image-1',
+                src: p101,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-10-image-2',
+                src: p102,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-10-image-3',
+                src: p103,
+                className: 'portfolio-image',
+            },
+        ],
+        link: '',
+        pdf: '/application-cv/DigitalMarketing2024.pdf'
+    },
+    {
+        id: 'project-11',
         title: 'Application CV',
         description: 'This portfolio site you are visiting right now. Built with React, SASS and TypeScript!',
         image: '',
