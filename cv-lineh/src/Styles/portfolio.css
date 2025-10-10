@@ -46,7 +46,6 @@
 }
 
 .portfolio-image-container {
-  /* position: relative; */
   overflow: hidden;
   border-radius: 8px;
 }
@@ -91,7 +90,7 @@
   position: absolute;
   top: 30%;
   transform: translateY(-50%);
-  color: var(--accent-primary);
+  color: var(--white-color);
   border: none;
   background-color: transparent;
  
@@ -158,12 +157,11 @@
 
 @media only screen and (min-width: 500px) {
   .portfolio-list {
-    /* grid-template-columns: repeat(2, 1fr); */
     max-width: 800px;
   }
 
   .portfolio-image-container {
-    max-width: 800px; /* må være samme som vidden på portfolio-list*/
+    max-width: 800px;
   }
 
   .portfolio-image-slider {
@@ -193,7 +191,6 @@
 .portfolio-nav-next {
   right: 10px;
 }
-
 }
 
 /* ----------------------------- desktop ------------------------------------ */
@@ -209,6 +206,11 @@
 
   .project-card {
     margin: 0;
+  }
+
+  .portfolio-nav-btn:hover {
+   color: var(--accent-primary);
+   transition: color 0.2s ease;
   }
 
   .portfolio-dot:hover {
@@ -264,25 +266,3 @@
     grid-row: 10;
   }
 }
-
-/* ----------------------------- Portfolio Image Slider ------------------------------------ */
-
-
-
-
-/* Dark mode adjustments */
-/* @media (prefers-color-scheme: dark) {
-  .portfolio-dot {
-    background-color: var(--accent-secondary);
-  }
-
-  .portfolio-dot.active {
-    background-color: var(--accent-primary);
-  }
-  
-  .portfolio-dot:hover {
-    background-color: var(--accent-primary);
-  }
-  
-} */
-

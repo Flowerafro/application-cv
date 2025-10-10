@@ -146,11 +146,11 @@ export const moduls: Modul[] = [
     },
     {
         id: 'modul-6',
-        title: 'Employment',
+        title: 'Files',
         description: '',
         className: 'modul-card-employment',
         image: '',
-        tagline: 'Flip to view last employers',
+        tagline: 'Employment & Resume',
         employees: [
             {
                 id: 'modul-6-employment-0',

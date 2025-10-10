@@ -7,7 +7,7 @@ import { LuMousePointerClick } from "react-icons/lu";
 export default function EmploymentFlipCard({ tagline, employees, height = 250 }: EmploymentFlipCardProps) {
   const [flipped, setFlipped] = useState(false);
 
-  if (!employees || employees.length === 0) return null;
+ /*  if (!employees || employees.length === 0) return null; */
 
   const handleClick = () => setFlipped(f => !f);
 

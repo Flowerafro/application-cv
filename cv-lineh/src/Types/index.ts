@@ -64,15 +64,16 @@ export interface Modul {
     id: string;
     title: string;
     description: string;
-    className: string; // legg til className property
-    tagline?: string; // optional property for employment
-    icon?: string; // optional property for education module
-    image?: string // optional property
-    projects?: Project[]; // optional property - array of Project objects til Portfolio module
+    className: string;
+    tagline?: string;
+    icon?: string;
+    link?: string;
+    image?: string
+    projects?: Project[];
     tools?: Tool[]
-    work?: Work[]; // optional property - array of Work objects til Experience module
-    interestImages?: interestImages[]; // optional property - array of interestImages objects til Interests module
-    employees?: Employment[]; // optional property for employment module
+    work?: Work[];
+    interestImages?: interestImages[];
+    employees?: Employment[];
 }
 
 // Context types

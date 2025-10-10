@@ -1,5 +1,4 @@
 /* ---------------- Globaal styles ------------------ */
-
 .layout {
   width: 100%;
   display: flex;
@@ -9,14 +8,8 @@
 
 /************ Animation for the header and opening up moduls  *************/
 
-// for å unngå at modul-listen hopper opp under headeren når den blir sticky
-/* .header-bg.normal + .modul-list {
-  position: static;
-} */
-
 .modul-list .loading,
 .modul-list .empty {
-  /* color: rgba(255,255,255,0.7); */
   font-size: 0.95rem;
   font-style: italic;
   grid-column: span 3;
@@ -51,28 +44,4 @@
     max-width: 1200px;
     width: 100%;
   }
-
-  .modul-list {
-  
-  }
-
-/*   .modul-list,
-  .portfolio-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, auto);
-    width: clamp(500px, 96%, 100vw);
-  } */
-
-
-
-  
-
- 
-
-
-
-
-
-
-
 }

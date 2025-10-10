@@ -1,12 +1,11 @@
     .nav-bar {
         width: 100vw;
         display: flex;
-        justify-content: center; /* center the inner content wrapper */
+        justify-content: center; 
         align-items: center;
         background-color: var(--navbar-bg-color);
     }
 
-    /* inner centered container to match .header-content */
     .nav-content {
       width: 100%;
       padding: 0 0.5rem;
@@ -20,8 +19,8 @@
         border: none;
         padding: 0.5rem 1rem;
         border-radius: 2px;
-        margin: 0.25rem; /* smaller margins to fit centered container */
-        position: relative; /* for underline pseudo-element */
+        margin: 0.25rem; 
+        position: relative; 
         color: var(--text-color);
         background-color: transparent;
         font-size: 0.9rem;
@@ -45,7 +44,6 @@
     }
 
     .nav-button.active::after,
-    .nav-button:hover::after,
     .nav-button:focus-visible::after {
         transform: translateX(-50%) scaleX(1);
     }
@@ -58,8 +56,12 @@
         transform: translateY(-1px);
     }
 
-/* -------------- tablet -----------------*/
+/* -------------- desktop -----------------*/
 
-@media only screen and (min-width: 500px) {
-
+@media only screen and (min-width: 900px) {
+    .nav-button:hover {
+        color: var(--accent-primary);
+        letter-spacing: 1px;
+        transition: color 260ms ease, letter-spacing 260ms ease, transform 260ms ease;
+    }
 }

@@ -48,6 +48,9 @@ import p75 from '../assets/p-75.png';
 import p76 from '../assets/p-76.png';
 import p77 from '../assets/p-77.png';
 
+import p80 from '../assets/p-80.png';
+import p81 from '../assets/p-81.png';
+
 import p90 from '../assets/p-90.png';
 import p91 from '../assets/p-91.png';
 import p92 from '../assets/p-92.png';
@@ -58,14 +61,12 @@ import p101 from '../assets/p-101.png';
 import p102 from '../assets/p-102.png';
 import p103 from '../assets/p-103.png';
 
-import troll from '../assets/logoMnavn.png';
-
 
 export const portfolio: Portfolio[] = [
     {
         id: 'project-1',
         title: 'News web site',
-        description: 'Exam project 2024: Communication design exam project built with HTML, CSS and JS',
+        description: 'Exam project Communication Designs (2024): Researching, developing and designing a news website built with HTML, CSS and JS',
         image: '',
         images: [
             {
@@ -132,7 +133,6 @@ export const portfolio: Portfolio[] = [
                 src: p23,
                 className: 'portfolio-image',
             }
-
         ],
         link: 'https://github.com/Flowerafro/TwoFacedArtworks',
     },
@@ -178,7 +178,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-4',
         title: 'Pokedex',
-        description: 'Exam project 2024: Gotta catch them all - building a Pokedex with React, Sanity and API',
+        description: 'Exam project Interactive Web Development (2024): Gotta catch them all - building a Pokedex with React, Sanity and API',
         image: '',
         images: [
             {
@@ -201,7 +201,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-5',
         title: 'Laftemannen',
-        description: 'Exam project 2025: A graphic design manual for Laftemannen Company using ADOBE ID/AI/PS',
+        description: 'Exam project Graphic design (2025): Creating a visual profile and design manual for Laftemannen Company using ADOBE ID/AI/PS',
         image: '',
         images: [
             {
@@ -251,7 +251,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-6',
         title: 'Company Website',
-        description: 'Exam project 2023: building a website for a fake company using HTML, CSS and JS',
+        description: 'Exam project Web development (2023): recreating and building a web shop using HTML and CSS',
         image: '',
         images: [
             {
@@ -281,7 +281,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-7',
         title: 'Contract Flow',
-        description: 'Current Exam project (2025): building a logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
+        description: 'Current Exam project Web applications (finished desemeber 2025): building a logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
         image: '',
         images: [
             {
@@ -325,18 +325,23 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/webeksamen2023',
+        link: '',
         pdf: '',
     },
     {
         id: 'project-8',
         title: 'Trollstien',
-        description: 'UI/UX exam project 2025: How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma.',
+        description: 'Exam project UI design (2025): How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma and presentation web page made with React & Typescript.',
         image: '',
         images: [
             {
                 id: 'project-8-image-0',
-                src: troll,
+                src: p80,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-8-image-1',
+                src: p81,
                 className: 'portfolio-image',
             }
         ],
@@ -346,7 +351,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-9',
         title: 'Web shop',
-        description: 'Exam project 2024: building a web shop with HTML, CSS and JS',
+        description: 'Exam project Web development (2024): recreating and building a web shop using HTML and CSS',
         image: '',
         images: [
             {
@@ -375,7 +380,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-10',
         title: 'Digital Marketing Campaign',
-        description: 'Exam project 2024: Marketing campaign for local cinema in Halden, Norway. Campaign graphic design materials made using ADOBE ID/AI/PS.',
+        description: 'Exam project Digital Marketing (2024): Marketing campaign for local cinema in Halden, Norway. Campaign graphic design materials made using ADOBE ID/AI/PS.',
         image: '',
         images: [
             {

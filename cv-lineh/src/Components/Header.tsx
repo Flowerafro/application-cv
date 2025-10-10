@@ -6,19 +6,18 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa6";
 import { FaDeviantart } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
+import PDFButton from "./PDFButton";
 
 export default function Header() {
-    // state som styrer at headeren skal gå fra fullscreen til shrink til normal
     const [headerState, setHeaderState] = useState<"fullscreen" | "shrink" | "normal">("fullscreen");
     const timeoutRef = useRef<number | null>(null);
 
-    // knappen klikkes, headerState settes til shrink og starter Timeout for å sette til normal etter animasjon.
     const handleClick = () => {
         setHeaderState("shrink");
-        // Etter animasjonen, bytt til normal header
         timeoutRef.current = setTimeout(() => {
             setHeaderState("normal");
-        }, 900); // Samme som transition-tid i CSS
+        }, 900); 
     };
 
     return (
@@ -26,7 +25,7 @@ export default function Header() {
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
                     <h1> Hi!  Im Line a designer of digital experiences and web designs</h1>
-                    <button className="intro-btn" onClick={handleClick}> welcome </button>
+                    <button className="intro-btn" onClick={handleClick}> Welcome </button>
                 </div>
             ) : (
                 <div className="header-content">
@@ -36,7 +35,7 @@ export default function Header() {
                         </NavLink>
                         <div className="profile-info">
                             <span className="profile-name">Line H</span>
-                            <span className="profile-title">Student @ HIOF</span>
+                            <span className="profile-title">IT-student @ HIOF</span>
                         </div>
                     </div>
                     <div className="contact-links">
@@ -45,12 +44,13 @@ export default function Header() {
                         <li><a href="https://www.linkedin.com/in/line-henriksen-542a44290/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a></li>
                         <li><a href="https://www.behance.net/linehenriksen2" target="_blank" rel="noopener noreferrer"><FaBehance /></a></li>
                         <li><a href="https://www.deviantart.com/fl0werafr0" target="_blank" rel="noopener noreferrer"><FaDeviantart /></a></li>
+                        <li><a href="#" download><TbFileCv /></a></li>
                     </ul>
                     </div>
+                    <PDFButton filePath="/application-cv/Resume2025.pdf" title="My CV" className="cv-button" />
                     <div className="colortogglediv">
                         <ColorModeToggle />
                     </div>
-                    
                 </div>
             )}
             

@@ -16,11 +16,6 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.pdf-view-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
 .pdf-download-link {
   color: var(--link-color);
   text-decoration: none;
@@ -35,6 +30,12 @@
 .pdf-download-link:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
+}
+
+.pdf-view-btn:hover {
+  transform: translateX(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: var(--accent-primary);
 }
 }
 
