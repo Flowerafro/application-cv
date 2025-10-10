@@ -340,7 +340,7 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://www.figma.com/design/3CAyTL98S1AUsNK0mRf7B5/Trollstien-APP?node-id=0-1&m=dev',
+        link: 'https://flowerafro.github.io/Trolljegern/',
         pdf: ''
     },
     {
@@ -401,14 +401,5 @@ export const portfolio: Portfolio[] = [
         ],
         link: '',
         pdf: '/application-cv/DigitalMarketing2024.pdf'
-    },
-    {
-        id: 'project-11',
-        title: 'Application CV',
-        description: 'This portfolio site you are visiting right now. Built with React, SASS and TypeScript!',
-        image: '',
-        images: [],
-        link: '',
-        pdf: ''
     }
 ]
