@@ -13,12 +13,13 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.5;
+  padding: 0;
+  margin: 0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Other colors palette */
   --light-green-color:#6af7d6;
   --green-color: #2dcca7;
   --dark-green-color: #1ea39d;
@@ -33,15 +34,11 @@
   --black-opacity40: #00000040;
   --oker-color: #f0a500ff;
 
-  /*Light mode colors inspired by spring*/
-
   --spring-contrast: #F28C28;
   --spring-contrast-2:#EDB458;
   --spring-green-light: #EBF5DF;
   --spring-green: #BAD4AA;
   --spring-green-yellow: #D4D4AAf4;
-
-    /*Light mode colors inspired by twilight*/
 
   --twilight-dark: #11151C;
   --twilight-medium: #212D40;
@@ -55,9 +52,13 @@
   --bg-color: var(--spring-green-light);                
   --header-bg-color: var(--spring-green);        
   --navbar-bg-color: var(--spring-green-yellow);  
+  --footer-bg-color: var(--dark-green-color);
 
   --card-bg-color: var(--spring-green);     
   --card-bg-color-2: var(--bg-color);  
+
+    --intro-btn: var(--dark-grey-color);
+
   --text-color: #333333;
   --dark-grey-color: #333333;
   --grey-color: #818080ff;
@@ -72,7 +73,7 @@
   --button-gradient-end: var(--spring-contrast-2);
   --button-text-color: var(--white-color);
 
-   --nav-btn: var(--spring-contrast-2);
+  --nav-btn: var(--spring-contrast-2);
 
   --link-color: var(--spring-contrast-2);
   --link-hover-color: var(--text-color);
@@ -87,6 +88,7 @@
   --bg-color: var(--twilight-dark);               
   --header-bg-color: var(--twilight-medium);       
   --navbar-bg-color: var(--twilight-light);
+  --footer-bg-color: var(--black-color);
 
   --portfolio-card-bg-color: var(--twilight-medium);
   --card-bg-color: var(--twilight-medium);
@@ -94,6 +96,8 @@
 
   --project-title-color: var(--white-color);
   --project-text-color: var(--light-grey-color);
+
+  --intro-btn: var(--white-color);
 
 
   --text-color: #ffffff;
@@ -128,7 +132,6 @@
 
 
 body {
- /* min-height: 100vh; */
   width: 100%;
   margin: 0;
   padding: 0;

@@ -7,6 +7,7 @@ import climbing from '../assets/climbing.jpg';
 import reading from '../assets/reading.jpg';
 import travel1 from '../assets/travel1.jpg';
 import camping from '../assets/camping.jpeg';
+import dog from '../assets/dog.jpg';
 
 export const moduls: Modul[] = [
     {
@@ -140,6 +141,11 @@ export const moduls: Modul[] = [
             {
                 id: 'modul-5-interest-5',
                 src: camping,
+                className: 'interest-image'
+            },
+            {
+                id: 'modul-5-interest-6',
+                src: dog,
                 className: 'interest-image'
             }
         ]

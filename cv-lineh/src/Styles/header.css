@@ -51,8 +51,16 @@
 }
 
 .profile-title {
-  font-size: 0.8rem;
-/*   color: #818080ff; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-title a {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: 500;
+
 }
 
 .contact-links ul {

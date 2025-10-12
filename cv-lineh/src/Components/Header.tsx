@@ -2,11 +2,11 @@ import { useState, useRef } from "react";
 import lhworks from '../assets/LHworks.jpeg';
 import ColorModeToggle from "./ColorModeToggle";
 import { NavLink } from "react-router-dom";
+import { GoMail } from "react-icons/go";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa6";
 import { FaDeviantart } from "react-icons/fa";
-import { TbFileCv } from "react-icons/tb";
 import PDFButton from "./PDFButton";
 
 export default function Header() {
@@ -35,7 +35,10 @@ export default function Header() {
                         </NavLink>
                         <div className="profile-info">
                             <span className="profile-name">Line H</span>
-                            <span className="profile-title">IT-student @ HIOF</span>
+                            <span className="profile-title">
+                                <GoMail />
+                                <a href="mailto:linehenriksen0@gmail.com">Contact me!</a>
+                            </span>
                         </div>
                     </div>
                     <div className="contact-links">

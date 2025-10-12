@@ -1,6 +1,6 @@
 .portfolio-list {
   position: absolute;
-  top: 200px; /* Juster til høyden på headeren */
+  top: 400px; /* Juster til høyden på headeren */
   max-width: 600px;
   margin: 2rem 0;
 
@@ -208,11 +208,19 @@
     margin: 0;
   }
 
+  .portfolio-nav-btn {
+    width: 100px;
+    height: 40px;
+  }
+
   .portfolio-nav-btn:hover {
    color: var(--accent-primary);
    transition: color 0.2s ease;
   }
 
+  .portfolio-slider-dots {
+    margin-top: 2rem;
+  }
   .portfolio-dot:hover {
   background-color: var(--accent-primary);
   transform: scale(1.1);

@@ -25,6 +25,17 @@
   opacity: 0.9;
 }
 
+.footer {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0;
+  text-align: center;
+  background-color: var(--header-bg-color);
+  color: var(--light-grey-color);
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+}
 
 
 /* ----------------------------- tablet------------------------------------ */

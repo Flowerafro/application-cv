@@ -17,7 +17,7 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   width: 100vw;
-  height: 200px;
+  height: 300px;
   z-index: 1000;
   transition: height 0.8s cubic-bezier(0.77,0,0.175,1), padding 0.7s;
   padding: 0;
@@ -29,7 +29,7 @@
   position: static;
   top: 0; left: 0; right: 0;
   width: 100vw;
-  height: 200px;
+  height: 300px;
   transition: none;
   display: flex;
   flex-direction: column;
@@ -52,13 +52,13 @@
   margin: 2rem;
   padding: 1rem 2rem;
   font-size: 1rem;
-  letter-spacing: 1px;
-  border: none;
+  letter-spacing: 2px;
+  border-radius: 2px;
   background: transparent;
-  border: 1px solid var(--white-color);
-  color: #fff;
+  border: 1px solid var(--intro-btn);
+  color: var(--intro-btn);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.40);
   transition: background 0.3s;
   overflow: hidden;
 
@@ -113,22 +113,22 @@
   opacity: var(--aurora-opacity);
   will-change: transform, filter, opacity;
   z-index: 0;
-  transition: opacity 1.3s cubic-bezier(.55,.1,.25,1), filter 4s linear;
+  transition: opacity 1.3s cubic-bezier(.55,.1,.25,1), filter 2s linear;
 }
 
 .header-bg.aurora-drift::before {
   background:
     radial-gradient(circle at 18% 72%, rgba(10, 0, 20, 0.85), transparent 62%),
-    radial-gradient(circle at 78% 32%, rgba(25,140,185,0.28), transparent 64%),
+    radial-gradient(circle at 78% 32%, rgba(25,140,185,0.90), transparent 64%),
     linear-gradient(300deg, rgb(0, 0, 0), rgb(40, 90, 100));
-  animation: auroraDriftA 12s linear infinite, auroraHue 18s linear infinite;
+  animation: auroraDriftA 5s linear infinite, auroraHue 18s linear infinite;
 }
 
 .header-bg.aurora-drift::after {
   background:
     radial-gradient(circle at 25% 40%, rgba(40, 0, 70, 0.75), transparent 60%),
     radial-gradient(circle at 70% 65%, rgba(15,120,160,0.25), transparent 65%),
-    linear-gradient(320deg, rgb(15, 15, 35), rgb(20, 60, 95));
+    linear-gradient(320deg, rgb(15, 15, 35), rgb(90, 00, 80));
   animation: auroraDriftB 28s linear infinite reverse, auroraHue 46s linear infinite reverse;
   opacity: calc(var(--aurora-opacity) * 0.82);
 }
@@ -153,23 +153,27 @@
   100% { filter: hue-rotate(360deg) blur(70px) saturate(140%); }
 }
 
+@supports (-moz-appearance: none) {
+  .intro-content h1 { color: var(--text-fallback, #de466c); background-clip: unset; -webkit-text-fill-color: unset; }
+}
+
 @media only screen and (min-width: 600px) {
 .header-bg.normal {
-  height: 200px;
+  height: 300px;
 }
 
 .header-bg.shrink {
-  height: 200px;
+  height: 300px;
 }
 }
 
 /* desktop */
 @media only screen and (min-width: 900px) {
   .header-bg.normal {
-  height: 100px;
+  height: 150px;
 }
 
 .header-bg.shrink {
-  height: 100px;
+  height: 150px;
 }
 }
