@@ -44,10 +44,9 @@ export default function Header() {
                         <li><a href="https://www.linkedin.com/in/line-henriksen-542a44290/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a></li>
                         <li><a href="https://www.behance.net/linehenriksen2" target="_blank" rel="noopener noreferrer"><FaBehance /></a></li>
                         <li><a href="https://www.deviantart.com/fl0werafr0" target="_blank" rel="noopener noreferrer"><FaDeviantart /></a></li>
-                        <li><a href="#" download><TbFileCv /></a></li>
                     </ul>
                     </div>
-                    <PDFButton filePath="/application-cv/Resume2025.pdf" title="My CV" className="cv-button" />
+                    <PDFButton filePath="/application-cv/Resume2025-2.pdf" title="My CV" className="cv-button" />
                     <div className="colortogglediv">
                         <ColorModeToggle />
                     </div>

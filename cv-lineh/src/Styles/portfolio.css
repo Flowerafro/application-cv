@@ -90,7 +90,7 @@
   position: absolute;
   top: 30%;
   transform: translateY(-50%);
-  color: var(--white-color);
+  color: var(--accent-secondary);
   border: none;
   background-color: transparent;
  

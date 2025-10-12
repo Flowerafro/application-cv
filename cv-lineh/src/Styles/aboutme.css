@@ -89,7 +89,7 @@
 /* Modul Card Coding */
 
 .modul-card-coding {
-  background-color: var(--card-bg-color);
+  background-color: var(--card-bg-color-2);
   color: var(--text-color);
   align-items: center;
   padding: 1rem;
@@ -319,7 +319,7 @@
 /*** card id 7*/
 
 .modul-card-employment {
-   background-color: var(--dark-grey-color);
+  background-color: var(--card-bg-color);
   flex-direction: column;
   justify-content: flex-start; 
   align-items: stretch;
@@ -359,12 +359,11 @@
   justify-content: center;
   align-items: stretch;
   height: 100%;
-
 }
 
 .employment-item {
   padding: 0.4rem 0;
-  border-bottom: 1px solid var(--accent-primary);
+  border-bottom: 1px solid var(--accent-secondary);
 }
 
 .employment-item:last-child {
@@ -379,8 +378,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--link-color);
+  color: var(--text-color);
   animation: flip 5s ease-in-out infinite;
+}
+
+.employment-tagline svg {
+  color: var(--accent-secondary);
+  width: 2em;
+  height: auto;
 }
 
 @keyframes flip {
@@ -534,7 +539,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--link-color);
   animation: flip 5s ease-in-out infinite;
 }
 

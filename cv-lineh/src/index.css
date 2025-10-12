@@ -35,7 +35,7 @@
 
   /*Light mode colors inspired by spring*/
 
-  --spring-contrast: #E8871E;
+  --spring-contrast: #F28C28;
   --spring-contrast-2:#EDB458;
   --spring-green-light: #EBF5DF;
   --spring-green: #BAD4AA;
@@ -56,7 +56,8 @@
   --header-bg-color: var(--spring-green);        
   --navbar-bg-color: var(--spring-green-yellow);  
 
-  --card-bg-color: #f4f4f4;       
+  --card-bg-color: var(--spring-green);     
+  --card-bg-color-2: var(--bg-color);  
   --text-color: #333333;
   --dark-grey-color: #333333;
   --grey-color: #818080ff;
@@ -89,6 +90,7 @@
 
   --portfolio-card-bg-color: var(--twilight-medium);
   --card-bg-color: var(--twilight-medium);
+  --card-bg-color-2: var(--twilight-light);
 
   --project-title-color: var(--white-color);
   --project-text-color: var(--light-grey-color);

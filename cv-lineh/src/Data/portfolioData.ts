@@ -139,7 +139,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-3',
         title: 'EuroThrift',
-        description: 'Acting as a prompt engineer, I created a functional web app using React, TypeScript, OpenAI API, and TailwindCSS. EuroThrift is a Travel Guide for travelers on a budget, with  search function and budget calculator.',
+        description: 'Exam project GenAI (2025): Acting as a prompt engineer, I created a functional web app using React, TypeScript, OpenAI API, and TailwindCSS. EuroThrift is a Travel Guide for travelers on a budget, with  search function and budget calculator.',
         image: '',
         images: [
             {
@@ -331,7 +331,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-8',
         title: 'Trollstien',
-        description: 'Exam project UI design (2025): How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma and presentation web page made with React & Typescript.',
+        description: 'Exam project UI design (2025): Won award for "Best Stand at EXPO 2025". How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma and presentation web page made with React & Typescript.',
         image: '',
         images: [
             {
