@@ -208,11 +208,6 @@
     margin: 0;
   }
 
-  .portfolio-nav-btn {
-    width: 100px;
-    height: 40px;
-  }
-
   .portfolio-nav-btn:hover {
    color: var(--accent-primary);
    transition: color 0.2s ease;
