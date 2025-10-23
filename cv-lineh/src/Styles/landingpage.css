@@ -84,6 +84,7 @@
   animation: title-rise 3s cubic-bezier(.55,.1,.25,1) forwards;
   will-change: transform, opacity;
   flex-wrap: wrap;
+  color: var(--intro-btn);
 
   border: none;
   padding: 1rem;
@@ -153,9 +154,9 @@
   100% { filter: hue-rotate(360deg) blur(70px) saturate(140%); }
 }
 
-@supports (-moz-appearance: none) {
+/* @supports (-moz-appearance: none) {
   .intro-content h1 { color: var(--text-fallback, #de466c); background-clip: unset; -webkit-text-fill-color: unset; }
-}
+} */
 
 @media only screen and (min-width: 600px) {
 .header-bg.normal {

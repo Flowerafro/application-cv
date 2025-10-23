@@ -60,6 +60,7 @@
     --intro-btn: var(--dark-grey-color);
 
   --text-color: #333333;
+  --text-color-secondary: var(--accent-secondary);
   --dark-grey-color: #333333;
   --grey-color: #818080ff;
   --light-grey-color: #f4f4f4;
@@ -101,6 +102,7 @@
 
 
   --text-color: #ffffff;
+  --text-color-secondary: var(--accent-secondary);
   --dark-grey-color: #333333;
   --grey-color: #cccccc;
   --light-grey-color: #ffffff80;
@@ -138,6 +140,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  background-color: var(--bg-color);
 }
 
 

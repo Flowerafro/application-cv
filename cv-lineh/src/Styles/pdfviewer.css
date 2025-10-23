@@ -24,9 +24,24 @@
   margin-left: 1rem;
 }
 
+/* ----------------- Tablet ----------------- */
+.pdf-button-wrapper {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 0.5rem;
+}
 /* ----------------- Desktop ----------------- */
 
 @media only screen and (min-width: 900px) {
+
+.pdf-button-wrapper {
+  width: auto;
+  align-items: center;
+  margin: 0 4rem 0 0;
+}
+
 .pdf-download-link:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
