@@ -1,7 +1,7 @@
 import '../Styles/pdfviewer.css';
 
 interface PDFButtonProps {
-  filePath: string; // e.g. '/Profilmanual.pdf'
+  filePath: string; 
   title?: string;
   className?: string;
 }

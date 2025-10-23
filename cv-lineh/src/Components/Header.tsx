@@ -42,7 +42,7 @@ export default function Header() {
                                 <a href="tel:+4748222033" aria-label="call Line H"><IoCall /></a>
                             </span>
                         </div>
-                                                <PDFButton filePath="/application-cv/Resume2025-2.pdf" title="My CV" className="cv-button" />
+                        <PDFButton filePath="/application-cv/Resume2025.pdf" title="My CV" className="cv-button" />
                     </div>
                         <div className="contact-links">
                             <ul>

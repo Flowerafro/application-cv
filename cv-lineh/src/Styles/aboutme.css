@@ -412,10 +412,10 @@
 /* Minimal employment flip (restored) */
 .employment-flip { position: relative; perspective: 800px; cursor: pointer; }
 .ef-inner { position: relative; width: 100%; height: 250px; transform-style: preserve-3d; transition: transform .5s; }
-.ef-inner.flipped { transform: rotateY(180deg); }
+.ef-inner.flipped { transform: rotateY(180deg);}
 .ef-face { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; padding:.5rem; backface-visibility: hidden; -webkit-backface-visibility:hidden; }
 .ef-front { }
-.ef-back { transform: rotateY(180deg); overflow-y:auto; }
+.ef-back { transform: rotateY(180deg); overflow-y:auto; background-color: var(--card-bg-color) }
 .employment-flip:focus-visible { outline:2px solid var(--accent-primary,#4dd); outline-offset:3px; }
 
 
