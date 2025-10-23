@@ -40,6 +40,7 @@
   width: auto;
   align-items: center;
   margin: 0 4rem 0 0;
+    padding-right: 1rem;
 }
 
 .pdf-download-link:hover {

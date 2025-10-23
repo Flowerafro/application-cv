@@ -40,6 +40,7 @@ export interface Project {
     image?: string;
     video?: string;
     link?: string;
+    github?: string;
     pdf?: string;
     images?: interestImages[];
 }
@@ -51,6 +52,7 @@ export interface Portfolio {
     image?: string;
     images?: PortfolioImages[];
     link?: string;
+    github?: string;
     pdf?: string;
 }
 

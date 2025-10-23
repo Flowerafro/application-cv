@@ -27,7 +27,7 @@ export default function Header() {
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
                     <h1> Hi! I'm Line, a designer of digital experiences and web designs</h1>
-                    <button className="intro-btn" onClick={handleClick}> Welcome </button>
+                    <button className="intro-btn" onClick={handleClick}> Welcome  </button>
                 </div>
             ) : (
                 <div className="header-content">

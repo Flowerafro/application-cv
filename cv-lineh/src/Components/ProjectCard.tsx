@@ -1,5 +1,6 @@
 import PortfolioImageSlider from './PortfolioImageSlider';
 import type { Portfolio } from '../Types';
+import { IoLogoGithub } from "react-icons/io";
 import PDFButton from './PDFButton';
 
 export default function ProjectCard({ project }: { project: Portfolio }) {
@@ -30,9 +31,16 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                         {project.pdf ? (
                             <PDFButton filePath={project.pdf} title={`Open`} />
                         ) : project.link ? (
-                            <div className="pdf-button-wrapper">
-                                <a className="pdf-view-btn" href={project.link} target="_blank" rel="noopener noreferrer">
-                                    View
+                            <div className="project-pdf-button-wrapper">
+                                <a className="project-pdf-view-btn" href={project.link} target="_blank" rel="noopener noreferrer">
+                                    View Project
+                                </a>
+                            </div>
+                        ) : null}
+                        {project.github ? (
+                            <div className="github-btn">
+                                <a className="github-link" href={project.github} target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                <IoLogoGithub size={24} />
                                 </a>
                             </div>
                         ) : null}

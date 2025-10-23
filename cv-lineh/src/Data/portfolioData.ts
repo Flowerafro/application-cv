@@ -65,7 +65,7 @@ import p103 from '../assets/p-103.png';
 export const portfolio: Portfolio[] = [
     {
         id: 'project-1',
-        title: 'News web site',
+        title: 'News web site - The Daily Bugle',
         description: 'Exam project Communication Designs (2024): Researching, developing and designing a news website built with HTML, CSS and JS',
         image: '',
         images: [
@@ -105,7 +105,8 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
+        link: '',
+        github: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
     },
     {
         id: 'project-2',
@@ -134,11 +135,12 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/TwoFacedArtworks',
+        link: 'https://www.deviantart.com/twofacedartworks/gallery',
+        github: 'https://github.com/Flowerafro/TwoFacedArtworks',
     },
     {
         id: 'project-3',
-        title: 'EuroThrift',
+        title: 'EuroThrift - Experience Europe the thrifty way',
         description: 'Exam project GenAI (2025): Acting as a prompt engineer, I created a functional web app using React, TypeScript, OpenAI API, and TailwindCSS. EuroThrift is a Travel Guide for travelers on a budget, with  search function and budget calculator.',
         image: '',
         images: [
@@ -174,10 +176,11 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: 'https://flowerafro.github.io/EuroThrift/',
+        github: 'https://github.com/Flowerafro/EuroThrift',
     },
     {
         id: 'project-4',
-        title: 'Pokedex',
+        title: 'The Pokedex',
         description: 'Exam project Interactive Web Development (2024): Gotta catch them all - building a Pokedex with React, Sanity and API',
         image: '',
         images: [
@@ -196,11 +199,12 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/PokedexGR18',
+        github: 'https://github.com/Flowerafro/PokedexGR18',
+        link: '',
     },
     {
         id: 'project-5',
-        title: 'Laftemannen',
+        title: 'Laftemannen ReBranding',
         description: 'Exam project Graphic design (2025): Creating a visual profile and design manual for Laftemannen Company using ADOBE ID/AI/PS',
         image: '',
         images: [
@@ -250,7 +254,7 @@ export const portfolio: Portfolio[] = [
     },
     {
         id: 'project-6',
-        title: 'Company Website',
+        title: 'Company Website ',
         description: 'Exam project Web development (2023): recreating and building a web shop using HTML and CSS',
         image: '',
         images: [
@@ -275,12 +279,13 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/webeksamen2023',
+        link: '',
+        github: 'https://github.com/Flowerafro/webeksamen2023',
         pdf: '',
     },
     {
         id: 'project-7',
-        title: 'Contract Flow',
+        title: 'Contract Flow - Fullstack Application',
         description: 'Current Exam project Web applications (finished desemeber 2025): building a logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
         image: '',
         images: [
@@ -326,11 +331,12 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: '',
+        github: 'https://github.com/Flowerafro/PLB-contactFlow/tree/develop',
         pdf: '',
     },
     {
         id: 'project-8',
-        title: 'Trollstien',
+        title: 'Trollstien - Hunt & Explore',
         description: 'Exam project UI design (2025): Won award for "Best Stand at EXPO 2025". How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma and presentation web page made with React & Typescript.',
         image: '',
         images: [
@@ -346,11 +352,12 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: 'https://flowerafro.github.io/Trolljegern/',
+        github: 'https://github.com/Flowerafro/Trolljegern',
         pdf: ''
     },
     {
         id: 'project-9',
-        title: 'Web shop',
+        title: 'Web shop ',
         description: 'Exam project Web development (2024): recreating and building a web shop using HTML and CSS',
         image: '',
         images: [
@@ -375,11 +382,12 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
+        link: '',
+        github: 'https://github.com/Flowerafro/Webutvikling_eksamen_2024',
     },
     {
         id: 'project-10',
-        title: 'Digital Marketing Campaign',
+        title: 'Digital Marketing Campaign - Halden Kino',
         description: 'Exam project Digital Marketing (2024): Marketing campaign for local cinema in Halden, Norway. Campaign graphic design materials made using ADOBE ID/AI/PS.',
         image: '',
         images: [
