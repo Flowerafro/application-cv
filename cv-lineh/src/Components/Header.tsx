@@ -23,7 +23,7 @@ export default function Header() {
     };
 
     return (
-        <header className={`header-bg ${headerState} aurora-drift`}>
+       <header className={`header-bg ${headerState} ${headerState === "fullscreen" ? "aurora-drift" : ""}`}>
             {headerState === "fullscreen" ? (
                 <div className="intro-content">
                     <h1> Hi! I'm Line, a designer of digital experiences and web designs</h1>

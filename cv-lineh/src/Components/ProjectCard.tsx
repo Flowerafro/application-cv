@@ -40,6 +40,7 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                         {project.github ? (
                             <div className="github-btn">
                                 <a className="github-link" href={project.github} target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                    Code
                                 <IoLogoGithub size={24} />
                                 </a>
                             </div>

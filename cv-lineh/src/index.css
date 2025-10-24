@@ -20,6 +20,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+   --footer-height: 100px;
+
   --light-green-color:#6af7d6;
   --green-color: #2dcca7;
   --dark-green-color: #1ea39d;
@@ -56,7 +58,7 @@
   --bg-color: var(--spring-green-light);                
   --header-bg-color: var(--spring-green);        
   --navbar-bg-color: var(--spring-green-yellow);  
-  --footer-bg-color: var(--dark-green-color);
+  --footer-bg-color: var(--spring-dark);
 
   --card-bg-color: var(--dark-grey-color);     
   --card-bg-color-2: var(--white-color);  

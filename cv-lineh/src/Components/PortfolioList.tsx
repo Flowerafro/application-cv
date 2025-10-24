@@ -12,10 +12,10 @@ export default function PortfolioList() {
     }
 
     return (
-        <main className="portfolio-list">
+        <div className="portfolio-list">
             {portfolio.map((project: Portfolio) => (
                 <ProjectCard key={project.id} project={project}  />
             ))}
-        </main>
+        </div>
     );
 }
