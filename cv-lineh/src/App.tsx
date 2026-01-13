@@ -3,9 +3,15 @@ import Layout from './Components/Layout';
 import AboutMe from './Pages/AboutMe';
 import Portfolio from './Pages/Portfolio';
 import { DarkModeProvider } from './Context/ThemeContext';
+import ReactGA from "react-ga4";
 import './index.css';
 
+ReactGA.initialize("G-TZ07536TFP");
+
 function App() {
+
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  
   return (
     <DarkModeProvider>
       <Routes>
