@@ -1,15 +1,26 @@
 import { useEffect, useState } from 'react';
 
-// Hook to determine if the viewport is desktop size, then the hover effects can be enabled on toolItems
-
 export function useViewport() {
     const [isDesktop, setIsDesktop] = useState(false);
 
     useEffect(() => {
         const check = () => setIsDesktop(window.innerWidth > 900);
+
         check();
-        window.addEventListener('resize', check);
-        return () => window.removeEventListener('resize', check);
+
+        let timeoutId: ReturnType<typeof setTimeout>;
+
+        const debouncedCheck = () => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(check, 200);
+        };
+
+        window.addEventListener('resize', debouncedCheck);
+
+        return () => {
+            window.removeEventListener('resize', debouncedCheck);
+            clearTimeout(timeoutId);
+        };
     }, []);
 
     return { isDesktop };

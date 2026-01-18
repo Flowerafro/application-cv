@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect, type ReactNode } from "react";
+import { createContext, useState, useEffect, type ReactNode } from "react";
 import type { DarkModeContextType } from "../Types";
 
 const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
@@ -13,13 +13,13 @@ function DarkModeProvider({ children }: DarkModeProviderProps) {
         const saved = localStorage.getItem('cv-darkMode');
         return saved === 'true';
     });
-    
+
     // Apply theme to document root and save to localStorage
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
         localStorage.setItem('cv-darkMode', darkMode.toString());
     }, [darkMode]);
-    
+
     const toggleDarkMode = () => {
         setDarkMode(prev => !prev);
     }
@@ -31,15 +31,6 @@ function DarkModeProvider({ children }: DarkModeProviderProps) {
     )
 }
 
-// Custom hook to use the DarkMode context
-export function useDarkMode(): DarkModeContextType {
-    const context = useContext(DarkModeContext);
-    
-    if (!context) {
-        throw new Error('useDarkMode must be used within a DarkModeProvider');
-    }
-    
-    return context;
-}
+
 
 export { DarkModeContext, DarkModeProvider };

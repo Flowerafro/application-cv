@@ -3,7 +3,7 @@ import type { interestImages } from '../Types';
 
 // display rotating images for interests
 export default function InterestCarousel({ images, altPrefix }: { images: interestImages[] | undefined; altPrefix: string }) {
-  const index = useRotatingImages(images as any, true, 2000);
+  const index = useRotatingImages(images, true, 2000);
   const src = images?.[index]?.src;
   if (!src) return null;
 

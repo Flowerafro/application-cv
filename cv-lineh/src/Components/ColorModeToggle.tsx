@@ -1,16 +1,16 @@
-import { useDarkMode } from "../Context/ThemeContext";
+import { useDarkMode } from "../Hooks/useDarkMode";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 function ColorModeToggle() {
     const { darkMode, toggleDarkMode } = useDarkMode();
-    
+
     const handleClick = () => {
         toggleDarkMode();
     }
 
     return (
         <div className="colortoggle">
-            <button 
+            <button
                 onClick={handleClick}
                 aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >

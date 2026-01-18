@@ -1,6 +1,7 @@
 .modul-list {
   position: absolute;
-  top: 400px; /* Juster til høyden på headeren */
+  top: 400px;
+  /* Juster til høyden på headeren */
   max-width: 600px;
   margin: 2rem 0;
   display: grid;
@@ -10,13 +11,18 @@
 }
 
 .modul-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   min-height: 300px;
   display: flex;
 }
 
-.modul-card-education, .modul-card-coding, .modul-card-tools, .modul-card-experience, .modul-card-interests, .modul-card-employment {
+.modul-card-education,
+.modul-card-coding,
+.modul-card-tools,
+.modul-card-experience,
+.modul-card-interests,
+.modul-card-employment {
   width: 100%;
   max-width: 380px;
 }
@@ -32,32 +38,37 @@
   font-weight: bold;
   background-image: linear-gradient(45deg, var(--purple-color), var(--blue-color), var(--green-color), var(--blue-color), var(--green-color), var(--magenta-color));
   background-size: 600% 100%;
-  
+
   -webkit-animation: bg-pan-left 10s infinite both;
-  animation: bg-pan-left 10s infinite both; 
+  animation: bg-pan-left 10s infinite both;
 }
 
 @-webkit-keyframes bg-pan-left {
   0% {
-        background-position: 100% 50%;
-    }
-    50% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
 }
+
 @keyframes bg-pan-left {
-0% {
-        background-position: 100% 50%;
-    }
-    50% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+  0% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .modul-card-education .modul-content-wrapper {
@@ -69,7 +80,8 @@
 
 .modul-card-education .modul-text {
   text-align: center;
-} 
+}
+
 .modul-card-education h3 {
   font-size: 2rem;
   font-weight: 600;
@@ -100,7 +112,7 @@
 }
 
 .modul-card-coding h3::before {
-  content: " "; 
+  content: " ";
   animation-name: titleChange;
   animation-iteration-count: infinite;
   animation-duration: 10s;
@@ -108,23 +120,25 @@
 
 @keyframes titleChange {
 
-    0% {
-        content: "React";
-    }
-    25% {
-        content: "JavaScript";
-    }
-    50% {
-        content: "MySQL";
-    }
+  0% {
+    content: "React";
+  }
 
-    75% {
-        content: "CSS/Sass";
-    }
+  25% {
+    content: "JavaScript";
+  }
 
-    100% {
-        content: "HTML";
-    }
+  50% {
+    content: "TypeScript";
+  }
+
+  75% {
+    content: "CSS/Sass";
+  }
+
+  100% {
+    content: "HTML";
+  }
 }
 
 .modul-card-coding p {
@@ -140,7 +154,7 @@
 /** Modul Card Tools **/
 
 .modul-card-tools {
-  background-color:#2dcca7;
+  background-color: #2dcca7;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -180,7 +194,7 @@
   border-radius: 8px;
   outline: none;
   background-color: var(--dark-green-color);
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   padding: 0.3rem 0;
 }
 
@@ -202,65 +216,68 @@
 }
 
 .work-experience {
-    text-align: center;
-    width: 100%;
-    height: 70%;
+  text-align: center;
+  width: 100%;
+  height: 70%;
 }
 
 .modul-card-experience .modul-text {
   margin-left: 1rem;
-} 
+}
 
 .work-item {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .work-item li {
-    transform: translateX(0px);
-    animation: fadeInOut 20s linear infinite;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-    opacity: 1;
-    margin-top: 1rem;
-    font-size: 0.85rem;
+  transform: translateX(0px);
+  animation: fadeInOut 20s linear infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  opacity: 1;
+  margin-top: 1rem;
+  font-size: 0.85rem;
 }
 
 @keyframes fadeInOut {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    10% {
-        transform: translateX(-50%);
-        opacity: 0;
-    }
-    25% {
-        transform: translateX(0);
-        opacity: 1; 
-    }
-    
-    50% {
-        transform: translateX(0);
-        opacity: 1; 
-    }
-    75% {
-        transform: translateX(0);
-        opacity: 1; 
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 
-    90% {
-        transform: translateX(50%);
-        opacity: 0;
-    }
- 
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+  10% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 /*** Modul Card Interests ***/
@@ -302,9 +319,9 @@
 }
 
 .interest-images-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .interest-image {
@@ -321,7 +338,7 @@
 .modul-card-employment {
   background-color: var(--card-bg-color);
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: stretch;
   color: var(--white-color);
   padding: 1rem;
@@ -389,39 +406,125 @@
 }
 
 @keyframes flip {
-  0%, 85%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
-  2% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
-  4% { -webkit-transform: translateX(10px);  transform: translateX(10px); }
-  6% { -webkit-transform: translateX(-8px);  transform: translateX(-8px); }
-  8% { -webkit-transform: translateX(8px);   transform: translateX(8px); }
-  10% { -webkit-transform: translateX(0);    transform: translateX(0); }
+
+  0%,
+  85%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  2% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  4% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  6% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+
+  8% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  10% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 @-webkit-keyframes flip {
-  0%, 85%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
-  2% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
-  4% { -webkit-transform: translateX(10px);  transform: translateX(10px); }
-  6% { -webkit-transform: translateX(-8px);  transform: translateX(-8px); }
-  8% { -webkit-transform: translateX(8px);   transform: translateX(8px); }
-  10% { -webkit-transform: translateX(0);    transform: translateX(0); }
+
+  0%,
+  85%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  2% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  4% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  6% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+
+  8% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  10% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 
 
 /* Minimal employment flip (restored) */
-.employment-flip { position: relative; perspective: 800px; cursor: pointer; }
-.ef-inner { position: relative; width: 100%; height: 250px; transform-style: preserve-3d; transition: transform .5s; }
-.ef-inner.flipped { transform: rotateY(180deg);}
-.ef-face { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; padding:.5rem; backface-visibility: hidden; -webkit-backface-visibility:hidden; }
-.ef-front { }
-.ef-back { transform: rotateY(180deg); overflow-y:auto; background-color: var(--card-bg-color) }
-.employment-flip:focus-visible { outline:2px solid var(--accent-primary,#4dd); outline-offset:3px; }
+.employment-flip {
+  position: relative;
+  perspective: 800px;
+  cursor: pointer;
+}
+
+.ef-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.ef-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.ef-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.ef-front {}
+
+.ef-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  background-color: var(--card-bg-color)
+}
+
+.employment-flip:focus-visible {
+  outline: 2px solid var(--accent-primary, #4dd);
+  outline-offset: 3px;
+}
 
 
 /* ------------- tablet ------------------- */
 
 @media only screen and (min-width: 500px) {
-.modul-list {
+  .modul-list {
     grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
   }
@@ -442,7 +545,7 @@
 
   .modul-card-experience .modul-text {
     font-size: 0.9rem;
-  } 
+  }
 
   .work-experience {
     height: auto;
@@ -450,8 +553,9 @@
 
   .work-item li {
     font-size: 0.9rem;
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
+
   .modul-card-interests .modul-text {
     font-size: 1.2rem;
     padding: 0.4rem;
@@ -465,23 +569,23 @@
 
 /* ------------- desktop ------------------- */
 @media only screen and (min-width: 900px) {
-    .modul-list {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, auto);
-        gap: 1rem;
+  .modul-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 1rem;
 
-        position: absolute;
-        top: 200px;
-        width: 100%;
-        max-width: 1200px;
-        margin-top: 1rem; 
-    }
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 1rem;
+  }
 
-    .modul-card {
-        height: auto;
-    }
+  .modul-card {
+    height: auto;
+  }
 
-    .modul-card-education {
+  .modul-card-education {
     grid-column: 1;
     grid-row: 2;
   }
@@ -490,7 +594,7 @@
     grid-column: 2;
     grid-row: 2;
   }
-  
+
   .modul-card-tools {
     grid-column: 3;
     grid-row: 2;
@@ -507,12 +611,12 @@
     grid-row: 3;
   }
 
-    .modul-card-employment {
+  .modul-card-employment {
     grid-column: 3;
     grid-row: 3;
   }
 
-   .modul-card-interests .modul-text {
+  .modul-card-interests .modul-text {
     font-size: 1.6rem;
     padding: 0.7rem;
   }
@@ -522,24 +626,24 @@
     transition: transform 0.3s ease-in-out;
   }
 
-.modul-card-tools .modul-text h3 {
-  transition: transform 1s cubic-bezier(.2,.8,.2,1), color 0.5s ease-in-out;
-}
+  .modul-card-tools .modul-text h3 {
+    transition: transform 1s cubic-bezier(.2, .8, .2, 1), color 0.5s ease-in-out;
+  }
 
-.modul-card-tools:hover .modul-text h3 {
-  transform: translateY(-4px);
-  color: #fff;
-  transition: transform 1s cubic-bezier(.22,.8,.3,1), color 0.5s ease-in-out;
-}
+  .modul-card-tools:hover .modul-text h3 {
+    transform: translateY(-4px);
+    color: #fff;
+    transition: transform 1s cubic-bezier(.22, .8, .3, 1), color 0.5s ease-in-out;
+  }
 
-.employment-tagline {
-  font-size: 1.1rem;
-  width: 70%;
+  .employment-tagline {
+    font-size: 1.1rem;
+    width: 70%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: flip 5s ease-in-out infinite;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: flip 5s ease-in-out infinite;
+  }
 
 }

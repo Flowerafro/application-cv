@@ -1,8 +1,10 @@
 .portfolio-list {
-  position: absolute;
-  top: 400px; /* Juster til høyden på headeren */
+  /* Removed absolute positioning to allow natural flow and centering */
+  position: relative;
   max-width: 600px;
-  margin: 2rem 0;
+  width: 90%;
+  margin: 2rem auto;
+  /* Vertical spacing + Horizontal centering */
 
   display: flex;
   flex-direction: column;
@@ -11,10 +13,16 @@
 }
 
 .project-card {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  margin: 1rem;
-  padding: 0..5rem;
+  margin: 1rem 0;
+  /* Vertical spacing only */
+  width: 100%;
+  /* Fill the container */
+  max-width: 600px;
+  /* Safety cap */
+  padding: 0;
+  /* Fixed typo */
   background: var(--card-bg-color);
   transition: transform 220ms ease, box-shadow 220ms ease;
 
@@ -24,26 +32,28 @@
   border-radius: 8px;
   overflow: hidden;
 
-  position: relative; /* festepunkt for knapper*/
+  position: relative;
+  /* festepunkt for knapper*/
 }
 
 .portfolio-image-container {
-    max-width: 600px; /* må være samme som vidden på portfolio-list*/
-    display: flex;
-    justify-content: center;
-  }
+  max-width: 600px;
+  /* må være samme som vidden på portfolio-list*/
+  display: flex;
+  justify-content: center;
+}
 
 .portfolio-image-slider .slider-image {
-    width: 100%; 
-    display: block;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    background-color: var(--light-gray); 
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: var(--light-gray);
 }
 
 .portfolio-image-slider {
   width: 100%;
- padding: 1rem;
+  padding: 1rem;
 }
 
 .portfolio-image-container {
@@ -59,11 +69,11 @@
 }
 
 .project-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .project-text h3 {
@@ -126,7 +136,7 @@
   color: var(--accent-secondary);
   border: none;
   background-color: transparent;
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +179,7 @@
 
 .portfolio-dot.active {
   background-color: var(--accent-primary);
-   width: 12px;
+  width: 12px;
   height: 12px;
 }
 
@@ -210,33 +220,42 @@
 
 
   .portfolio-nav-btn {
-  top: 50%;
-  font-size: 2.2rem;
-}
+    top: 50%;
+    font-size: 2.2rem;
+  }
 
-.portfolio-nav-prev {
-  left: 10px;
-}
+  .portfolio-nav-prev {
+    left: 10px;
+  }
 
-.portfolio-nav-next {
-  right: 10px;
-}
+  .portfolio-nav-next {
+    right: 10px;
+  }
 }
 
 /* ----------------------------- desktop ------------------------------------ */
 
 @media only screen and (min-width: 900px) {
   .portfolio-list {
-    top: 300px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-    margin: 0;
-    max-width: 1000px;
+    /* Keep single column layout (inherit flex column from mobile/tablet) */
+    /* Remove grid properties that were here */
+
+    margin: 2rem auto;
+    max-width: 800px;
+    /* Keep same as tablet or slightly larger, but single column */
+    width: 100%;
+    padding: 0 2rem;
+
+    /* Remove top offset since we are in flow now */
+    top: auto;
   }
 
   .project-card {
-    margin-top: 1rem;
+    /* Reset margins if needed, but flex gap handles it globally or margin handles it */
+    margin: 2rem 0;
+    /* Add vertical spacing back since we are not using grid gap */
+    max-width: 100%;
+    /* Fill grid cell */
   }
 
   .project-actions {
@@ -246,15 +265,15 @@
   }
 
   .portfolio-nav-btn {
-   font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .portfolio-nav-btn:hover {
-   color: var(--accent-primary);
-   transition: color 0.2s ease;
+    color: var(--accent-primary);
+    transition: color 0.2s ease;
   }
 
-.project-pdf-button-wrapper:hover {
+  .project-pdf-button-wrapper:hover {
     background-color: var(--accent-secondary);
     transition: background-color 0.3s ease;
   }
@@ -267,9 +286,10 @@
   .portfolio-slider-dots {
     margin-top: 2rem;
   }
+
   .portfolio-dot:hover {
-  background-color: var(--accent-primary);
-  transition: background-color 0.7s ease, transform 0.7s ease;
-}
+    background-color: var(--accent-primary);
+    transition: background-color 0.7s ease, transform 0.7s ease;
+  }
 
 }

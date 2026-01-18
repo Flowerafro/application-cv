@@ -1,17 +1,23 @@
+import { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Components/Layout';
 import AboutMe from './Pages/AboutMe';
 import Portfolio from './Pages/Portfolio';
 import { DarkModeProvider } from './Context/ThemeContext';
 import ReactGA from "react-ga4";
+import { useCookieConsent } from './Hooks/useCookieConsent';
 import './index.css';
 
-ReactGA.initialize("G-TZ07536TFP");
-
 function App() {
+  const { consent } = useCookieConsent();
 
-  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  
+  useEffect(() => {
+    if (consent === 'granted') {
+      ReactGA.initialize("G-TZ07536TFP");
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    }
+  }, [consent]);
+
   return (
     <DarkModeProvider>
       <Routes>
