@@ -286,7 +286,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-7',
         title: 'Contract Flow - Fullstack Application',
-        description: 'Current Exam project Web applications (finished desemeber 2025): building a logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
+        description: 'Exam project Fullstack: building a web app logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
         image: '',
         images: [
             {

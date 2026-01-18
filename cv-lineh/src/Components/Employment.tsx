@@ -10,7 +10,7 @@ export default function Employment({ employees }: EmploymentProps) {
 
   return (
     <div className="employment-list" aria-label="Previous employment history">
-       <PDFButton filePath="/application-cv/Resume2025.pdf" title="Resume"/>
+       <PDFButton filePath="/application-cv/Resume2026.pdf" title="Resume"/>
     </div>
   );
 }
