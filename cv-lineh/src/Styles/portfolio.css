@@ -237,25 +237,19 @@
 
 @media only screen and (min-width: 900px) {
   .portfolio-list {
-    /* Keep single column layout (inherit flex column from mobile/tablet) */
-    /* Remove grid properties that were here */
-
     margin: 2rem auto;
-    max-width: 800px;
-    /* Keep same as tablet or slightly larger, but single column */
+    max-width: 1000px;
     width: 100%;
     padding: 0 2rem;
-
-    /* Remove top offset since we are in flow now */
     top: auto;
+   display: flex;
+    flex-direction: column-reverse; 
+
   }
 
   .project-card {
-    /* Reset margins if needed, but flex gap handles it globally or margin handles it */
     margin: 2rem 0;
-    /* Add vertical spacing back since we are not using grid gap */
     max-width: 100%;
-    /* Fill grid cell */
   }
 
   .project-actions {

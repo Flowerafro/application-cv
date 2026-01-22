@@ -61,6 +61,10 @@ import p101 from '../assets/p-101.png';
 import p102 from '../assets/p-102.png';
 import p103 from '../assets/p-103.png';
 
+import p110 from '../assets/p-110.png';
+import p111 from '../assets/p-111.png';
+import p112 from '../assets/p-112.png';
+
 
 export const portfolio: Portfolio[] = [
     {
@@ -414,5 +418,30 @@ export const portfolio: Portfolio[] = [
         ],
         link: '',
         pdf: '/application-cv/DigitalMarketing2024.pdf'
+    },
+    {
+        id: 'project-11',
+        title: 'Atmospheric weather application',
+        description: 'Fun hobby project (2025). A weather application with a focus on atmospheric design and feel. Built with React, TypeScript and Open-Meteo API.',
+        image: '',
+        images: [
+            {
+                id: 'project-11-image-0',
+                src: p110,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-11-image-1',
+                src: p111,
+                className: 'portfolio-image',
+            },
+            {
+                id: 'project-11-image-2',
+                src: p112,
+                className: 'portfolio-image',
+            },
+        ],
+        link: 'https://flowerafro.github.io/WeatherApp2025/',
+        github: 'https://github.com/Flowerafro/WeatherApp2025',
     }
 ]
