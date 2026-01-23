@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                         ) : project.link ? (
                             <div className="project-pdf-button-wrapper">
                                 <a className="project-pdf-view-btn" href={project.link} target="_blank" rel="noopener noreferrer">
-                                    View Project
+                                    View Live
                                 </a>
                             </div>
                         ) : null}
@@ -45,6 +45,20 @@ export default function ProjectCard({ project }: { project: Portfolio }) {
                                 </a>
                             </div>
                         ) : null}
+                        {project.secondaryLink ? (
+                            <div className='github-btn'>
+                                <a href={project.secondaryLink} target="_blank" rel="noopener noreferrer">
+                                    Prototype
+                                </a>
+                            </div>
+                        ) : null}
+                        {project.aboutLink ? (
+                            <div className='github-btn'>
+                                <a href={project.secondaryLink} target="_blank" rel="noopener noreferrer">
+                                    About
+                                </a>
+                            </div>
+                        ): null}
                     </div>
             </div>
         </div>

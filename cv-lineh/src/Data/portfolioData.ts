@@ -69,7 +69,7 @@ import p112 from '../assets/p-112.png';
 export const portfolio: Portfolio[] = [
     {
         id: 'project-1',
-        title: 'News web site - The Daily Bugle',
+        title: 'News web site: The Daily Bugle',
         description: 'Exam project Communication Designs (2024): Researching, developing and designing a news website built with HTML, CSS and JS',
         image: '',
         images: [
@@ -111,11 +111,12 @@ export const portfolio: Portfolio[] = [
         ],
         link: '',
         github: 'https://github.com/Flowerafro/kommunikasjonsdesign_thedailybugle',
+        secondaryLink: 'https://www.figma.com/design/v0PY0SiwYlFF98bsiUc9QN/XL?node-id=0-1&t=qiuQL4Lyri5pIaUu-1',
     },
     {
         id: 'project-2',
         title: 'TwoFaced Artworks',
-        description: 'As a practice project, I created web design for the norwegian illustrator TwoFaced Artworks. Built with React, SASS and Sanity',
+        description: 'Current project: I created web design for the norwegian illustrator TwoFaced Artworks. Building a new version with Typescript/React, SASS and Sanity',
         image: '',
         images: [
             {
@@ -139,7 +140,8 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: 'https://www.deviantart.com/twofacedartworks/gallery',
+        link: '',
+        aboutLink: 'https://www.deviantart.com/twofacedartworks/gallery',
         github: 'https://github.com/Flowerafro/TwoFacedArtworks',
     },
     {
@@ -290,7 +292,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-7',
         title: 'Contract Flow - Fullstack Application',
-        description: 'Exam project Fullstack: building a web app logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes from Figma.',
+        description: 'Exam project Fullstack: building a web app logistics application with React and TypeScript, RedwoodSDK, Drizzle, Cloudflare. Wireframes and prototype made in Figma.',
         image: '',
         images: [
             {
@@ -335,7 +337,8 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: '',
-        github: 'https://github.com/Flowerafro/PLB-contactFlow/tree/develop',
+        github: 'https://github.com/Flowerafro/PLB-contactFlow',
+        secondaryLink: 'https://www.figma.com/design/iEIlXmhKT8sqmGGFr4efrr/ContractFlow?node-id=0-1&t=XdTDjCHOxLeEj5MD-1',
         pdf: '',
     },
     {
@@ -356,6 +359,7 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: 'https://flowerafro.github.io/Trolljegern/',
+        secondaryLink: 'https://www.figma.com/proto/3CAyTL98S1AUsNK0mRf7B5/Trollstien-APP?node-id=0-1&t=3IgvolUQSBQhRQaR-1',
         github: 'https://github.com/Flowerafro/Trolljegern',
         pdf: ''
     },

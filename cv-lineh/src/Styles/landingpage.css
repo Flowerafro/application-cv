@@ -48,14 +48,77 @@
   position: relative;
 }
 
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.intro-btn {
+  position: relative; 
+  margin: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  color: var(--intro-btn); 
+  cursor: pointer;
+  background: var(--white-opacity40);
+  border: none; 
+  overflow: hidden;
+  animation: btn-reveal 3s ease forwards;
+}
+
+.intro-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px; 
+  padding: 2px;
+  
+  --gradient-border: conic-gradient(
+    from var(--border-angle), 
+    transparent 25%, 
+    #fff, 
+  #EDB458 99%, 
+    transparent
+  );
+
+  background: var(--gradient-border);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  animation: bg-spin 3s linear infinite;
+}
+
+.intro-btn:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes bg-spin {
+  to { --border-angle: 1turn; }
+}
+
+@keyframes btn-reveal {
+  0%, 90% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 
 .intro-btn {
   margin: 2rem;
   padding: 1rem 2rem;
   font-size: 1rem;
   letter-spacing: 2px;
-  border-radius: 2px;
+  border-radius: 8px;
   background: transparent;
-  border: 1px solid var(--intro-btn);
+  border: 1px solid var(--accent-secondary);
   color: var(--intro-btn);
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.40);
@@ -76,7 +139,7 @@
     opacity: 1;
   }
 }
-
+ */
 
 /** Landing page text reveal **/
 

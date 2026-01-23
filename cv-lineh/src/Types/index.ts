@@ -41,6 +41,7 @@ export interface Project {
     video?: string;
     link?: string;
     github?: string;
+    secondaryLink?: string;
     pdf?: string;
     images?: interestImages[];
 }
@@ -52,6 +53,8 @@ export interface Portfolio {
     image?: string;
     images?: PortfolioImages[];
     link?: string;
+    secondaryLink?: string;
+    aboutLink?: string;
     github?: string;
     pdf?: string;
 }

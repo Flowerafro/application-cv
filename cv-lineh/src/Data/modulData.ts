@@ -1,5 +1,7 @@
 import type { Modul } from "../Types";
-import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity } from "react-icons/si";
+import { SiAdobe, SiGithub, SiFigma, SiNotion, SiTrello, SiSass, SiCanva, SiSanity, SiAtlassian, SiWordpress } from "react-icons/si";
+import { TfiMicrosoftAlt } from "react-icons/tfi";
+import { VscVscode } from "react-icons/vsc";
 
 import diploma from '../assets/diploma.png';
 import hiking from '../assets/hiking.jpg';
@@ -79,7 +81,32 @@ export const moduls: Modul[] = [
                 icon: SiCanva,
                 link: 'https://www.canva.com/',
                 name: 'Canva'
+            },
+            {
+                id: 'modul-3-tool-9',
+                icon: SiAtlassian,
+                link: 'https://www.atlassian.com/',
+                name: 'Atlassian'
+            },
+            {
+                id: 'modul-3-tool-10',
+                icon: SiWordpress,
+                link: 'https://wordpress.org/',
+                name: 'WordPress'
+            },
+            {
+                id: 'modul-3-tool-11',
+                icon: TfiMicrosoftAlt,
+                link: 'https://www.microsoft.com/',
+                name: 'Power Apps'
+            },
+            {
+                id: 'modul-3-tool-12',
+                icon: VscVscode,
+                link: 'https://code.visualstudio.com/',
+                name: 'VS Code'
             }
+
         ]
     },
     {
