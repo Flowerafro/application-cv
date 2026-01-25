@@ -116,7 +116,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-2',
         title: 'TwoFaced Artworks',
-        description: 'Current project: I created web design for the norwegian illustrator TwoFaced Artworks. Building a new version with Typescript/React, SASS and Sanity',
+        description: 'Current project: I created web design for the norwegian illustrator TwoFaced Artworks. Building a new version with Frontend (Typescript/React, SASS) and Backend and media storage (Sanity)',
         image: '',
         images: [
             {
@@ -140,9 +140,8 @@ export const portfolio: Portfolio[] = [
                 className: 'portfolio-image',
             }
         ],
-        link: '',
-        aboutLink: 'https://www.deviantart.com/twofacedartworks/gallery',
-        github: 'https://github.com/Flowerafro/TwoFacedArtworks',
+        link: 'https://flowerafro.github.io/TwoFaced/',
+        github: 'https://github.com/Flowerafro/TwoFaced'
     },
     {
         id: 'project-3',
