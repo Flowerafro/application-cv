@@ -7,14 +7,13 @@ interface PDFButtonProps {
 }
 
 export default function PDFButton({ filePath, title = 'View PDF', className = '' }: PDFButtonProps) {
-  const src = filePath.startsWith('/') ? filePath : `/${filePath}`;
 
   return (
     <div className={`pdf-button-wrapper ${className}`}> 
-      <a className="pdf-view-btn" href={src} target="_blank" rel="noopener noreferrer">
+      <a className="pdf-view-btn" href={filePath} target="_blank" rel="noopener noreferrer">
         {title}
       </a>
-      <a className="pdf-download-link" href={src} download>
+      <a className="pdf-download-link" href={filePath} download>
         Download
       </a>
     </div>
