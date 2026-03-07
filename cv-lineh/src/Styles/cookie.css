@@ -6,7 +6,7 @@
     padding: 1.5rem;
     background-color: var(--card-bg-color, #1f2937);
     /* Fallback to dark gray */
-    color: var(--text-color, #ffffff);
+    color: white;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
@@ -77,8 +77,8 @@
 
 .cookie-btn-secondary {
     background-color: transparent;
-    border: 2px solid var(--text-color, #fff);
-    color: var(--text-color, #fff);
+    border: 2px solid white;
+    color: white;
 }
 
 .cookie-btn-secondary:hover {
