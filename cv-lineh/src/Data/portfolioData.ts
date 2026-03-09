@@ -210,7 +210,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-5',
         title: 'Laftemannen ReBranding',
-        description: 'Exam project Graphic design (2025): Creating a visual profile and design manual for Laftemannen Company using ADOBE ID/AI/PS',
+        description: 'Exam project Graphic design (2025): Developed a complete visual identity and design manual for Laftemannen, including logo, color palette, and brand guidelines.',
         image: '',
         images: [
             {
@@ -255,7 +255,7 @@ export const portfolio: Portfolio[] = [
             }
         ],
         link: '',
-        pdf: '/application-cv/Profilmanual.pdf',
+        pdf: '/Profilmanual.pdf',
     },
     {
         id: 'project-6',
@@ -343,7 +343,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-8',
         title: 'Trollstien - Hunt & Explore',
-        description: 'Exam project UI design (2025): Won award for "Best Stand at EXPO 2025". How to make Trollstien more attractive for older children and pre-teens. Wireframes from Figma and presentation web page made with React & Typescript.',
+        description: 'Exam project UI design (2025): Won award for "Best Stand at EXPO 2025". How to make Trollstien more attractive for older children and pre-teens. Wireframes and prototype made in Figma and presentation web page made with React & Typescript.',
         image: '',
         images: [
             {
@@ -395,7 +395,7 @@ export const portfolio: Portfolio[] = [
     {
         id: 'project-10',
         title: 'Digital Marketing Campaign - Halden Kino',
-        description: 'Exam project Digital Marketing (2024): Marketing campaign for local cinema in Halden, Norway. Campaign graphic design materials made using ADOBE ID/AI/PS.',
+        description: 'Exam project Digital Marketing (2024): Designed graphic materials for a full digital marketing campaign targeting local cinema audiences, covering social media ads and campaign assets.',
         image: '',
         images: [
             {
@@ -420,7 +420,7 @@ export const portfolio: Portfolio[] = [
             },
         ],
         link: '',
-        pdf: '/application-cv/DigitalMarketing2024.pdf'
+        pdf: '/DigitalMarketing2024.pdf'
     },
     {
         id: 'project-11',
